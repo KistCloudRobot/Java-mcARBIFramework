@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<ARBIFrameworkServerConfiguration>
+	<MessageBrokerType>ZeroMQ</MessageBrokerType>
+	<MessageBrokerProperty Center = "false">
+		<Host>0.0.0.0</Host>
+		<Port>61114</Port>
+		<Name>Tow1</Name>
+	</MessageBrokerProperty>
+	<RouterProperty>
+		<Host>0.0.0.0</Host>
+		<Port>61616</Port>
+	</RouterProperty>
+	<InteractionManagerStart>false</InteractionManagerStart>
+	<InteractionManagerBrokerProperty>
+		<StompBroker Available = "false">
+			<Host>127.0.0.1</Host>
+			<Port>61312</Port>
+		</StompBroker>
+		<ApolloBroker Available = "false">
+			<Host>127.0.0.1</Host>
+			<Port>61311</Port>
+		</ApolloBroker>
+		<ZeroMQBroker Available = "false">
+			<Host>127.0.0.1</Host>
+			<Port>61313</Port>
+		</ZeroMQBroker>
+		<SocketBroker Available = "false">
+			<Host>127.0.0.1</Host>
+			<Port>61314</Port>
+		</SocketBroker>
+	</InteractionManagerBrokerProperty>
+	<ARBIFrameworkMonitorStart>false</ARBIFrameworkMonitorStart>
+</ARBIFrameworkServerConfiguration>

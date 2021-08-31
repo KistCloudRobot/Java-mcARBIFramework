@@ -1,0 +1,4 @@
+<Agent-Property>
+	<ServerURL>tcp://localhost:61616</ServerURL>
+	<AgentName>monitortest</AgentName>
+</Agent-Property>

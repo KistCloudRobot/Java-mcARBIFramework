@@ -1,0 +1,5 @@
+<Agent-Property>
+	<ServerURL>tcp://172.16.165.196:61616</ServerURL>
+	<AgentName>testAgent2</AgentName>
+	<BrokerType>zeroMQ</BrokerType>
+</Agent-Property>
