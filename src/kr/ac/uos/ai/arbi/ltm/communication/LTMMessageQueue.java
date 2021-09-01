@@ -23,12 +23,16 @@ public class LTMMessageQueue {
 	}
 
 	public void enqueue(LTMMessage message) {
+		System.out.println("before lock");
 		_lock.lock();
+		System.out.println("after lock");
 		try {
 			_queue.add(message);
 			_newMessageArrived.signalAll();
 		} finally {
+			System.out.println("before unlock");
 			_lock.unlock();
+			System.out.println("after unlock");
 		}
 	}
 

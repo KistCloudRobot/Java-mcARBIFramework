@@ -149,6 +149,7 @@ public class MessageService{
 		public void run() {
 			while(isRunning == true) {
 				LTMMessage msg = queue.blockingDequeue(null, 10);
+				//System.out.println("is running!");
 				if(msg != null) {
 					System.out.println("before run");
 					ltmMessageReceived(msg);

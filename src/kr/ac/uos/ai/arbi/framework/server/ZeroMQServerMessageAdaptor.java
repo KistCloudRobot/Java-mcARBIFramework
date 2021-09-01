@@ -125,6 +125,7 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 				this.handleRouterList(messageObject);
 			}
 
+			System.out.println("Yes i am");
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			// e.printStackTrace();

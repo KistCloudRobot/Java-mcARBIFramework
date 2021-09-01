@@ -50,7 +50,6 @@ public class LTMMessageProcessor implements LTMMessageListener, LTMNotificationH
 		LTMMessageFactory factory = LTMMessageFactory.getInstance();
 		LTMMessage resultMSG = factory.newMessage(msg.getClient(), LTMMessageAction.Result, result,
 				msg.getConversationID());
-
 		msgService.send(resultMSG);
 	}
 
