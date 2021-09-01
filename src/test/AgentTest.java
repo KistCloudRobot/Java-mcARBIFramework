@@ -18,12 +18,13 @@ public class AgentTest extends ArbiAgent{
 	public void onNotify(String sender, String notification){}
 	
 	public AgentTest(){
-		ArbiAgentExecutor.execute("tcp://172.16.165.135:61116","agent://www.arbi.com/Lift1/TestAgent", this,2);
+		ArbiAgentExecutor.execute("tcp://127.0.0.1:61616","agent://www.arbi.com/Lift1/TestAgent", this,2);
 		this.send("agent://www.arbi.com/Lift1/TestAgent", "test");
 	}
 	
 	public void onStart(){
 		System.out.println("start");
+		this.send("tester", "wow");
 		
 		/*
 		DataSource dc = new DataSource();

@@ -141,6 +141,7 @@ public class McArbiServerAdaptor implements MessageDeliverAdaptor, LTMMessageAda
 				ArbiAgentMessage agentMessage = new ArbiAgentMessage(sender, receiver,
 						AgentMessageAction.valueOf(action), content, conversationID, timestamp);
 				this.messageQueue.enqueue(agentMessage);
+				
 			} else if (command.startsWith("Long-Term-Memory")) {
 				String client = messageObject.get("client").toString();
 				String action = messageObject.get("action").toString();
@@ -149,6 +150,7 @@ public class McArbiServerAdaptor implements MessageDeliverAdaptor, LTMMessageAda
 				LTMMessageFactory f = LTMMessageFactory.getInstance();
 				LTMMessage ltmMessage = f.newMessage(client, LTMMessageAction.valueOf(action), content, queryID);
 				this.ltmMessageQueue.enqueue(ltmMessage);
+				
 			} else if (command.startsWith("InteractionManager-Status")) {
 				String status = messageObject.get("status").toString();
 				service.messageRecieved(status);
@@ -225,11 +227,12 @@ public class McArbiServerAdaptor implements MessageDeliverAdaptor, LTMMessageAda
 			String receiverURL = msg.getClient();
 			String receiverDestination = receiverURL + "/message";
 			zmqConsumer.sendMore(receiverDestination);
-
+			System.out.println(receiverDestination);
 			zmqConsumer.sendMore("");
 
 			zmqConsumer.send(messageObject.toJSONString());
-
+			System.out.println("message sent!! " + messageObject.toJSONString());
+			System.out.println("content : " + msg.getContent());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -259,7 +262,7 @@ public class McArbiServerAdaptor implements MessageDeliverAdaptor, LTMMessageAda
 
 	}
 	@Override
-	public void deliver(ArbiAgentMessage message) {
+	public synchronized void deliver(ArbiAgentMessage message) {
 		try {
 			String receiverURL = message.getReceiver();
 			String receiverDestination = receiverURL + "/message";
@@ -282,7 +285,7 @@ public class McArbiServerAdaptor implements MessageDeliverAdaptor, LTMMessageAda
 		}
 	}
 
-	public   void deliverToMonitor(ArbiAgentMessage message) {
+	public  synchronized void deliverToMonitor(ArbiAgentMessage message) {
 
 		try {
 
@@ -311,7 +314,7 @@ public class McArbiServerAdaptor implements MessageDeliverAdaptor, LTMMessageAda
 
 	}
 
-	public  void deliverToMonitor(LTMMessage msg) {
+	public synchronized void deliverToMonitor(LTMMessage msg) {
 		try {
 
 			String receiverDestination = InteractionManager.interactionAgentURI + "/message";

@@ -94,10 +94,10 @@ public class ZeroMQLTMAdaptor implements LTMMessageAdaptor {
 					
 					
 					text = zmqConsumer.recvStr();
-					
+					System.out.println("rcvd : " + text);
 					while(zmqConsumer.hasReceiveMore() == true) {
 						message = zmqConsumer.recvStr();
-
+						System.out.println("rcvd : " + message);
 					}
 				}catch (org.zeromq.ZMQException e) {
 					System.out.println("thread terminated");

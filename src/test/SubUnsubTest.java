@@ -16,27 +16,27 @@ public class SubUnsubTest {
 			}
 		};
 		System.out.println("Agent start");
-		
-		ArbiAgentExecutor.execute("tcp://172.16.165.204:61115", "agent://www.arbi.com/Lift2/TaskManager", taskManager, Broker.ZEROMQ);
+
+		ArbiAgentExecutor.execute("tcp://127.0.0.1:61616", "agent://www.arbi.com/Lift2/TaskManager", taskManager,
+				Broker.ZEROMQ);
 
 		DataSource ds = new DataSource() {
 			@Override
 			public void onNotify(String content) {
-				
-				System.out.println("Notified! : "+content);
-			}		
+
+				System.out.println("Notified! : " + content);
+			}
 		};
-		ds.connect("tcp://172.16.165.204:61115", "ds://www.arbi.com/Lift2/TaskManager",Broker.ZEROMQ);
+		ds.connect("tcp://127.0.0.1:61616", "ds://www.arbi.com/Lift2/TaskManager", Broker.ZEROMQ);
 		System.out.println("connected");
+
 		String subscribeID1 = ds.subscribe("(rule (fact (context $context)) --> (notify (context $context)))");
 		String subscribeID2 = ds.subscribe("(rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp)))");
-		String subscribeID3 =ds.subscribe("(rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status)))");
+		String subscribeID3 = ds.subscribe("(rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status)))");
 		String subscribeID4 = ds.subscribe("(rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID)))");
 
 		System.out.println("test start");
-		
-		
-		
+
 		try {
 			ds.assertFact("(context \"TestModel1\")");
 			ds.assertFact("(context \"TestModel2\")");
@@ -46,18 +46,17 @@ public class SubUnsubTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		ds.close();
 		taskManager.close();
 		System.out.println("end test");
 		/*
-		Scanner in = new Scanner(System.in);
-		
-		in.nextLine();
-		ds.unsubscribe(subscribeID);
-		ds.assertFact("(TestModel \"TestModel2\")");
-		
-		in.nextLine();
-		*/
+		 * Scanner in = new Scanner(System.in);
+		 * 
+		 * in.nextLine(); ds.unsubscribe(subscribeID);
+		 * ds.assertFact("(TestModel \"TestModel2\")");
+		 * 
+		 * in.nextLine();
+		 */
 	}
 }

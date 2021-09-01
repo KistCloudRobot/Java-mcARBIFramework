@@ -21,7 +21,7 @@ public class LTMMessageProcessor implements LTMMessageListener, LTMNotificationH
 
 	private LTMService ltmService;
 	private MessageService msgService;
-
+	
 	static {
 		commandMap = new HashMap<LTMMessageAction, LTMCommand>();
 		commandMap.put(LTMMessageAction.AssertFact, new AssertFactCommand());
@@ -39,7 +39,7 @@ public class LTMMessageProcessor implements LTMMessageListener, LTMNotificationH
 	public LTMMessageProcessor(LTMService service) {
 		this.ltmService = service;
 		service.addLTMNotificationHandler(this);
-		this.messageQueue = new ArrayBlockingQueue<LTMMessage>(100);
+
 
 	}
 
@@ -48,9 +48,10 @@ public class LTMMessageProcessor implements LTMMessageListener, LTMNotificationH
 		System.out.println(msg.getClient().toString() + " : " + msg.getContent());
 		String result = commandMap.get(msg.getAction()).deploy(ltmService, msg.getClient(), msg.getContent());
 		LTMMessageFactory factory = LTMMessageFactory.getInstance();
-		LTMMessage resultMSG = factory.newMessage(msg.getClient(), LTMMessageAction.Result, result,
-				msg.getConversationID());
+		LTMMessage resultMSG = factory.newMessage(msg.getClient(), LTMMessageAction.Result, result,	msg.getConversationID());
+		System.out.println("result : " + resultMSG);
 		msgService.send(resultMSG);
+
 	}
 
 	public void setMessageService(MessageService messageService) {

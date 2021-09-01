@@ -49,11 +49,11 @@ public class MessageService{
 		System.out.println("[LTM Message]\t<" + message.getAction().toString() + ">\t" + message.getClient() + " : "
 				+ message.getContent());
 		
-		ltmMessageAdaptor.send(message);
+		message.setSendingFromServer(true);
 		
-		if (interactionManagerStatus) {
-			deliverAdaptor.deliverToMonitor(message);
-		}
+		ltmMessageQueue.enqueue(message);
+
+
 
 	}
 	
@@ -62,18 +62,20 @@ public class MessageService{
 	}
 	
 	public void ltmMessageReceived(LTMMessage ltmMessage) {
+		
 		System.out.println("[LTM Message]\t<" + ltmMessage.getAction().toString() + ">\t" + ltmMessage.getClient()
 				+ " : " + ltmMessage.getContent());
 
 		if (interactionManagerStatus) {
 			deliverAdaptor.deliverToMonitor(ltmMessage);
 		}
-		if(ltmMessage.getAction() == LTMMessageAction.Notify) {
+		if(ltmMessage.getAction() == LTMMessageAction.Notify || ltmMessage.isSendingFromServer() == true) {
 			ltmMessageAdaptor.send(ltmMessage);
 		}else {
 			ltmListener.messageRecieved(ltmMessage);
 		}
-			
+		
+		
 	}
 
 	public void messageRecieved(String status) {
@@ -149,7 +151,7 @@ public class MessageService{
 		public void run() {
 			while(isRunning == true) {
 				LTMMessage msg = queue.blockingDequeue(null, 10);
-				//System.out.println("is running!");
+
 				if(msg != null) {
 					System.out.println("before run");
 					ltmMessageReceived(msg);

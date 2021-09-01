@@ -1444,3 +1444,1227 @@
 [ExceptionLog 2021-09-01 23:41:18]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
 [ExceptionLog 2021-09-01 23:41:18]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
 [ExceptionLog 2021-09-01 23:41:35]ghost msg : Subscribe:810594276369800 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:19]ghost msg : Subscribe:805257551564800 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:19]ghost msg : Subscribe:805257573480100 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:19]ghost msg : Subscribe:805257575377000 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:19]ghost msg : Subscribe:805257577462500 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:19]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:19]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:19]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:27]ghost msg : Subscribe:805265288096900 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:27]ghost msg : Subscribe:805265308656900 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:27]ghost msg : Subscribe:805265310586200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:27]ghost msg : Subscribe:805265312420000 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:27]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:27]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:27]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:32]ghost msg : Subscribe:805270173256400 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:32]ghost msg : Subscribe:805270193782200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:32]ghost msg : Subscribe:805270195648600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:32]ghost msg : Subscribe:805270197603900 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:32]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:32]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:32]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:37]ghost msg : Subscribe:805275318668400 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:37]ghost msg : Subscribe:805275339025900 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:37]ghost msg : Subscribe:805275340851800 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:37]ghost msg : Subscribe:805275342792100 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:37]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:37]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:37]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:42]ghost msg : Subscribe:805280063472500 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:42]ghost msg : Subscribe:805280083313000 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:42]ghost msg : Subscribe:805280084884000 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:42]ghost msg : Subscribe:805280086911500 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:42]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:42]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:42]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:46]ghost msg : Subscribe:805284765463300 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:46]ghost msg : Subscribe:805284785448000 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:46]ghost msg : Subscribe:805284787370400 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:46]ghost msg : Subscribe:805284789310600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:46]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:46]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:46]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:51]ghost msg : Subscribe:805289485086000 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:51]ghost msg : Subscribe:805289505014600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:51]ghost msg : Subscribe:805289506513600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:51]ghost msg : Subscribe:805289508454700 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:51]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:51]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:49:51]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:02]ghost msg : Subscribe:805299979246600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:02]ghost msg : Subscribe:805300000448300 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:02]ghost msg : Subscribe:805300001851200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:02]ghost msg : Subscribe:805300003764200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:02]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:02]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:02]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:07]ghost msg : Subscribe:805304842264000 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:07]ghost msg : Subscribe:805304863615700 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:07]ghost msg : Subscribe:805304865054200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:07]ghost msg : Subscribe:805304867049700 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:07]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:07]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:07]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:10]ghost msg : Subscribe:805308485817200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:10]ghost msg : Subscribe:805308506837500 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:10]ghost msg : Subscribe:805308508278400 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:10]ghost msg : Subscribe:805308510252300 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:10]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:10]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:10]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:14]ghost msg : Subscribe:805312565858800 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:14]ghost msg : Subscribe:805312586817300 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:14]ghost msg : Subscribe:805312588824600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:14]ghost msg : Subscribe:805312590789200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:14]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:14]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:14]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:18]ghost msg : Subscribe:805316725866500 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:18]ghost msg : Subscribe:805316745686600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:18]ghost msg : Subscribe:805316747486900 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:18]ghost msg : Subscribe:805316749520100 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:18]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:18]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:18]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:23]ghost msg : Subscribe:805321769871200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:23]ghost msg : Subscribe:805321790869400 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:23]ghost msg : Subscribe:805321792666300 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:23]ghost msg : Subscribe:805321794636500 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:23]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:23]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:23]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:29]ghost msg : Subscribe:805326870244700 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:29]ghost msg : Subscribe:805326890570400 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:29]ghost msg : Subscribe:805326892548000 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:29]ghost msg : Subscribe:805326894514300 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:29]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:29]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:29]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:33]ghost msg : Subscribe:805331041336400 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:33]ghost msg : Subscribe:805331061509600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:33]ghost msg : Subscribe:805331063402100 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:33]ghost msg : Subscribe:805331065389200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:33]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:33]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:33]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:37]ghost msg : Subscribe:805335822706600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:37]ghost msg : Subscribe:805335844907100 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:37]ghost msg : Subscribe:805335846469000 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:37]ghost msg : Subscribe:805335848424400 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:37]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:42]ghost msg : Subscribe:805340828915200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:42]ghost msg : Subscribe:805340849186900 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:42]ghost msg : Subscribe:805340850406300 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:43]ghost msg : Subscribe:805340852423900 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:43]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:43]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:43]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:47]ghost msg : Subscribe:805345344877900 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:47]ghost msg : Subscribe:805345366600600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:47]ghost msg : Subscribe:805345367902900 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:47]ghost msg : Subscribe:805345369684200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:50:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:00]ghost msg : Subscribe:805357927538500 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:00]ghost msg : Subscribe:805357947901700 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:00]ghost msg : Subscribe:805357949711600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:00]ghost msg : Subscribe:805357951510800 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:00]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:00]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:00]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:06]ghost msg : Subscribe:805364591081100 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:06]ghost msg : Subscribe:805364613724300 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:06]ghost msg : Subscribe:805364615904600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:06]ghost msg : Subscribe:805364618001500 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:06]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:06]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:06]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:14]ghost msg : Subscribe:805372310671100 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:14]ghost msg : Subscribe:805372332682500 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:14]ghost msg : Subscribe:805372334750700 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:14]ghost msg : Subscribe:805372336748100 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:14]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:14]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:14]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:22]ghost msg : Subscribe:805380104759400 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:22]ghost msg : Subscribe:805380126296300 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:22]ghost msg : Subscribe:805380128184500 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:22]ghost msg : Subscribe:805380130190200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:22]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:22]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:22]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:30]ghost msg : Subscribe:805388831678900 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:31]ghost msg : Subscribe:805388853433400 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:31]ghost msg : Subscribe:805388855386300 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:31]ghost msg : Subscribe:805388857818400 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:31]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:31]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:31]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:39]ghost msg : Subscribe:805397226264400 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:39]ghost msg : Subscribe:805397247103600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:39]ghost msg : Subscribe:805397249106600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:39]ghost msg : Subscribe:805397251142000 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:39]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:39]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:51:39]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:53:21]ghost msg : Subscribe:805499124340900 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:53:21]ghost msg : Subscribe:805499145984700 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:53:21]ghost msg : Subscribe:805499147761500 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:53:21]ghost msg : Subscribe:805499149833100 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:53:21]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:53:21]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:53:21]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:55:17]ghost msg : Subscribe:805615345766300 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:55:17]ghost msg : Subscribe:805615367098500 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:55:17]ghost msg : Subscribe:805615369092700 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:55:17]ghost msg : Subscribe:805615371022400 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:55:17]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:55:17]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:55:17]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:55:25]ghost msg : Subscribe:805622987260500 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:55:25]ghost msg : Subscribe:805623009135300 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:55:25]ghost msg : Subscribe:805623011182400 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:55:25]ghost msg : Subscribe:805623013276500 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:55:25]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:55:25]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:55:25]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:55:33]ghost msg : Subscribe:805631287030500 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:55:33]ghost msg : Subscribe:805631307961600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:55:33]ghost msg : Subscribe:805631310146300 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:55:33]ghost msg : Subscribe:805631312191600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:55:33]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:55:33]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:55:33]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:55:41]ghost msg : Subscribe:805638988217500 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:55:41]ghost msg : Subscribe:805639010187000 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:55:41]ghost msg : Subscribe:805639012243700 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:55:41]ghost msg : Subscribe:805639014512000 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:55:41]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:55:41]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:55:41]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:55:48]ghost msg : Subscribe:805646010190400 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:55:48]ghost msg : Subscribe:805646032516000 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-01 23:56:30]ghost msg : Subscribe:805688074282300 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:05:49]ghost msg : Subscribe:806246897377100 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:05:49]ghost msg : Subscribe:806246919546600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:05:49]ghost msg : Subscribe:806246922096400 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:05:49]ghost msg : Subscribe:806246924061700 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:05:49]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:05:49]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:05:49]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:06:39]ghost msg : Subscribe:806297815791800 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:06:39]ghost msg : Subscribe:806297837654300 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:06:39]ghost msg : Subscribe:806297839602100 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:06:39]ghost msg : Subscribe:806297841409400 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:06:39]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:06:40]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:06:40]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:06:50]ghost msg : Subscribe:806308456714200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:06:50]ghost msg : Subscribe:806308478958900 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:06:50]ghost msg : Subscribe:806308480829900 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:06:50]ghost msg : Subscribe:806308482567400 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:06:50]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:06:50]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:06:50]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:06:58]ghost msg : Subscribe:806316263196500 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:06:58]ghost msg : Subscribe:806316284919400 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:06:58]ghost msg : Subscribe:806316287142200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:06:58]ghost msg : Subscribe:806316289345200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:06:58]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:06:58]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:06:58]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:07:05]ghost msg : Subscribe:806323566083700 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:07:05]ghost msg : Subscribe:806323589011000 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:07:05]ghost msg : Subscribe:806323591551200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:07:05]ghost msg : Subscribe:806323593944200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:07:05]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:07:05]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:07:05]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:07:13]ghost msg : Subscribe:806330977186400 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:07:13]ghost msg : Subscribe:806331000313200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:07:13]ghost msg : Subscribe:806331002159700 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:07:13]ghost msg : Subscribe:806331004029100 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:07:13]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:07:13]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:07:13]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:07:20]ghost msg : Subscribe:806338403041100 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:07:20]ghost msg : Subscribe:806338427077600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:07:20]ghost msg : Subscribe:806338429229400 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:07:20]ghost msg : Subscribe:806338431263000 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:07:20]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:07:20]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:07:20]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:07:26]ghost msg : Subscribe:806344784916500 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:07:26]ghost msg : Subscribe:806344807757600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:07:26]ghost msg : Subscribe:806344809699800 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:07:26]ghost msg : Subscribe:806344812034600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:07:26]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:07:26]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:07:26]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:08:09]ghost msg : Subscribe:806387512736900 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:08:09]ghost msg : Subscribe:806387535434100 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:08:09]ghost msg : Subscribe:806387537330600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:08:09]ghost msg : Subscribe:806387539781100 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:08:09]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:08:09]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:08:09]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:08:17]ghost msg : Subscribe:806394870232800 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:08:17]ghost msg : Subscribe:806394891369200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:08:17]ghost msg : Subscribe:806394893327500 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:08:17]ghost msg : Subscribe:806394895427400 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:08:17]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:08:17]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:08:17]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:08:24]ghost msg : Subscribe:806402379760300 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:54]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:54]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:54]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:54]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:54]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:54]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:54]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:54]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:54]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:54]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:54]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:54]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:27:54]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:00]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:00]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:00]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:00]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:00]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:00]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:00]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:00]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:00]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:00]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:00]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:00]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:00]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:07]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:07]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:07]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:07]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:07]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:07]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:07]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:07]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:07]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:07]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:07]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:07]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:07]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:14]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:14]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:14]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:14]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:14]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:14]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:14]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:14]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:14]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:14]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:14]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:14]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:14]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:22]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:22]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:22]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:22]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:22]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:22]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:22]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:22]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:22]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:22]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:22]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:22]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:22]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:29]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:29]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:29]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:29]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:29]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:29]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:29]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:29]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:29]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:29]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:29]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:29]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:29]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:36]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:36]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:36]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:36]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:36]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:36]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:36]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:36]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:36]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:36]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:36]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:36]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:36]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:44]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:44]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:44]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:44]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:44]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:44]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:44]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:44]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:44]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:44]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:44]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:44]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:44]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:51]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:51]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:51]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:51]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:51]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:51]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:51]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:51]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:51]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:51]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:51]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:51]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:51]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:59]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:59]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:59]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:59]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:59]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:59]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:59]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:59]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:59]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:59]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:59]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:59]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:28:59]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:07]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:07]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:07]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:07]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:07]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:07]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:07]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:07]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:07]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:07]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:07]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:07]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:07]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:15]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:15]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:15]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:15]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:15]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:15]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:15]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:15]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:15]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:15]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:15]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:15]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:15]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:23]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:23]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:23]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:23]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:23]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:23]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:23]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:23]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:23]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:23]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:23]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:23]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:23]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:31]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:31]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:31]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:31]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:31]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:31]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:31]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:31]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:31]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:31]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:31]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:31]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:31]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:54]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:54]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:54]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:54]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:54]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:54]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:54]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:54]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:54]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:54]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:54]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:54]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:29:54]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:30:02]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:30:02]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:30:02]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:30:02]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:30:02]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:30:02]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:30:02]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:30:02]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:30:02]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:30:02]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:30:02]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:30:02]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:30:02]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:37:20]ghost msg : Subscribe:808138374563600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:37:20]ghost msg : Subscribe:808138396608700 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:37:20]ghost msg : Subscribe:808138398822900 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:37:20]ghost msg : Subscribe:808138400860600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:37:20]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:37:20]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:37:20]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:37:30]ghost msg : Subscribe:808148127448100 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:37:30]ghost msg : Subscribe:808148148365000 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:37:30]ghost msg : Subscribe:808148150528300 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:37:30]ghost msg : Subscribe:808148152508700 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:37:30]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:37:30]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:37:30]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:37:46]ghost msg : Subscribe:808164817325200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:37:46]ghost msg : Subscribe:808164838534700 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:37:46]ghost msg : Subscribe:808164840378600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:37:46]ghost msg : Subscribe:808164842436300 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:37:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:37:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:37:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:37:53]ghost msg : Subscribe:808171780133400 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:37:53]ghost msg : Subscribe:808171800757200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:37:53]ghost msg : Subscribe:808171802886700 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:37:53]ghost msg : Subscribe:808171804947700 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:37:53]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:37:53]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:37:53]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:38:03]ghost msg : Subscribe:808181689736100 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:38:03]ghost msg : Subscribe:808181710552200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:38:03]ghost msg : Subscribe:808181712392300 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:38:03]ghost msg : Subscribe:808181714430300 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:38:03]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:38:03]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:38:03]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:40:02]ghost msg : Subscribe:808300641924100 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:40:02]ghost msg : Subscribe:808300664195200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:40:02]ghost msg : Subscribe:808300666652400 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:40:02]ghost msg : Subscribe:808300668813000 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:40:02]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:40:02]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:40:02]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:40:34]ghost msg : Subscribe:808332412209100 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:40:34]ghost msg : Subscribe:808332433753100 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:42:52]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:42:52]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:42:52]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:42:52]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:42:52]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:42:52]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:42:52]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:16]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:16]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:16]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:16]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:16]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:16]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:16]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:24]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:24]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:24]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:24]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:24]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:24]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:24]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:31]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:31]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:31]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:31]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:31]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:31]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:31]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:38]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:38]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:38]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:38]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:38]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:38]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:38]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:45]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:45]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:45]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:45]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:45]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:45]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:45]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:51]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:51]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:51]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:51]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:51]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:51]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:51]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:57]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:57]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:57]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:57]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:57]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:57]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:43:57]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:03]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:03]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:03]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:03]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:03]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:03]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:03]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:10]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:10]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:10]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:10]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:10]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:10]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:10]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:24]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:24]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:24]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:24]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:24]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:24]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:24]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:31]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:31]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:31]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:31]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:31]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:31]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:31]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:39]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:39]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:39]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:39]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:39]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:39]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:39]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:48]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:48]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:48]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:48]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:48]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:48]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 00:44:48]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:11:47]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:11:47]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:11:47]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:11:47]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:11:47]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:11:47]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:11:47]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:13:46]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:13:46]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:13:46]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:13:46]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:13:46]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:13:46]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:13:46]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:13:54]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:13:54]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:13:54]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:13:54]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:13:54]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:13:54]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:13:54]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:00]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:00]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:00]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:00]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:00]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:00]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:00]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:08]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:08]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:08]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:08]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:08]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:08]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:08]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:15]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:15]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:15]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:15]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:15]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:15]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:15]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:22]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:22]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:22]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:22]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:22]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:22]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:22]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:29]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:29]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:29]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:29]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:29]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:29]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:29]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:36]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:36]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:36]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:36]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:36]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:36]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:36]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:43]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:52]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:52]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:52]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:52]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:52]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:52]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:52]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:59]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:59]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:59]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:59]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:59]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:59]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:14:59]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:15:08]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:15:08]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:15:08]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:15:08]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:15:08]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:15:08]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:15:08]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:18:37]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:18:37]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:18:37]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:18:37]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:18:37]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:18:37]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:18:37]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:18:45]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:18:45]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:18:45]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:18:45]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:18:45]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:18:45]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:18:45]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:23:19]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:23:19]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:23:19]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:23:19]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:23:19]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:23:19]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:23:19]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:23:32]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:23:32]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:23:32]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:23:32]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:23:32]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:23:32]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:23:32]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:23:40]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:23:40]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:23:40]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:23:40]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:23:40]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:23:40]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:23:40]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:23:48]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:23:48]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:23:48]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:23:48]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:23:48]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:23:48]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:23:48]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:20]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:20]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:20]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:20]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:20]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:20]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:20]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:28]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:28]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:28]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:28]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:28]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:28]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:28]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:35]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:35]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:35]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:35]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:35]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:35]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:35]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:43]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:43]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:43]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:43]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:43]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:43]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:43]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:51]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:51]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:51]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:51]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:51]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:51]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:30:51]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:08]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:08]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:08]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:08]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:08]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:08]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:08]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:17]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:17]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:17]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:17]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:17]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:17]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:17]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:28]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:28]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:28]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:28]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:28]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:28]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:28]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:37]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:37]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:37]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:37]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:37]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:37]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:37]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:46]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:46]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:46]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:46]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:46]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:46]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:34:46]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:10]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:10]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:10]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:10]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:10]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:10]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:10]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:23]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:23]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:23]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:23]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:23]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:23]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:23]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:31]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:31]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:31]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:31]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:31]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:31]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:31]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:41]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:41]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:41]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:41]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:41]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:41]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:41]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:49]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:49]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:49]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:49]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:49]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:49]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:49]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:59]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:59]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:59]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:59]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:59]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:59]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:35:59]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:43:46]ghost msg : Subscribe:830124125785500 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:43:46]ghost msg : Subscribe:830124146139600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:43:46]ghost msg : Subscribe:830124148123900 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:43:46]ghost msg : Subscribe:830124150190600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:43:46]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:43:46]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:43:46]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:44:34]ghost msg : Subscribe:830172093888700 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:44:34]ghost msg : Subscribe:830172115553600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:44:34]ghost msg : Subscribe:830172117724800 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:44:34]ghost msg : Subscribe:830172119601700 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:44:34]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:44:34]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:44:34]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:44:42]ghost msg : Subscribe:830180502283400 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:44:42]ghost msg : Subscribe:830180522982200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:44:42]ghost msg : Subscribe:830180524833000 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:44:42]ghost msg : Subscribe:830180526755100 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:44:42]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:44:42]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:44:42]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:44:49]ghost msg : Subscribe:830187371626800 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:51:50]ghost msg : testID:123323123 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:52:18]ghost msg : testID:123323123 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:52:36]ghost msg : 123323123 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:52:47]ghost msg : 123323123 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:52:47]ghost msg : 123323123 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:52:47]ghost msg : 123323123 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:52:47]ghost msg : 123323123 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:52:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:52:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:52:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:52:56]ghost msg : 123323123 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:53:05]ghost msg : 123323123 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:56:03]ghost msg : testID action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:56:03]ghost msg : testID action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:56:03]ghost msg : testID action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:56:03]ghost msg : testID action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:56:03]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:56:03]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:56:03]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:56:11]ghost msg : testID action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:56:11]ghost msg : testID action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:56:11]ghost msg : testID action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:56:11]ghost msg : testID action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:56:11]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:56:11]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:56:11]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:56:20]ghost msg : testID action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:56:20]ghost msg : testID action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:56:20]ghost msg : testID action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:56:20]ghost msg : testID action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:56:20]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:56:20]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:56:20]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:56:28]ghost msg : testID action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:56:28]ghost msg : testID action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:56:28]ghost msg : testID action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:56:28]ghost msg : testID action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:56:28]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:56:28]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:56:28]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:56:36]ghost msg : testID action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:59:59]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:59:59]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:59:59]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:59:59]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:59:59]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:59:59]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 06:59:59]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:08]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:08]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:08]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:08]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:08]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:08]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:08]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:14]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:14]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:14]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:14]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:14]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:14]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:14]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:23]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:23]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:23]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:23]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:23]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:23]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:23]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:30]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:30]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:30]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:30]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:30]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:30]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:30]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:38]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:38]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:38]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:38]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:38]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:38]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:38]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:45]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:45]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:45]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:45]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:45]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:45]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:45]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:00:51]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:05:26]ghost msg : Subscribe:831423998012100 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:05:26]ghost msg : Subscribe:831424017983800 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:05:26]ghost msg : Subscribe:831424019885500 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:05:26]ghost msg : Subscribe:831424021737000 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:05:26]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:05:26]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:05:26]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:05:43]ghost msg : Subscribe:831441437752900 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:05:43]ghost msg : Subscribe:831441459319700 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:05:43]ghost msg : Subscribe:831441461455100 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:05:43]ghost msg : Subscribe:831441463764500 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:05:43]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:05:43]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:05:43]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:06:03]ghost msg : Subscribe:831461508565300 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:09:50]ghost msg : Subscribe:831688117090800 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:10:10]ghost msg : Subscribe:831707948190000 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:10:10]ghost msg : Subscribe:831707968472600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:10:10]ghost msg : Subscribe:831707970528800 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:10:10]ghost msg : Subscribe:831707972777200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:10:10]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:10:10]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:10:10]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:11:29]ghost msg : Subscribe:831786848650300 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:11:29]ghost msg : Subscribe:831786869138600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:11:29]ghost msg : Subscribe:831786871050500 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:11:29]ghost msg : Subscribe:831786872822000 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:11:29]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:11:29]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:11:29]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:11:42]ghost msg : Subscribe:831800540802200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:11:42]ghost msg : Subscribe:831800560708200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:11:42]ghost msg : Subscribe:831800562692100 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:11:42]ghost msg : Subscribe:831800564476500 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:11:42]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:11:42]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:11:42]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:11:52]ghost msg : Subscribe:831810800723300 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:12:03]ghost msg : Subscribe:831821159190200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:23:55]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:23:55]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:23:55]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:23:55]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:23:55]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:23:55]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:23:55]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:19]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:19]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:19]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:19]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:19]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:19]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:19]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:32]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:32]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:32]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:32]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:32]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:32]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:32]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:43]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:43]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:43]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:43]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:43]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:43]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:43]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:52]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:52]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:52]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:52]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:52]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:52]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:52]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:59]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:59]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:59]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:59]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:59]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:59]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:24:59]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:06]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:06]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:06]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:06]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:06]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:06]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:06]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:14]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:14]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:14]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:14]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:14]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:14]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:14]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:22]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:22]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:22]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:22]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:22]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:22]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:22]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:29]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:29]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:29]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:29]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:29]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:29]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:29]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:36]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:36]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:36]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:36]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:36]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:36]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:36]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:43]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:43]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:43]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:43]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:43]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:43]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:43]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:50]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:50]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:50]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:50]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:50]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:50]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:50]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:59]ghost msg : (rule (fact (context $context)) --> (notify (context $context))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:59]ghost msg : (rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:59]ghost msg : (rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:59]ghost msg : (rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID))) action: Subscribeclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:59]ghost msg : (context "TestModel1") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:59]ghost msg : (context "TestModel2") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:25:59]ghost msg : (context "TestModel3") action: AssertFactclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:40:59]ghost msg : Subscribe:833556927775600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:40:59]ghost msg : Subscribe:833556948398000 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:40:59]ghost msg : Subscribe:833556950602800 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:40:59]ghost msg : Subscribe:833556952988200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:40:59]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:40:59]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:40:59]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:06]ghost msg : Subscribe:833564074327600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:06]ghost msg : Subscribe:833564094852300 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:06]ghost msg : Subscribe:833564097139000 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:06]ghost msg : Subscribe:833564099427500 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:06]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:06]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:06]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:13]ghost msg : Subscribe:833570930985300 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:13]ghost msg : Subscribe:833570951772600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:13]ghost msg : Subscribe:833570953908200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:13]ghost msg : Subscribe:833570955952700 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:13]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:13]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:13]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:19]ghost msg : Subscribe:833577514197200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:19]ghost msg : Subscribe:833577534822700 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:19]ghost msg : Subscribe:833577536905800 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:19]ghost msg : Subscribe:833577539030400 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:19]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:19]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:19]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:26]ghost msg : Subscribe:833583916284700 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:26]ghost msg : Subscribe:833583937060000 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:26]ghost msg : Subscribe:833583939303800 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:26]ghost msg : Subscribe:833583941413200 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:26]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:26]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:26]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:32]ghost msg : Subscribe:833590244989000 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:32]ghost msg : Subscribe:833590265132800 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:32]ghost msg : Subscribe:833590267304400 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:32]ghost msg : Subscribe:833590269622300 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:32]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:32]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:32]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:38]ghost msg : Subscribe:833596782841100 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:38]ghost msg : Subscribe:833596803778900 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:38]ghost msg : Subscribe:833596806126700 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:38]ghost msg : Subscribe:833596808638400 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:38]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:46]ghost msg : Subscribe:833604310870600 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:46]ghost msg : Subscribe:833604333107900 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:46]ghost msg : Subscribe:833604335143500 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:46]ghost msg : Subscribe:833604337084100 action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:46]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:46]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+[ExceptionLog 2021-09-02 07:41:46]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager

@@ -107,6 +107,8 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 				String content = messageObject.get("content").toString();
 				String conversationID = messageObject.get("conversationID").toString();
 				long timestamp = Long.parseLong(messageObject.get("timestamp").toString());
+				
+
 				ArbiAgentMessage agentMessage = new ArbiAgentMessage(sender, receiver,
 						AgentMessageAction.valueOf(action), content, conversationID, timestamp);
 				messageQueue.enqueue(agentMessage);
@@ -117,6 +119,8 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 				String queryID = messageObject.get("conversationID").toString();
 				LTMMessageFactory f = LTMMessageFactory.getInstance();
 				LTMMessage ltmMessage = f.newMessage(client, LTMMessageAction.valueOf(action), content, queryID);
+
+				
 				ltmMessageQueue.enqueue(ltmMessage);
 			} else if (command.startsWith("InteractionManager-Status")) {
 				String status = messageObject.get("status").toString();
@@ -213,7 +217,7 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 	}
 
 	@Override
-	public void deliver(ArbiAgentMessage message) {
+	public synchronized void deliver(ArbiAgentMessage message) {
 		try {
 			
 			
@@ -251,7 +255,7 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 			e.printStackTrace();
 		}
 	}
-	public void sendInitMessage() {
+	public synchronized  void sendInitMessage() {
 		System.out.println("inited");
 		JSONObject messageObject = new JSONObject();
 		messageObject.put("sender",brokerName);
@@ -308,7 +312,7 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 		System.out.println("router size : " + this.socketMap.size());
 	}
 	
-	public   void deliverToMonitor(ArbiAgentMessage message) {
+	public  synchronized void deliverToMonitor(ArbiAgentMessage message) {
 
 		try {
 
@@ -337,7 +341,7 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 
 	}
 
-	public  void deliverToMonitor(LTMMessage msg) {
+	public synchronized void deliverToMonitor(LTMMessage msg) {
 		try {
 
 			String receiverDestination = InteractionManager.interactionAgentURI + "/message";

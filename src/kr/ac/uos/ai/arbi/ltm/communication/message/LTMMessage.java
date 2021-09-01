@@ -15,6 +15,8 @@ public abstract class LTMMessage {
 	
 	private final ResultLock				resultLock;
 	private LTMMessage						result;
+	private boolean 						isSendingFromServer;
+	
 	
 	private class ResultLock {
 		private final Lock						lock;
@@ -46,6 +48,7 @@ public abstract class LTMMessage {
 		this.content = content;
 		this.conversationID = conversationID;
 		this.resultLock = new ResultLock();
+		this.setSendingFromServer(false);
 	}
 
 	public String getConversationID() {
@@ -87,5 +90,13 @@ public abstract class LTMMessage {
 		} finally {
 			resultLock.unlock();
 		}
+	}
+
+	public boolean isSendingFromServer() {
+		return isSendingFromServer;
+	}
+
+	public void setSendingFromServer(boolean isSendingFromServer) {
+		this.isSendingFromServer = isSendingFromServer;
 	}
 }

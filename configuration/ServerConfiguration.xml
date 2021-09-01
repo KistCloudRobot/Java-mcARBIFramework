@@ -2,7 +2,7 @@
 <ARBIFrameworkServerConfiguration>
 	<MessageBrokerType>ZeroMQ</MessageBrokerType>
 	<MessageBrokerProperty Center = "true">
-		<Host>0.0.0.0</Host>
+		<Host>127.0.0.1</Host>
 		<Port>61616</Port>
 		<Name>TestServer</Name>
 	</MessageBrokerProperty>
