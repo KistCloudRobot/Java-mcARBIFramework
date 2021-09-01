@@ -122,8 +122,11 @@ public class LTMService {
 	}
 
 	public String subscribe(String author, String rule) {
+		System.out.println("before rule add");
 		Rule r = RuleFactory.newRuleFromRuleString(author, rule);
+		System.out.println("rule added");
 		String id = subscriber.addRule(r);
+		System.out.println("befores return");
 		return id;
 	}
 
