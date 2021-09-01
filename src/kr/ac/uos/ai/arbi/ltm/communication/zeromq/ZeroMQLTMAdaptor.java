@@ -70,10 +70,10 @@ public class ZeroMQLTMAdaptor implements LTMMessageAdaptor {
 		messageObject.put("action", message.getAction().toString());
 		messageObject.put("content", message.getContent());
 		messageObject.put("conversationID", message.getConversationID());
-		
+
 		zmqProducer.sendMore("");
 		zmqProducer.send(messageObject.toJSONString());
-
+		
 	}
 
 	private class MessageRecvTask extends Thread {
@@ -97,6 +97,7 @@ public class ZeroMQLTMAdaptor implements LTMMessageAdaptor {
 					
 					while(zmqConsumer.hasReceiveMore() == true) {
 						message = zmqConsumer.recvStr();
+
 					}
 				}catch (org.zeromq.ZMQException e) {
 					System.out.println("thread terminated");
@@ -105,7 +106,8 @@ public class ZeroMQLTMAdaptor implements LTMMessageAdaptor {
 				}
 				
 				try {
-
+					
+					
 					JSONParser jsonParser = new JSONParser();
 					JSONObject messageObject = (JSONObject) jsonParser.parse(message);
 
