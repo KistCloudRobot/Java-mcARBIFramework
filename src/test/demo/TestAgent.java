@@ -6,9 +6,9 @@ import kr.ac.uos.ai.arbi.ltm.DataSource;
 public class TestAgent extends ArbiAgent{
 	DataSource ds;
 	public TestAgent() {
-		ArbiAgentExecutor.execute("tcp://0.0.0.0:61115", "agent://www.arbi.com/Lift2/ContextManager", this, 2);
+		ArbiAgentExecutor.execute("tcp://172.16.165.135:61116", "agent://www.arbi.com/Lift1/ContextManager", this, 2);
 		ds = new DataSource();
-		ds.connect("tcp://0.0.0.0:61115", "ds://www.arbi.com/Lift2/ContextManager", 2);
+		ds.connect("tcp://172.16.165.135:61116", "ds://www.arbi.com/Lift1/ContextManager", 2);
 	}
 	
 	@Override

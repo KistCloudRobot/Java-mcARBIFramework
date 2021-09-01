@@ -15,7 +15,9 @@ public class SubUnsubTest {
 				return "(ok)";
 			}
 		};
-		ArbiAgentExecutor.execute("tcp://127.0.0.1:61616", "agent://www.arbi.com/TaskManager", taskManager, Broker.ZEROMQ);
+		System.out.println("Agent start");
+		
+		ArbiAgentExecutor.execute("tcp://172.16.165.204:61115", "agent://www.arbi.com/Lift2/TaskManager", taskManager, Broker.ZEROMQ);
 
 		DataSource ds = new DataSource() {
 			@Override
@@ -24,18 +26,21 @@ public class SubUnsubTest {
 				System.out.println("Notified! : "+content);
 			}		
 		};
-		System.out.println("testing 1");
-		taskManager.send("test", "testing");
-		ds.connect("tcp://127.0.0.1:61616", "ds://www.arbi.com/TaskManager",Broker.ZEROMQ);
+		ds.connect("tcp://172.16.165.204:61115", "ds://www.arbi.com/Lift2/TaskManager",Broker.ZEROMQ);
+		System.out.println("connected");
+		String subscribeID1 = ds.subscribe("(rule (fact (context $context)) --> (notify (context $context)))");
+		String subscribeID2 = ds.subscribe("(rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp)))");
+		String subscribeID3 =ds.subscribe("(rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status)))");
+		String subscribeID4 = ds.subscribe("(rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID)))");
+
+		System.out.println("test start");
 		
-		System.out.println("conn ");
-		String subscribeID = ds.subscribe("(rule (fact (TestModel $model)) --> (notify (TestModel $model)))");
-		System.out.println("testing " + subscribeID);
+		
 		
 		try {
-			ds.assertFact("(TestModel \"TestModel1\")");
-			ds.assertFact("(TestModel \"TestModel2\")");
-			ds.assertFact("(TestModel \"TestModel3\")");
+			ds.assertFact("(context \"TestModel1\")");
+			ds.assertFact("(context \"TestModel2\")");
+			ds.assertFact("(context \"TestModel3\")");
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
@@ -44,6 +49,7 @@ public class SubUnsubTest {
 		
 		ds.close();
 		taskManager.close();
+		System.out.println("end test");
 		/*
 		Scanner in = new Scanner(System.in);
 		

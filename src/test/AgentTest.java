@@ -9,10 +9,8 @@ public class AgentTest extends ArbiAgent{
 	
 	public void onStop(){}
 	public String onRequest(String sender, String request){return "Ignored";}
+	
 	public void onData(String sender, String data){
-		
-		
-		
 		System.out.println(data + " received!");
 	}
 	public String onSubscribe(String sender, String subscribe){return "Ignored";}
@@ -20,9 +18,8 @@ public class AgentTest extends ArbiAgent{
 	public void onNotify(String sender, String notification){}
 	
 	public AgentTest(){
-		ArbiAgentExecutor.execute("tcp://127.0.0.1:61616","agent://www.arbi.com/TestAgent", this,2);
-	
-		System.out.println("agent1");
+		ArbiAgentExecutor.execute("tcp://172.16.165.135:61116","agent://www.arbi.com/Lift1/TestAgent", this,2);
+		this.send("agent://www.arbi.com/Lift1/TestAgent", "test");
 	}
 	
 	public void onStart(){
@@ -45,5 +42,6 @@ public class AgentTest extends ArbiAgent{
 	}
 	public static void main(String[] args) {
 		new AgentTest();
+		while(true);
 	}
 }
