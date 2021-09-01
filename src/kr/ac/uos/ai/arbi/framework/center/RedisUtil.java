@@ -109,16 +109,19 @@ public class RedisUtil {
 		String name = predicate.getPredicate().getName();
 		List<String> predicateKeyList = command.zrange(PredicateNamePrefix
 				+ name, 0, -1);
+		
+		PredicateContainer resultGL = null;
+		
 		for (int i = 0; i < predicateKeyList.size(); i++) {
 			
 			PredicateContainer queriedGL = queryPredicateDataByKey(predicateKeyList.get(i));
 			Binding b = predicate.getPredicate().unify(
 					queriedGL.getPredicate(), null);
 			if (b != null) {
-				return queriedGL;
+				resultGL = queriedGL;
 			}
 		}
-		return null;
+		return resultGL;
 	}
 
 	
