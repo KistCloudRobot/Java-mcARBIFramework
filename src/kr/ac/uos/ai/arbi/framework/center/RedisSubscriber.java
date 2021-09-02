@@ -106,7 +106,6 @@ public class RedisSubscriber implements RedisPubSubListener<String, String>, Run
 					System.out.println(DebugUtilities.getDate() + "RedisSubscriber checkSubscribedRules : result : " + checkResult);
 					
 				}
-				System.out.println(rule);
 				
 				if ((tempBind = evaluate(con)) != null && checkResult == true) {
 				

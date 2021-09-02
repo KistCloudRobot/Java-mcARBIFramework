@@ -233,7 +233,6 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 			String receiverName = this.getAgentName(receiverID);
 			
 			if(receiverName.equals(this.brokerName) == false) {
-				System.out.println("routing to " + receiverName);
 				sendSocket = this.socketMap.get(receiverName);
 			}else {
 				sendSocket = zmqConsumer;

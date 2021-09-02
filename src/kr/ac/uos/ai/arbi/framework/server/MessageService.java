@@ -46,23 +46,23 @@ public class MessageService{
 	}
 
 	public void send(LTMMessage message) {
-		System.out.println("[LTM Message]\t<" + message.getAction().toString() + ">\t" + message.getClient() + " : "
-				+ message.getContent());
+//		System.out.println("[LTM Message]\t<" + message.getAction().toString() + ">\t" + message.getClient() + " : "
+//				+ message.getContent());
+		
+		message.setSendingFromServer(true);
+		
+		ltmMessageQueue.enqueue(message);
+	}
+	
+	public void notify(LTMMessage message) {
 		
 		message.setSendingFromServer(true);
 		
 		ltmMessageQueue.enqueue(message);
 
-
-
-	}
-	
-	public void notify(LTMMessage message) {
-		ltmAdaptor.send(message);
 	}
 	
 	public void ltmMessageReceived(LTMMessage ltmMessage) {
-		
 		System.out.println("[LTM Message]\t<" + ltmMessage.getAction().toString() + ">\t" + ltmMessage.getClient()
 				+ " : " + ltmMessage.getContent());
 
@@ -122,8 +122,7 @@ public class MessageService{
 				ArbiAgentMessage msg = queue.blockingDequeue(null, 10);
 				if(msg != null) {
 					agentMessageReceived(msg);
-				}
-					
+				}			
 				
 			}
 			
