@@ -96,7 +96,7 @@ public abstract class LTMMessage {
 		return isSendingFromServer;
 	}
 
-	public void setSendingFromServer(boolean isSendingFromServer) {
+	public synchronized void setSendingFromServer(boolean isSendingFromServer) {
 		this.isSendingFromServer = isSendingFromServer;
 	}
 }

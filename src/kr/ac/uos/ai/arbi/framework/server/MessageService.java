@@ -45,7 +45,7 @@ public class MessageService{
 
 	}
 
-	public void send(LTMMessage message) {
+	public synchronized void send(LTMMessage message) {
 //		System.out.println("[LTM Message]\t<" + message.getAction().toString() + ">\t" + message.getClient() + " : "
 //				+ message.getContent());
 		
@@ -54,7 +54,7 @@ public class MessageService{
 		ltmMessageQueue.enqueue(message);
 	}
 	
-	public void notify(LTMMessage message) {
+	public synchronized void notify(LTMMessage message) {
 		
 		message.setSendingFromServer(true);
 		
