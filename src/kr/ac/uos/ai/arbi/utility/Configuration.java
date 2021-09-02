@@ -2,7 +2,7 @@ package kr.ac.uos.ai.arbi.utility;
 
 public class Configuration {
 	
-	private static boolean LOG_AVAILABILITY = true;
+	private static boolean LOG_AVAILABILITY = false;
 	
 	public static void setLogAvailability(boolean isAvailable) {
 		Configuration.LOG_AVAILABILITY = isAvailable;

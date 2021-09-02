@@ -106,6 +106,8 @@ public class RedisSubscriber implements RedisPubSubListener<String, String>, Run
 					System.out.println(DebugUtilities.getDate() + "RedisSubscriber checkSubscribedRules : result : " + checkResult);
 					
 				}
+				System.out.println(rule);
+				
 				if ((tempBind = evaluate(con)) != null && checkResult == true) {
 				
 					b.copy(tempBind);
@@ -141,6 +143,7 @@ public class RedisSubscriber implements RedisPubSubListener<String, String>, Run
 	private Binding evaluate(Condition con) {
 		PredicateContainer data = createContainer(null, con.toString());
 		PredicateContainer queriedData;
+		
 		try {
 			queriedData = RedisUtil.queryMatchData(data);
 		} catch (RedisKeyNotFoundException e) {

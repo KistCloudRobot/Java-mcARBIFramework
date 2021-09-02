@@ -128,8 +128,6 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 			}else if(command.startsWith("Address-List")) {
 				this.handleRouterList(messageObject);
 			}
-
-			System.out.println("Yes i am");
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			// e.printStackTrace();
@@ -148,18 +146,14 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 						
 					String message = "";
 					message = zmqConsumer.recvStr();
-					System.out.println("message rcvd " + message);
 					while(zmqConsumer.hasReceiveMore() == true) {
 						message =  zmqConsumer.recvStr();
-						System.out.println("message rcvd " + message);
 					}
 					
 					if(Configuration.getLogAvailability() == true) {
 						System.out.println(DebugUtilities.getDate() + " ZEROMQServerMessageAdaptor recvd message : " + message);
 					}
 					handleMessage(message);
-					System.out.println("message handled ");
-					
 				}
 			} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
@@ -182,11 +176,10 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 			String receiverURL = msg.getClient();
 			String receiverDestination = receiverURL + "/message";
 			
-			System.out.println("message before sent ");
 			zmqConsumer.sendMore(receiverDestination);
 			zmqConsumer.sendMore("");
 			zmqConsumer.send(messageObject.toJSONString());
-			System.out.println("message sent");
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -250,13 +243,11 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 			sendSocket.sendMore(receiverDestination);
 			sendSocket.sendMore("");
 			sendSocket.send(messageObject.toJSONString());
-			System.out.println("sent!");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 	public synchronized  void sendInitMessage() {
-		System.out.println("inited");
 		JSONObject messageObject = new JSONObject();
 		messageObject.put("sender",brokerName);
 		messageObject.put("address", this.brokerURL);
@@ -264,8 +255,6 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 
 		zmqProducer.sendMore("");
 		zmqProducer.send(messageObject.toJSONString());
-		
-		System.out.println("init msg sent");
 	}
 	
 	public String getAgentName(String input) {
@@ -295,8 +284,6 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 			JSONObject addressData = (JSONObject)whitelist.get(i);
 			String name = addressData.get("name").toString();
 			String address = addressData.get("address").toString();
-			System.out.println(name);
-			System.out.println(this.socketMap.containsKey(name));
 			
 			if(name.equals(this.brokerName) == false && this.socketMap.containsKey(name) == false) {
 				Socket newSocket = zmqContext.socket(ZMQ.DEALER);
@@ -335,7 +322,6 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 			zmqConsumer.send(messageObject.toJSONString());
 
 		} catch (Exception e) {
-			System.out.println(e.toString());
 			e.printStackTrace();
 		}
 

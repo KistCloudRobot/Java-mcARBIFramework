@@ -113,7 +113,6 @@ public class RedisUtil {
 		PredicateContainer resultGL = null;
 		
 		for (int i = 0; i < predicateKeyList.size(); i++) {
-			
 			PredicateContainer queriedGL = queryPredicateDataByKey(predicateKeyList.get(i));
 			Binding b = predicate.getPredicate().unify(
 					queriedGL.getPredicate(), null);
@@ -130,7 +129,13 @@ public class RedisUtil {
 		if (!key.startsWith(PredicatePrefix)) {
 			key = PredicatePrefix + key;
 		}
-		int size = Integer.valueOf(command.hget(key, ExpressionNumberKey));
+		String sizeString = command.hget(key, ExpressionNumberKey);
+		if (sizeString == null) {
+			throw new RedisKeyNotFoundException();
+		}
+		int size = Integer.valueOf(sizeString);
+		
+		
 		
 		ExpressionList exps = new ExpressionList();
 
@@ -157,8 +162,13 @@ public class RedisUtil {
 		}
 		GeneralizedList predicate = GLFactory.newGL(
 				command.hget(key, PredicateNameKey), exps);
-		container = new PredicateContainer(command.hget(key, AuthorKey),
-				Long.valueOf(command.hget(key, CreateTimeKey)), predicate);
+		
+		String createTimeKey = command.hget(key, CreateTimeKey);
+		if (createTimeKey == null) {
+			throw new RedisKeyNotFoundException();
+		}
+		
+		container = new PredicateContainer(command.hget(key, AuthorKey),Long.valueOf(createTimeKey), predicate);
 		
 		
 		return container;
