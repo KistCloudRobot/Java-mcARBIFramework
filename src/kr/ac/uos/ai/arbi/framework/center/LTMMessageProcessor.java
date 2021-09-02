@@ -49,7 +49,6 @@ public class LTMMessageProcessor implements LTMMessageListener, LTMNotificationH
 		String result = commandMap.get(msg.getAction()).deploy(ltmService, msg.getClient(), msg.getContent());
 		LTMMessageFactory factory = LTMMessageFactory.getInstance();
 		LTMMessage resultMSG = factory.newMessage(msg.getClient(), LTMMessageAction.Result, result,	msg.getConversationID());
-		System.out.println("result : " + resultMSG);
 		msgService.send(resultMSG);
 
 	}
