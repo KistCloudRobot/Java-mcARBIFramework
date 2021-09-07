@@ -201,7 +201,6 @@ public class McArbiServerAdaptor implements MessageDeliverAdaptor, LTMMessageAda
 					zmqConsumer.recvStr();
 					while(zmqConsumer.hasReceiveMore() == true) {
 						message =  zmqConsumer.recvStr();
-						System.out.println("on message" + message);
 					}
 					
 					handleMessage(message);
@@ -227,12 +226,11 @@ public class McArbiServerAdaptor implements MessageDeliverAdaptor, LTMMessageAda
 			String receiverURL = msg.getClient();
 			String receiverDestination = receiverURL + "/message";
 			zmqConsumer.sendMore(receiverDestination);
-			System.out.println(receiverDestination);
+
 			zmqConsumer.sendMore("");
 
 			zmqConsumer.send(messageObject.toJSONString());
-			System.out.println("message sent!! " + messageObject.toJSONString());
-			System.out.println("content : " + msg.getContent());
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

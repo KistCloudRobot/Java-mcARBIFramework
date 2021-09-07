@@ -42,7 +42,6 @@ public class MessageService{
 		if (interactionManagerStatus) {
 			deliverAdaptor.deliverToMonitor(agentMessage);
 		}
-
 	}
 
 	public synchronized void send(LTMMessage message) {
@@ -83,7 +82,6 @@ public class MessageService{
 			interactionManagerStatus = true;
 		else if (status.equals("OFF"))
 			interactionManagerStatus = false;
-
 	}
 
 	public void initialize(String serverURL, String brokerURL, String brokerName) {

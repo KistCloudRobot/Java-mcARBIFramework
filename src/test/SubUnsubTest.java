@@ -38,8 +38,8 @@ public class SubUnsubTest {
 		System.out.println("test start");
 
 		try {
-			ds.assertFact("(context \"TestModel1\")");
-			ds.assertFact("(context \"TestModel2\")");
+			ds.assertFact("(context 1)");
+			ds.assertFact("(context 2)");
 			ds.assertFact("(context \"TestModel3\")");
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
@@ -47,8 +47,6 @@ public class SubUnsubTest {
 			e.printStackTrace();
 		}
 
-		ds.close();
-		taskManager.close();
 		System.out.println("end test");
 		/*
 		 * Scanner in = new Scanner(System.in);

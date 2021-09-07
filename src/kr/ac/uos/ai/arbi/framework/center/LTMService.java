@@ -106,18 +106,25 @@ public class LTMService {
 		} catch (RedisKeyNotFoundException e) {
 			return "(failed)";
 		}
+		
+		System.out.println("isNull?" + queried);
+		System.out.println("isNull too?" + before);
+		
 		Binding b = queried.getPredicate().unify(before.getPredicate(), null);
 		after = createContainer(author, after.getPredicate().evaluate(b));
 		retractData(queried);
 		assertData(after);
-		psCommand.publish(SubscribeChannel, after.getPredicateKey());
+		
+		
+		psCommand.publish(SubscribeChannel, fact);
+
 		return "(ok)";
 	}
 
 	public String assertFact(String author, String string) {
 		PredicateContainer p = createContainer(author, string);
 		assertData(p);
-		psCommand.publish(SubscribeChannel, p.getPredicateKey());
+		psCommand.publish(SubscribeChannel, string);
 		return "(ok)";
 	}
 

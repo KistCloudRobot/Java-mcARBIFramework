@@ -160,15 +160,22 @@ public class RedisUtil {
 				exps.add(resultExpression);
 			}
 		}
-		GeneralizedList predicate = GLFactory.newGL(
-				command.hget(key, PredicateNameKey), exps);
+		String glString =  command.hget(key, PredicateNameKey);
+		if(glString == null) {
+			throw new RedisKeyNotFoundException();
+		}
+		GeneralizedList predicate = GLFactory.newGL(glString, exps);
 		
 		String createTimeKey = command.hget(key, CreateTimeKey);
 		if (createTimeKey == null) {
 			throw new RedisKeyNotFoundException();
 		}
 		
-		container = new PredicateContainer(command.hget(key, AuthorKey),Long.valueOf(createTimeKey), predicate);
+		String result = command.hget(key, AuthorKey);
+		if (result == null) {
+			throw new RedisKeyNotFoundException();
+		}
+		container = new PredicateContainer(result,Long.valueOf(createTimeKey), predicate);
 		
 		
 		return container;

@@ -164,7 +164,7 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 	}
 
 	@Override
-	public synchronized void send(LTMMessage msg) {
+	public void send(LTMMessage msg) {
 		try {
 			JSONObject messageObject = new JSONObject();
 			messageObject.put("client", msg.getClient());
@@ -186,7 +186,7 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 
 	}
 	@Override
-	public synchronized void notify(LTMMessage msg) {
+	public void notify(LTMMessage msg) {
 		try {
 			JSONObject messageObject = new JSONObject();
 			messageObject.put("client", msg.getClient());
@@ -194,7 +194,7 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 			messageObject.put("action", msg.getAction().toString());
 			messageObject.put("content", msg.getContent());
 			messageObject.put("conversationID", msg.getConversationID());
-
+			
 			String receiverURL = msg.getClient();
 			String receiverDestination = receiverURL + "/message";
 			zmqProducer.sendMore(receiverDestination);
@@ -210,7 +210,7 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 	}
 
 	@Override
-	public synchronized void deliver(ArbiAgentMessage message) {
+	public void deliver(ArbiAgentMessage message) {
 		try {
 			
 			
@@ -246,7 +246,7 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 			e.printStackTrace();
 		}
 	}
-	public synchronized  void sendInitMessage() {
+	public void sendInitMessage() {
 		JSONObject messageObject = new JSONObject();
 		messageObject.put("sender",brokerName);
 		messageObject.put("address", this.brokerURL);
@@ -298,7 +298,7 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 		System.out.println("router size : " + this.socketMap.size());
 	}
 	
-	public  synchronized void deliverToMonitor(ArbiAgentMessage message) {
+	public  void deliverToMonitor(ArbiAgentMessage message) {
 
 		try {
 
@@ -326,7 +326,7 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 
 	}
 
-	public synchronized void deliverToMonitor(LTMMessage msg) {
+	public void deliverToMonitor(LTMMessage msg) {
 		try {
 
 			String receiverDestination = InteractionManager.interactionAgentURI + "/message";
