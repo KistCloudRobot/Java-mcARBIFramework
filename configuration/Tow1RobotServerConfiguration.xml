@@ -3,7 +3,7 @@
 	<MessageBrokerType>ZeroMQ</MessageBrokerType>
 	<MessageBrokerProperty Center = "false">
 		<Host>127.0.0.1</Host>
-		<Port>61114</Port>
+		<Port>31114</Port>
 		<Name>Tow1</Name>
 	</MessageBrokerProperty>
 	<RouterProperty>

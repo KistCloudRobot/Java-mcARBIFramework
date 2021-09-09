@@ -75,7 +75,7 @@ public class RedisSubscriber implements RedisPubSubListener<String, String>, Run
 
 	private void checkSubscribedRules(Condition c) {
 		String predicateName = c.getPredicateName();
-		System.out.println("new condition : " + c.toString());
+		//System.out.println("new condition : " + c.toString());
 		if (Configuration.getLogAvailability() == true) {
 			System.out.println(DebugUtilities.getDate() + "RedisSubscriber checkSubscribedRules : predicateName : "
 					+ predicateName);

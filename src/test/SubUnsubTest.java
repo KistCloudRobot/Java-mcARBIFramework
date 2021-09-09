@@ -39,7 +39,7 @@ public class SubUnsubTest {
 
 		try {
 			ds.assertFact("(context 1)");
-			ds.assertFact("(context 2)");
+			ds.updateFact("(update (context 1) (context 2))");
 			ds.assertFact("(context \"TestModel3\")");
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {

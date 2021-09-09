@@ -176,6 +176,8 @@ public class RedisUtil {
 			throw new RedisKeyNotFoundException();
 		}
 		container = new PredicateContainer(result,Long.valueOf(createTimeKey), predicate);
+		//System.out.println("containter null? : " + container);
+		//System.out.println("containter info : " + container.getPredicateKey().toString());
 		
 		
 		return container;

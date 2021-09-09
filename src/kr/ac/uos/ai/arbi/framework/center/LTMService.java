@@ -115,8 +115,7 @@ public class LTMService {
 		retractData(queried);
 		assertData(after);
 		
-		
-		psCommand.publish(SubscribeChannel, fact);
+		psCommand.publish(SubscribeChannel, after.getPredicate().toString());
 
 		return "(ok)";
 	}
