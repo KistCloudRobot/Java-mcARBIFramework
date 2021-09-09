@@ -107,9 +107,6 @@ public class LTMService {
 			return "(failed)";
 		}
 		
-		System.out.println("isNull?" + queried);
-		System.out.println("isNull too?" + before);
-		
 		Binding b = queried.getPredicate().unify(before.getPredicate(), null);
 		after = createContainer(author, after.getPredicate().evaluate(b));
 		retractData(queried);
