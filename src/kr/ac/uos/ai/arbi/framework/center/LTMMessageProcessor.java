@@ -19,7 +19,7 @@ public class LTMMessageProcessor implements LTMMessageListener, LTMNotificationH
 
 	private ArrayBlockingQueue<LTMMessage> messageQueue = null;
 
-	private LTMService ltmService;
+	private LTMServiceInterface ltmService;
 	private MessageService msgService;
 
 	static {
@@ -36,7 +36,7 @@ public class LTMMessageProcessor implements LTMMessageListener, LTMNotificationH
 		commandMap.put(LTMMessageAction.GetLastModifiedTime, new GetLastModifiedTimeCommand());
 	}
 
-	public LTMMessageProcessor(LTMService service) {
+	public LTMMessageProcessor(LTMServiceInterface service) {
 		this.ltmService = service;
 		service.addLTMNotificationHandler(this);
 		this.messageQueue = new ArrayBlockingQueue<LTMMessage>(100);

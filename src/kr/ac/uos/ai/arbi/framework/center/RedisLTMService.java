@@ -14,13 +14,13 @@ import com.lambdaworks.redis.api.sync.RedisCommands;
 import com.lambdaworks.redis.pubsub.StatefulRedisPubSubConnection;
 import com.lambdaworks.redis.pubsub.api.async.RedisPubSubAsyncCommands;
 
-public class LTMService {
+public class RedisLTMService implements LTMServiceInterface{
 	private RedisClient queryClient;
 	private RedisCommands<String, String> command;
 	private RedisPubSubAsyncCommands<String, String> psCommand;
 	private RedisSubscriber subscriber;
 
-	public LTMService() {
+	public RedisLTMService() {
 		queryClient = RedisClient.create("redis://127.0.0.1:6379/0");
 		StatefulRedisConnection<String, String> connection = queryClient.connect();
 		StatefulRedisPubSubConnection<String, String> psConnection = queryClient.connectPubSub();
@@ -110,14 +110,16 @@ public class LTMService {
 		after = createContainer(author, after.getPredicate().evaluate(b));
 		retractData(queried);
 		assertData(after);
-		psCommand.publish(SubscribeChannel, after.getPredicateKey());
+		String afterPredicateKey = RedisUtil.PredicatePrefix + after.getPredicate().getName() + ":" + after.getCreateTime();
+		psCommand.publish(SubscribeChannel, afterPredicateKey);
 		return "(ok)";
 	}
 
 	public String assertFact(String author, String string) {
 		PredicateContainer p = createContainer(author, string);
 		assertData(p);
-		psCommand.publish(SubscribeChannel, p.getPredicateKey());
+		String predicateKey = RedisUtil.PredicatePrefix + p.getPredicate().getName() + ":" + p.getCreateTime();
+		psCommand.publish(SubscribeChannel, predicateKey);
 		return "(ok)";
 	}
 

@@ -1,14 +1,16 @@
 package kr.ac.uos.ai.arbi.framework.center.command;
 
-import kr.ac.uos.ai.arbi.framework.center.LTMService;
+import kr.ac.uos.ai.arbi.framework.center.LTMServiceInterface;
+import kr.ac.uos.ai.arbi.framework.center.RedisLTMService;
 
 public class AssertFactCommand extends LTMCommand{
 
 
+
 	@Override
-	public String deploy(LTMService service, String author, String fact) {
-		System.out.println("AssertFactCommand: Before service.assertFact");
-		return  service.assertFact(author, fact);
+	public String deploy(LTMServiceInterface service, String author, String fact) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

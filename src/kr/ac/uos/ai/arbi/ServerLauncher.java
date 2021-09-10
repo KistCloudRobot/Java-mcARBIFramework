@@ -18,7 +18,7 @@ import kr.ac.uos.ai.arbi.agent.ArbiAgentExecutor;
 import kr.ac.uos.ai.arbi.framework.ArbiFrameworkServer;
 import kr.ac.uos.ai.arbi.framework.broker.ActiveMQBroker;
 import kr.ac.uos.ai.arbi.framework.broker.ApolloBroker;
-import kr.ac.uos.ai.arbi.framework.center.LTMService;
+import kr.ac.uos.ai.arbi.framework.center.RedisLTMService;
 import kr.ac.uos.ai.arbi.framework.center.RedisUtil;
 import kr.ac.uos.ai.arbi.interaction.InteractionManager;
 import kr.ac.uos.ai.arbi.interaction.InteractionManagerBrokerConfiguration;
