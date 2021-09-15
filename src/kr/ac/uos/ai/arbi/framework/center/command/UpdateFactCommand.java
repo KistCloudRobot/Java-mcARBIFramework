@@ -6,8 +6,7 @@ public class UpdateFactCommand extends LTMCommand {
 
 	@Override
 	public String deploy(LTMServiceInterface service, String author, String fact) {
-		// TODO Auto-generated method stub
-		return null;
+		return service.updateFact(author, fact);
 	}
 
 }

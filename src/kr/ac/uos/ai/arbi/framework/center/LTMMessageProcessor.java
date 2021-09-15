@@ -45,6 +45,8 @@ public class LTMMessageProcessor implements LTMMessageListener, LTMNotificationH
 
 	@Override
 	public synchronized void messageRecieved(LTMMessage msg) {
+		
+		
 		System.out.println(msg.getClient().toString() + " : " + msg.getContent());
 		String result = commandMap.get(msg.getAction()).deploy(ltmService, msg.getClient(), msg.getContent());
 		LTMMessageFactory factory = LTMMessageFactory.getInstance();

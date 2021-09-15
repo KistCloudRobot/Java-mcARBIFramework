@@ -1,5 +1,6 @@
 package kr.ac.uos.ai.arbi.framework;
 
+import kr.ac.uos.ai.arbi.framework.center.InMemoryLTMService;
 import kr.ac.uos.ai.arbi.framework.center.LTMMessageProcessor;
 import kr.ac.uos.ai.arbi.framework.center.LTMServiceInterface;
 import kr.ac.uos.ai.arbi.framework.center.RedisLTMService;
@@ -14,7 +15,7 @@ public class ArbiFrameworkServer {
 	
 	public ArbiFrameworkServer(int brokerType,String brokerName) {
 		this.brokerType = brokerType;
-		ltmService = new RedisLTMService();
+		ltmService = new InMemoryLTMService();
 		
 		
 		LTMMessageProcessor msgProcessor = new LTMMessageProcessor(ltmService);

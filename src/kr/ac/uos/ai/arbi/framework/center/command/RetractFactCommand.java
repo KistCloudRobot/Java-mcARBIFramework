@@ -8,7 +8,6 @@ public class RetractFactCommand extends LTMCommand{
 
 	@Override
 	public String deploy(LTMServiceInterface service, String author, String fact) {
-		// TODO Auto-generated method stub
-		return null;
+		return service.retractFact(author, fact);
 	}
 }
