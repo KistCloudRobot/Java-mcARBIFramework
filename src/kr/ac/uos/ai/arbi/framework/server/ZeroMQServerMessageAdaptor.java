@@ -68,8 +68,8 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 
 		zmqConsumer.bind(brokerURL);
 		
-		zmqConsumer.setRcvHWM(1000000);
-		zmqConsumer.setSndHWM(1000000);
+		//zmqConsumer.setRcvHWM(1000000);
+		//zmqConsumer.setSndHWM(1000000);
 		socketMap = new HashMap<String,Socket>();
 		
 		zmqProducer = zmqContext.socket(ZMQ.DEALER);
@@ -143,17 +143,14 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 						
 					String message = "";
 					message = zmqConsumer.recvStr();
-					System.out.println("message rcvd " + message);
 					while(zmqConsumer.hasReceiveMore() == true) {
 						message =  zmqConsumer.recvStr();
-						System.out.println("message rcvd " + message);
 					}
 					
 					if(Configuration.getLogAvailability() == true) {
 						System.out.println(DebugUtilities.getDate() + " ZEROMQServerMessageAdaptor recvd message : " + message);
 					}
 					handleMessage(message);
-					System.out.println("message handled ");
 					
 				}
 			} catch (InterruptedException e) {
@@ -177,11 +174,9 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 			String receiverURL = msg.getClient();
 			String receiverDestination = receiverURL + "/message";
 			
-			System.out.println("message before sent ");
 			zmqConsumer.sendMore(receiverDestination);
 			zmqConsumer.sendMore("");
 			zmqConsumer.send(messageObject.toJSONString());
-			System.out.println("message sent");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

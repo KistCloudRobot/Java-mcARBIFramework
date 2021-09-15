@@ -34,12 +34,12 @@ public class ZeroMQAgentAdaptor implements ArbiMessageAdaptor {
 		zmqProducer = zmqContext.socket(ZMQ.DEALER);
 		zmqProducer.connect(broker);
 		zmqProducer.setIdentity(arbiAgentURI.getBytes());
-		zmqProducer.setSndHWM(0);
+		//zmqProducer.setSndHWM(0);
 		
 		zmqConsumer = zmqContext.socket(ZMQ.DEALER);
 		zmqConsumer.connect(broker);
 		zmqConsumer.setIdentity((arbiAgentURI + "/message").getBytes());
-		zmqConsumer.setRcvHWM(0);
+		//zmqConsumer.setRcvHWM(0);
 		
 		messageRecvTask = new MessageRecvTask();
 		messageRecvTask.start();
