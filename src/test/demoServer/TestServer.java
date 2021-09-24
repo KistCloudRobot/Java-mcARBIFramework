@@ -6,13 +6,13 @@ import java.util.Map;
 
 import kr.ac.uos.ai.arbi.framework.ArbiFrameworkServer;
 
-public class Server {
+public class TestServer {
 	public static void main(String[] args) {
 		try {
 			String ip = InetAddress.getLocalHost().getHostAddress();
-			String centerURL = "tcp://192.168.0.2:61616";
-			String brokerURL = "tcp://" + ip + ":61316";
-			String brokerName = System.getenv("AGENT");
+			String centerURL = "tcp://" + ip + ":61616";
+			String brokerURL = "tcp://172.16.165.204:61316";
+			String brokerName = "agent://www.arbi.com/Test/TestAgent";
 			
 			ArbiFrameworkServer server = new ArbiFrameworkServer(2, brokerName);
 			server.start(centerURL, brokerURL);

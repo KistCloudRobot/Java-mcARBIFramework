@@ -1402,3 +1402,16 @@
 [ExceptionLog 2021-09-15 00:59:04]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TestAgent
 [ExceptionLog 2021-09-15 00:59:06]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TestAgent
 [ExceptionLog 2021-09-15 00:59:08]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TestAgent
+[ExceptionLog 2021-09-24 16:40:31]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Test/TestAgent101
+[ExceptionLog 2021-09-24 16:40:31]ghost msg : (error "retractFail"  action: Resultclient : ds://www.arbi.com/Test/TestAgent101
+[ExceptionLog 2021-09-24 16:41:22]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Test/TestAgent101
+[ExceptionLog 2021-09-24 16:41:22]ghost msg : (error "retractFail"  action: Resultclient : ds://www.arbi.com/Test/TestAgent101
+[ExceptionLog 2021-09-24 16:44:05]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Test/TestAgent101
+[ExceptionLog 2021-09-24 16:44:05]ghost msg : (test "test1") action: Resultclient : ds://www.arbi.com/Test/TestAgent101
+[ExceptionLog 2021-09-24 16:44:05]ghost msg : (error) action: Resultclient : ds://www.arbi.com/Test/TestAgent101
+[ExceptionLog 2021-09-24 16:54:46]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Test/TestAgent101
+[ExceptionLog 2021-09-24 16:54:46]ghost msg : (test "test1") action: Resultclient : ds://www.arbi.com/Test/TestAgent101
+[ExceptionLog 2021-09-24 16:54:46]ghost msg : (error) action: Resultclient : ds://www.arbi.com/Test/TestAgent101
+[ExceptionLog 2021-09-24 16:55:15]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Test/TestAgent101
+[ExceptionLog 2021-09-24 16:55:15]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Test/TestAgent101
+[ExceptionLog 2021-09-24 16:55:15]ghost msg : (test "test2") action: Resultclient : ds://www.arbi.com/Test/TestAgent101

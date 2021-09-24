@@ -139,7 +139,7 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 			try {
 				while (true) {
 
-					Thread.sleep(1);
+					Thread.sleep(5);
 						
 					String message = "";
 					message = zmqConsumer.recvStr();

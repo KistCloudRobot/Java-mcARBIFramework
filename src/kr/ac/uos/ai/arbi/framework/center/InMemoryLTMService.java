@@ -10,6 +10,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 import kr.ac.uos.ai.arbi.framework.center.RedisSubscriber.HandleSubscriptionWork;
 import kr.ac.uos.ai.arbi.model.Binding;
 import kr.ac.uos.ai.arbi.model.BindingFactory;
+import kr.ac.uos.ai.arbi.model.GeneralizedList;
 import kr.ac.uos.ai.arbi.model.rule.Rule;
 import kr.ac.uos.ai.arbi.model.rule.RuleFactory;
 import kr.ac.uos.ai.arbi.model.rule.action.Action;
@@ -147,26 +148,18 @@ public class InMemoryLTMService implements LTMServiceInterface{
 
 	@Override
 	public String updateFact(String author, String fact) {
-		String result = retractFact(author,fact);
-		String result2 = assertFact(author,fact);
+		
+		PredicateContainer container = new PredicateContainer(author,System.currentTimeMillis(),fact);
+		GeneralizedList gl1 = container.getPredicate().getExpression(0).asGeneralizedList();
+		GeneralizedList gl2 = container.getPredicate().getExpression(1).asGeneralizedList();
+		
+		String result = retractFact(author,gl1.toString());
+		String result2 = assertFact(author,gl2.toString());
 		
 		StringBuilder finalResult = new StringBuilder();
-		finalResult.append("(error ");
-		boolean isErrored = false;
-		if(result.equals("(error)")) {
-			finalResult.append("\"retractFail\" ");
-			isErrored = true;
-		}
-		if(result2.equals("(error)")){
-			isErrored = true;
-			finalResult.append("\"assertFail\")");
-		}
-		
-		if(isErrored == false) {
-			return "(ok)";
-		}else {
-			return finalResult.toString();
-		}
+
+		return "(ok)";
+
 	}
 
 	@Override
