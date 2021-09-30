@@ -11,8 +11,8 @@ public class TestServer {
 		try {
 			String ip = InetAddress.getLocalHost().getHostAddress();
 			String centerURL = "tcp://" + ip + ":61616";
-			String brokerURL = "tcp://172.16.165.204:61316";
-			String brokerName = "agent://www.arbi.com/Test/TestAgent";
+			String brokerURL = "tcp://127.0.1.1:61316";
+			String brokerName = "Lift1";
 			
 			ArbiFrameworkServer server = new ArbiFrameworkServer(2, brokerName);
 			server.start(centerURL, brokerURL);

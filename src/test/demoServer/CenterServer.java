@@ -10,7 +10,7 @@ public class CenterServer {
 	public static void main(String[] args) {
 		try {
 			String ip = InetAddress.getLocalHost().getHostAddress();
-			String centerURL = "tcp://" + ip + ":61616";
+			String centerURL = "tcp://" + System.getenv("JMS_CENTER");
 			
 			ArbiFrameworkServer server = new ArbiFrameworkServer(4, "Center");
 			server.start(centerURL, centerURL);

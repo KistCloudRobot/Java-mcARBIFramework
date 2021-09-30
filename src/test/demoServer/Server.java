@@ -10,8 +10,8 @@ public class Server {
 	public static void main(String[] args) {
 		try {
 			String ip = InetAddress.getLocalHost().getHostAddress();
-			String centerURL = "tcp://192.168.0.2:61616";
-			String brokerURL = "tcp://" + ip + ":61316";
+			String centerURL = "tcp://" + System.getenv("JMS_CENTER");
+			String brokerURL = "tcp://" + System.getenv("JMS_BROKER");
 			String brokerName = System.getenv("AGENT");
 			
 			ArbiFrameworkServer server = new ArbiFrameworkServer(2, brokerName);
