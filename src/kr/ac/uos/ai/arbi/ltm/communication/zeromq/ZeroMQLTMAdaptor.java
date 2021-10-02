@@ -38,11 +38,12 @@ public class ZeroMQLTMAdaptor implements LTMMessageAdaptor {
 		System.out.println(broker);
 		zmqProducer.connect(broker);
 		zmqProducer.setIdentity((clientURI).getBytes());
-
+		//zmqProducer.setSndHWM(0);
 		zmqConsumer = zmqContext.socket(ZMQ.DEALER);
 		zmqConsumer.connect(broker);
 		zmqConsumer.setIdentity((clientURI + "/message").getBytes());
-
+		//zmqConsumer.setRcvHWM(0);
+		
 		messageRecvTask = new MessageRecvTask();
 		isAlive = true;
 		messageRecvTask.start();

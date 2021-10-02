@@ -1367,6 +1367,7 @@
 [ExceptionLog 2021-09-01 06:27:39]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/ContextManager
 [ExceptionLog 2021-09-01 06:27:40]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/ContextManager
 [ExceptionLog 2021-09-01 06:27:41]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/ContextManager
+<<<<<<< HEAD
 [ExceptionLog 2021-09-01 23:33:21]ghost msg : Subscribe:810099727273100 action: Resultclient : ds://www.arbi.com/Tow1/TaskManager
 [ExceptionLog 2021-09-01 23:33:21]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Tow1/TaskManager
 [ExceptionLog 2021-09-01 23:33:21]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Tow1/TaskManager
@@ -3043,3 +3044,53 @@
 [ExceptionLog 2021-09-09 14:43:34]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
 [ExceptionLog 2021-09-09 14:43:34]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
 [ExceptionLog 2021-09-09 14:43:34]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Lift2/TaskManager
+=======
+[ExceptionLog 2021-09-14 14:46:05]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TaskManager
+[ExceptionLog 2021-09-14 14:46:51]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TaskManager
+[ExceptionLog 2021-09-14 14:49:14]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TaskManager
+[ExceptionLog 2021-09-14 16:12:02]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TaskManager
+[ExceptionLog 2021-09-14 16:12:37]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TaskManager
+[ExceptionLog 2021-09-14 16:12:37]ghost msg : (error) action: Resultclient : ds://www.arbi.com/TaskManager
+[ExceptionLog 2021-09-14 16:15:43]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TaskManager
+[ExceptionLog 2021-09-14 16:19:19]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TaskManager
+[ExceptionLog 2021-09-14 16:19:19]ghost msg : (Robot_position (time 4.6701536E8) (position 8.211853 -9.55127)) action: Resultclient : ds://www.arbi.com/TaskManager
+[ExceptionLog 2021-09-15 00:14:24]ghost msg : Subscribe:1631632464940 action: Resultclient : ds://www.arbi.com/TestAgent
+[ExceptionLog 2021-09-15 00:14:24]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TestAgent
+[ExceptionLog 2021-09-15 00:14:27]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TestAgent
+[ExceptionLog 2021-09-15 00:14:33]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TestAgent
+[ExceptionLog 2021-09-15 00:34:06]ghost msg : Subscribe:1631633646273 action: Resultclient : ds://www.arbi.com/TestAgent
+[ExceptionLog 2021-09-15 00:37:44]ghost msg : Subscribe:1631633864471 action: Resultclient : ds://www.arbi.com/TestAgent
+[ExceptionLog 2021-09-15 00:37:44]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TestAgent
+[ExceptionLog 2021-09-15 00:37:45]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TestAgent
+[ExceptionLog 2021-09-15 00:37:46]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TestAgent
+[ExceptionLog 2021-09-15 00:38:46]ghost msg : Subscribe:1631633926308 action: Resultclient : ds://www.arbi.com/TestAgent
+[ExceptionLog 2021-09-15 00:38:46]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TestAgent
+[ExceptionLog 2021-09-15 00:38:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TestAgent
+[ExceptionLog 2021-09-15 00:39:02]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TestAgent
+[ExceptionLog 2021-09-15 00:40:45]ghost msg : Subscribe:1631634045500 action: Resultclient : ds://www.arbi.com/TestAgent
+[ExceptionLog 2021-09-15 00:51:18]ghost msg : Subscribe:1631634678449 action: Resultclient : ds://www.arbi.com/TestAgent
+[ExceptionLog 2021-09-15 00:51:25]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TestAgent
+[ExceptionLog 2021-09-15 00:54:43]ghost msg : Subscribe:1631634883973 action: Resultclient : ds://www.arbi.com/TestAgent
+[ExceptionLog 2021-09-15 00:54:44]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TestAgent
+[ExceptionLog 2021-09-15 00:54:44]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TestAgent
+[ExceptionLog 2021-09-15 00:54:45]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TestAgent
+[ExceptionLog 2021-09-15 00:55:01]ghost msg : Subscribe:1631634901369 action: Resultclient : ds://www.arbi.com/TestAgent
+[ExceptionLog 2021-09-15 00:55:01]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TestAgent
+[ExceptionLog 2021-09-15 00:59:04]ghost msg : Subscribe:1631635144265 action: Resultclient : ds://www.arbi.com/TestAgent
+[ExceptionLog 2021-09-15 00:59:04]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TestAgent
+[ExceptionLog 2021-09-15 00:59:06]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TestAgent
+[ExceptionLog 2021-09-15 00:59:08]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TestAgent
+[ExceptionLog 2021-09-24 16:40:31]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Test/TestAgent101
+[ExceptionLog 2021-09-24 16:40:31]ghost msg : (error "retractFail"  action: Resultclient : ds://www.arbi.com/Test/TestAgent101
+[ExceptionLog 2021-09-24 16:41:22]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Test/TestAgent101
+[ExceptionLog 2021-09-24 16:41:22]ghost msg : (error "retractFail"  action: Resultclient : ds://www.arbi.com/Test/TestAgent101
+[ExceptionLog 2021-09-24 16:44:05]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Test/TestAgent101
+[ExceptionLog 2021-09-24 16:44:05]ghost msg : (test "test1") action: Resultclient : ds://www.arbi.com/Test/TestAgent101
+[ExceptionLog 2021-09-24 16:44:05]ghost msg : (error) action: Resultclient : ds://www.arbi.com/Test/TestAgent101
+[ExceptionLog 2021-09-24 16:54:46]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Test/TestAgent101
+[ExceptionLog 2021-09-24 16:54:46]ghost msg : (test "test1") action: Resultclient : ds://www.arbi.com/Test/TestAgent101
+[ExceptionLog 2021-09-24 16:54:46]ghost msg : (error) action: Resultclient : ds://www.arbi.com/Test/TestAgent101
+[ExceptionLog 2021-09-24 16:55:15]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Test/TestAgent101
+[ExceptionLog 2021-09-24 16:55:15]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Test/TestAgent101
+[ExceptionLog 2021-09-24 16:55:15]ghost msg : (test "test2") action: Resultclient : ds://www.arbi.com/Test/TestAgent101
+>>>>>>> refs/remotes/origin/origin

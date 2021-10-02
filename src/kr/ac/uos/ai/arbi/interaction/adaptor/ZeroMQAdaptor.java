@@ -71,9 +71,6 @@ public class ZeroMQAdaptor extends Thread implements InteractionMessageAdaptor {
 		
 		zmqRouter.sendMore(monitorID);
 		zmqRouter.sendMore("");
-		
-		System.out.println("message sent ! " + monitorID + " "+ message);
-		
 		zmqRouter.send(message);
 	}
 

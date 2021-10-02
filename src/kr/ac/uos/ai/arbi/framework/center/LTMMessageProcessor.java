@@ -19,7 +19,7 @@ public class LTMMessageProcessor implements LTMMessageListener, LTMNotificationH
 
 	private ArrayBlockingQueue<LTMMessage> messageQueue = null;
 
-	private LTMService ltmService;
+	private LTMServiceInterface ltmService;
 	private MessageService msgService;
 	
 	static {
@@ -36,7 +36,7 @@ public class LTMMessageProcessor implements LTMMessageListener, LTMNotificationH
 		commandMap.put(LTMMessageAction.GetLastModifiedTime, new GetLastModifiedTimeCommand());
 	}
 
-	public LTMMessageProcessor(LTMService service) {
+	public LTMMessageProcessor(LTMServiceInterface service) {
 		this.ltmService = service;
 		service.addLTMNotificationHandler(this);
 
@@ -45,7 +45,10 @@ public class LTMMessageProcessor implements LTMMessageListener, LTMNotificationH
 
 	@Override
 	public synchronized void messageRecieved(LTMMessage msg) {
+<<<<<<< HEAD
 //		System.out.println(msg.getClient().toString() + " : " + msg.getContent());
+=======
+>>>>>>> refs/remotes/origin/origin
 		String result = commandMap.get(msg.getAction()).deploy(ltmService, msg.getClient(), msg.getContent());
 		LTMMessageFactory factory = LTMMessageFactory.getInstance();
 		LTMMessage resultMSG = factory.newMessage(msg.getClient(), LTMMessageAction.Result, result,	msg.getConversationID());

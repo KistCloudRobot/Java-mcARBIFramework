@@ -2,12 +2,20 @@
 <ARBIFrameworkServerConfiguration>
 	<MessageBrokerType>ZeroMQ</MessageBrokerType>
 	<MessageBrokerProperty Center = "false">
+<<<<<<< HEAD
 		<Host>127.0.0.1</Host>
+=======
+		<Host>172.16.165.204</Host>
+>>>>>>> refs/remotes/origin/origin
 		<Port>61316</Port>
 		<Name>Local</Name>
 	</MessageBrokerProperty>
 	<RouterProperty>
+<<<<<<< HEAD
 		<Host>127.0.0.1</Host>
+=======
+		<Host>172.16.165.204</Host>
+>>>>>>> refs/remotes/origin/origin
 		<Port>61616</Port>
 	</RouterProperty>
 	<InteractionManagerStart>false</InteractionManagerStart>

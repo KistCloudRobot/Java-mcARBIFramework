@@ -8,13 +8,12 @@ public class PredicateContainer {
 	private final String				author;
 	private final long					createTime;
 	private final GeneralizedList		predicate;
-	private final String 				predicatePrefix;
-	
+
 	public PredicateContainer(String author, long createTime, GeneralizedList predicate) {
 		this.author = author;
 		this.createTime = createTime;
 		this.predicate = predicate;
-		this.predicatePrefix = RedisUtil.PredicatePrefix;
+
 	}
 	public PredicateContainer(String author, long createTime, String glString) {
 		GeneralizedList gl = null;
@@ -24,7 +23,6 @@ public class PredicateContainer {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		this.predicatePrefix = RedisUtil.PredicatePrefix;
 		this.author = author;
 		this.createTime = createTime;
 		this.predicate = gl;
@@ -39,7 +37,5 @@ public class PredicateContainer {
 		return predicate;
 	}
 	
-	public String getPredicateKey() {
-		return  predicatePrefix + predicate.getName() + ":" + createTime;
-	}
+
 }

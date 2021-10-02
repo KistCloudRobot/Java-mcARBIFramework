@@ -26,13 +26,18 @@ public class AgentTest extends ArbiAgent{
 	
 	public void onStart(){
 		System.out.println("start");
+<<<<<<< HEAD
 		this.send("agent://www.arbi.com/Lift1/BehaviorInterface", "test");
 		/*
+=======
+		
+		
+>>>>>>> refs/remotes/origin/origin
 		DataSource dc = new DataSource();
-		dc.connect("tcp://localhost:5671", "ds://www.arbi.com/TaskManager", Broker.ZEROMQ);
+		dc.connect("tcp://127.0.0.1:61616", "ds://www.arbi.com/TaskManager", Broker.ZEROMQ);
 		dc.assertFact("(Robot_position (time 467015366.818170342) (position 8.2118526332695385 -9.5512692050022654))");
 		System.out.println(dc.retrieveFact("(Robot_position $time $position)"));
-		 */
+		
 		
 	}
 	public String onQuery(String sender, String query){

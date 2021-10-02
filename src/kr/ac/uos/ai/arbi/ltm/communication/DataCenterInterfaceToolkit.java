@@ -3,6 +3,7 @@ package kr.ac.uos.ai.arbi.ltm.communication;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.LinkedBlockingQueue;
 
 import kr.ac.uos.ai.arbi.ltm.LTMMessageAction;
 import kr.ac.uos.ai.arbi.agent.datastream.DataStreamToolkit;
@@ -19,7 +20,7 @@ public class DataCenterInterfaceToolkit extends Thread {
 	private final LTMMessageQueue queue;
 	private ExecutorService messageThreadPool;
 	private final DataSource dataSource;
-	private final ArrayList<LTMMessage> waitingResult;
+	private final LinkedBlockingQueue<LTMMessage> waitingResult;
 	private final LTMMessageAdaptor adaptor;
 
 	private final LTMMessageFactory factory;
@@ -34,7 +35,7 @@ public class DataCenterInterfaceToolkit extends Thread {
 		} else {
 			this.adaptor = new ActiveMQAdaptor(brokerURL, dataSourceURI, queue);
 		}
-		this.waitingResult = new ArrayList<LTMMessage>();
+		this.waitingResult = new LinkedBlockingQueue<LTMMessage>();
 		this.messageThreadPool = Executors.newFixedThreadPool(nThread);
 		this.start();
 	}
