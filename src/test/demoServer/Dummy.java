@@ -9,12 +9,20 @@ import kr.ac.uos.ai.arbi.ltm.DataSource;
 public class Dummy extends ArbiAgent{
 	
 	public void onStop(){}
-	public String onRequest(String sender, String request){return "Ignored";}
+	public String onRequest(String sender, String request){
+		return "Ignored";
+	}
 	
-	public void onData(String sender, String data){}
+	public void onData(String sender, String data){
+		System.out.println("on data\t: " + data);
+	}
+	
+	public void onNotify(String sender, String notification){
+		System.out.println("on notify\t: " + notification);
+	}
+	
 	public String onSubscribe(String sender, String subscribe){return "Ignored";}
 	public void onUnsubscribe(String sender, String subID){}
-	public void onNotify(String sender, String notification){}
 	
 	public Dummy(){}
 	
