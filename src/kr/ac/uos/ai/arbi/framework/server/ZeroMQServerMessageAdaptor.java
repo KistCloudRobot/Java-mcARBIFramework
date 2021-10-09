@@ -146,18 +146,18 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 						
 					String message = "";
 					message = zmqConsumer.recvStr();
+					System.out.println(DebugUtilities.getDate() + " ZEROMQServerMessageAdaptor recvd message : " + message);
+					
 					while(zmqConsumer.hasReceiveMore() == true) {
+						Thread.sleep(5);
 						message =  zmqConsumer.recvStr();
-					}
-					
-					if(Configuration.getLogAvailability() == true) {
 						System.out.println(DebugUtilities.getDate() + " ZEROMQServerMessageAdaptor recvd message : " + message);
+						
 					}
-					handleMessage(message);
-<<<<<<< HEAD
-=======
 					
->>>>>>> refs/remotes/origin/origin
+					
+					handleMessage(message);
+
 				}
 			} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
@@ -183,10 +183,8 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 			zmqConsumer.sendMore(receiverDestination);
 			zmqConsumer.sendMore("");
 			zmqConsumer.send(messageObject.toJSONString());
-<<<<<<< HEAD
-			
-=======
->>>>>>> refs/remotes/origin/origin
+
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -245,10 +243,16 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 				sendSocket = zmqConsumer;
 				receiverDestination += "/message";
 			}
+			if(sendSocket == null) {
+				this.zmqConsumer.sendMore(receiverDestination);
+				this.zmqConsumer.sendMore("");
+				this.zmqConsumer.send(messageObject.toJSONString());
+			}else {
+				sendSocket.sendMore(receiverDestination);
+				sendSocket.sendMore("");
+				sendSocket.send(messageObject.toJSONString());
+			}
 			
-			sendSocket.sendMore(receiverDestination);
-			sendSocket.sendMore("");
-			sendSocket.send(messageObject.toJSONString());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -14,12 +14,16 @@ public class AgentTest2 extends ArbiAgent{
 	public void onUnsubscribe(String sender, String subID){}
 	public void onNotify(String sender, String notification){}
 	
-	AgentTest2(){
+	public AgentTest2(){
 		ArbiAgentExecutor.execute("tcp://127.0.0.1:61616","testAgent2", this,2);
 		System.out.println("agent2");
+		
+		this.send("tester", "testing");
 	}
 	
 	public void onStart(){
+		
+		
 		/*
 		
 		DataSource dc = new DataSource();
@@ -37,12 +41,7 @@ public class AgentTest2 extends ArbiAgent{
 	public void onData(String sender, String data) {
 		System.out.println("start " + data);
 		System.out.println(Thread.currentThread().getId());
-		try {
-			Thread.sleep(10000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 		System.out.println("data end");
 		
 	}

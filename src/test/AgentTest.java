@@ -18,25 +18,31 @@ public class AgentTest extends ArbiAgent{
 	public void onNotify(String sender, String notification){}
 	
 	public AgentTest(){
-		ArbiAgentExecutor.execute("tcp://127.0.0.1:61116","agent://www.arbi.com/Lift1/TestAgent", this,2);	
+		ArbiAgentExecutor.execute("tcp://127.0.0.1:61114","agent://www.arbi.com/Tow1/TestAgent", this,2);	
+		
+		System.out.println("start");
+
+		this.send("agent://www.arbi.com/BehaviorInterface", "test");
+	
+		DataSource dc = new DataSource();
+		dc.connect("tcp://127.0.0.1:61614", "ds://www.arbi.com/TaskManager", Broker.ZEROMQ);
+		
+		
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		dc.assertFact("(Robot_position (time 467015366.818170342) (position 8.2118526332695385 -9.5512692050022654))");
+		System.out.println(dc.retrieveFact("(Robot_position $time $position)"));
 	}
 	
 	
 	
 	
 	public void onStart(){
-		System.out.println("start");
-<<<<<<< HEAD
-		this.send("agent://www.arbi.com/Lift1/BehaviorInterface", "test");
-		/*
-=======
 		
-		
->>>>>>> refs/remotes/origin/origin
-		DataSource dc = new DataSource();
-		dc.connect("tcp://127.0.0.1:61616", "ds://www.arbi.com/TaskManager", Broker.ZEROMQ);
-		dc.assertFact("(Robot_position (time 467015366.818170342) (position 8.2118526332695385 -9.5512692050022654))");
-		System.out.println(dc.retrieveFact("(Robot_position $time $position)"));
 		
 		
 	}

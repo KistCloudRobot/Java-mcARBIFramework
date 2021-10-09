@@ -44,11 +44,8 @@ public class MessageService{
 		}
 	}
 
-<<<<<<< HEAD
 	public synchronized void send(LTMMessage message) {
-=======
-	public void send(LTMMessage message) {
->>>>>>> refs/remotes/origin/origin
+
 //		System.out.println("[LTM Message]\t<" + message.getAction().toString() + ">\t" + message.getClient() + " : "
 //				+ message.getContent());
 		
