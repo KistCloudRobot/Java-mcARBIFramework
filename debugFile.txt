@@ -6168,3 +6168,9 @@
 [ExceptionLog 2021-10-09 12:21:39]ghost msg : (ok) action: Resultclient : assertAgentDS0
 [ExceptionLog 2021-10-09 15:25:21]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TaskManager
 [ExceptionLog 2021-10-09 15:25:21]ghost msg : (Robot_position (time 4.6701536E8) (position 8.211853 -9.55127)) action: Resultclient : ds://www.arbi.com/TaskManager
+[ExceptionLog 2021-10-13 13:47:46]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/testAgent
+[ExceptionLog 2021-10-13 13:47:46]ghost msg : (Robot_position (time 4.6701536E8) (position 8.211853 -9.55127)) action: Resultclient : ds://www.arbi.com/testAgent
+[ExceptionLog 2021-10-13 13:48:08]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/testAgent
+[ExceptionLog 2021-10-13 13:48:08]ghost msg : (Robot_position (time 4.6701536E8) (position 8.211853 -9.55127)) action: Resultclient : ds://www.arbi.com/testAgent
+[ExceptionLog 2021-10-13 13:49:18]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/testAgent
+[ExceptionLog 2021-10-13 13:49:18]ghost msg : (Robot_position (time 4.6701536E8) (position 8.211853 -9.55127)) action: Resultclient : ds://www.arbi.com/testAgent

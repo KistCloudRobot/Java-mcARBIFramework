@@ -25,7 +25,7 @@ public class AgentTest extends ArbiAgent{
 		this.send("agent://www.arbi.com/BehaviorInterface", "test");
 	
 		DataSource dc = new DataSource();
-		dc.connect("tcp://127.0.0.1:61614", "ds://www.arbi.com/TaskManager", Broker.ZEROMQ);
+		dc.connect("tcp://127.0.0.1:61114", "ds://www.arbi.com/testAgent", Broker.ZEROMQ);
 		
 		
 		try {
