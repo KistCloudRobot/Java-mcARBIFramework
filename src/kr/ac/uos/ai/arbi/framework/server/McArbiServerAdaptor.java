@@ -51,9 +51,10 @@ public class McArbiServerAdaptor implements MessageDeliverAdaptor, LTMMessageAda
 		zmqConsumer = zmqContext.socket(ZMQ.ROUTER);
 		System.out.println("consumer server url : " + serverURL);
 		System.out.println("center run");
+		zmqConsumer.setReceiveTimeOut(2000);
 		zmqConsumer.bind(serverURL);
 		socketMap = new HashMap<String,Socket>();
-	
+
 		messageRecvTask = new MessageRecvTask();
 		messageRecvTask.setName("ServerAdapterThread");
 		messageRecvTask.start();
@@ -196,14 +197,17 @@ public class McArbiServerAdaptor implements MessageDeliverAdaptor, LTMMessageAda
 			try {
 				while (true) {
 
-					Thread.sleep(1);
+					Thread.sleep(10);
 					String message = "";
-					zmqConsumer.recvStr();
+					message = zmqConsumer.recvStr();
+					System.out.println("message rcved : " + message);
 					while(zmqConsumer.hasReceiveMore() == true) {
+						Thread.sleep(10);
 						message =  zmqConsumer.recvStr();
+						System.out.println("message rcved inside : " + message);
 					}
-					
-					handleMessage(message);
+					if(message != null)
+						handleMessage(message);
 				}
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block

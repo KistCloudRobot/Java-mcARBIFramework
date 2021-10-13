@@ -65,7 +65,7 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 		zmqContext = ZMQ.context(1);
 		zmqConsumer = zmqContext.socket(ZMQ.ROUTER);
 		System.out.println("consumer server url : " + brokerURL);
-
+		zmqConsumer.setReceiveTimeOut(2000);
 		zmqConsumer.bind(brokerURL);
 		
 		//zmqConsumer.setRcvHWM(1000000);
@@ -142,21 +142,21 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 			try {
 				while (true) {
 
-					Thread.sleep(5);
+					Thread.sleep(10);
 						
 					String message = "";
 					message = zmqConsumer.recvStr();
 					System.out.println(DebugUtilities.getDate() + " ZEROMQServerMessageAdaptor recvd message : " + message);
 					
 					while(zmqConsumer.hasReceiveMore() == true) {
-						Thread.sleep(5);
+						Thread.sleep(10);
 						message =  zmqConsumer.recvStr();
 						System.out.println(DebugUtilities.getDate() + " ZEROMQServerMessageAdaptor recvd message : " + message);
 						
 					}
 					
-					
-					handleMessage(message);
+					if(message != null)
+						handleMessage(message);
 
 				}
 			} catch (InterruptedException e) {
