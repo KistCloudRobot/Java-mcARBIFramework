@@ -82,7 +82,7 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 		messageRecvTask = new MessageRecvTask();
 		messageRecvTask.setName("serverAdapterThread");
 		messageRecvTask.start();
-		
+		//testing test
 
 	}
 
