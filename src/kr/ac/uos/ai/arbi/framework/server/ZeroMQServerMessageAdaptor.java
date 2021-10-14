@@ -157,7 +157,7 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 					
 					if(message != null)
 						handleMessage(message);
-
+					//testing
 				}
 			} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
