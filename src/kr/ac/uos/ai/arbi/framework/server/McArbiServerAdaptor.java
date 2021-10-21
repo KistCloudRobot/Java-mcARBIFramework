@@ -123,7 +123,6 @@ public class McArbiServerAdaptor implements MessageDeliverAdaptor, LTMMessageAda
 		try {
 			JSONParser jsonParser = new JSONParser();
 			JSONObject messageObject = (JSONObject) jsonParser.parse(message);
-			System.out.println(message);
 			if (messageObject == null)
 				return;
 
@@ -200,11 +199,9 @@ public class McArbiServerAdaptor implements MessageDeliverAdaptor, LTMMessageAda
 					Thread.sleep(10);
 					String message = "";
 					message = zmqConsumer.recvStr();
-					System.out.println("message rcved : " + message);
 					while(zmqConsumer.hasReceiveMore() == true) {
 						Thread.sleep(10);
 						message =  zmqConsumer.recvStr();
-						System.out.println("message rcved inside : " + message);
 					}
 					if(message != null)
 						handleMessage(message);
@@ -310,7 +307,6 @@ public class McArbiServerAdaptor implements MessageDeliverAdaptor, LTMMessageAda
 			zmqConsumer.send(messageObject.toJSONString());
 
 		} catch (Exception e) {
-			System.out.println(e.toString());
 			e.printStackTrace();
 		}
 

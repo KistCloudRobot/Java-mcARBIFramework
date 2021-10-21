@@ -35,7 +35,6 @@ public class ZeroMQLTMAdaptor implements LTMMessageAdaptor {
 
 		zmqContext = ZMQ.context(1);
 		zmqProducer = zmqContext.socket(ZMQ.DEALER);
-		System.out.println(broker);
 		zmqProducer.connect(broker);
 		zmqProducer.setIdentity((clientURI).getBytes());
 		//zmqProducer.setSndHWM(0);
@@ -95,10 +94,8 @@ public class ZeroMQLTMAdaptor implements LTMMessageAdaptor {
 					
 					
 					text = zmqConsumer.recvStr();
-					System.out.println("rcvd : " + text);
 					while(zmqConsumer.hasReceiveMore() == true) {
 						message = zmqConsumer.recvStr();
-						System.out.println("rcvd : " + message);
 					}
 				}catch (org.zeromq.ZMQException e) {
 					System.out.println("thread terminated");

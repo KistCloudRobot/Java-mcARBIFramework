@@ -36,7 +36,7 @@ public class AgentExecuteTest {
 		@Override
 		public void onNotify(String content) {
 			
-			System.out.println("Notified! : "+content);
+//			System.out.println("Notified! : "+content);
 		}
 			
 		};

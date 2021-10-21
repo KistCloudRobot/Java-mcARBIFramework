@@ -49,11 +49,11 @@ public class ZeroMQAdaptor extends Thread implements InteractionMessageAdaptor {
 	public void run() {
 		while (true) {
 			String message = zmqRouter.recvStr();
-			System.out.println("receivedMessage : " + message);
+//			System.out.println("receivedMessage : " + message);
 			message = zmqRouter.recvStr();
 			
 			message = zmqRouter.recvStr();
-			System.out.println("receivedMessage : " + message);
+//			System.out.println("receivedMessage : " + message);
 			queue.enqueue(message);
 		}
 	}
