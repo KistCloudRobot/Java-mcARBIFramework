@@ -28,14 +28,15 @@ public class AgentTest extends ArbiAgent{
 	
 	
 	public void onStart(){
-		
-		System.out.println(this.request("agent://www.arbi.com/Local/NavigationController", "(Move (actionID \"Lift2_1\") \"AMR_LIFT2\" 209 208)"));
+		System.out.println("here");
+		this.send("agent://www.arbi.com/Local/TestAgent", "(hi)");
+		System.out.println(this.query("agent://www.arbi.com/Local/TestAgent", "(hi)"));
 	}
 	public String onQuery(String sender, String query){
 		return "(ok)";
 		
 	}
 	public static void main(String[] args) {
-		ArbiAgentExecutor.execute("tcp://127.0.0.1:61115", "agent://www.arbi.com/Lift2/TaskManager", new AgentTest(), 2);
+		ArbiAgentExecutor.execute("tcp://172.16.165.204:61313", "agent://www.arbi.com/Local/TestAgent", new AgentTest(), 2);
 	}
 }

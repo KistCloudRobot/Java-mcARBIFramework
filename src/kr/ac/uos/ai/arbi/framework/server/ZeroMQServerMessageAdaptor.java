@@ -142,14 +142,14 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 			try {
 				while (true) {
 
-					Thread.sleep(10);
+					Thread.sleep(2);
 						
 					String message = "";
 					message = zmqConsumer.recvStr();
 //					System.out.println(DebugUtilities.getDate() + " ZEROMQServerMessageAdaptor recvd message : " + message);
 					
 					while(zmqConsumer.hasReceiveMore() == true) {
-						Thread.sleep(10);
+						Thread.sleep(2);
 						message =  zmqConsumer.recvStr();
 //						System.out.println(DebugUtilities.getDate() + " ZEROMQServerMessageAdaptor recvd message : " + message);
 						
@@ -239,12 +239,11 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 			
 			if(receiverName.equals(this.brokerName) == false) {
 				sendSocket = this.socketMap.get(receiverName);
-			}else {
-				sendSocket = zmqConsumer;
-				receiverDestination += "/message";
 			}
+			
+			
 			if(sendSocket == null) {
-				this.zmqConsumer.sendMore(receiverDestination);
+				this.zmqConsumer.sendMore(receiverDestination + "/message");
 				this.zmqConsumer.sendMore("");
 				this.zmqConsumer.send(messageObject.toJSONString());
 			}else {
@@ -281,7 +280,7 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 		this.socketMap.put(serverName,dealer);
 	}
 	
-	public void route(String serverName,String message) {
+	public void route(String serverName, String message) {
 		socketMap.get(serverName).send(message);
 		System.out.println("routed : " + serverName +  " : " + message);
 	}

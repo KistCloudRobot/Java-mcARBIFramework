@@ -35,7 +35,7 @@ public class AllocationTest extends ArbiAgent{
 	
 	public String onQuery(String sender, String query){return "Ignored";}
 	public static void main(String[] args) {
-		ArbiAgentExecutor.execute("tcp://127.0.0.1:61316","agent://www.arbi.com/Local/TaskManager", new AllocationTest(), 2);	
+		ArbiAgentExecutor.execute("tcp://172.16.165.204:61316","agent://www.arbi.com/Local/TaskManager", new AllocationTest(), 2);	
 		while(true);
 	}
 }
