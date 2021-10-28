@@ -8,8 +8,8 @@ import kr.ac.uos.ai.arbi.framework.ArbiFrameworkServer;
 
 public class Lift2Server {
 	public static void main(String[] args) {
-		String centerURL = "tcp://172.16.165.204:61616";
-		String brokerURL = "tcp://172.16.165.204:61115";
+		String centerURL = "tcp://127.0.0.1:61616";
+		String brokerURL = "tcp://127.0.0.1:61115";
 		String brokerName = "Lift2";
 		
 		ArbiFrameworkServer server = new ArbiFrameworkServer(2, brokerName);

@@ -29,14 +29,14 @@ public class AgentTest extends ArbiAgent{
 	
 	public void onStart(){
 		System.out.println("here");
-		this.send("agent://www.arbi.com/Local/TestAgent", "(hi)");
-		System.out.println(this.query("agent://www.arbi.com/Local/TestAgent", "(hi)"));
+		//this.request("agent://www.arbi.com/Lift2/BehaviorInterface", "(unload (actionID \"11\") 19)");
+		System.out.println(this.request("agent://www.arbi.com/Lift2/TestAgent2", "(hi)"));
 	}
 	public String onQuery(String sender, String query){
 		return "(ok)";
 		
 	}
 	public static void main(String[] args) {
-		ArbiAgentExecutor.execute("tcp://172.16.165.204:61313", "agent://www.arbi.com/Local/TestAgent", new AgentTest(), 2);
+		ArbiAgentExecutor.execute("tcp://localhost:62116", "agent://www.arbi.com/Lift2/TestAgent2", new AgentTest(), 2);
 	}
 }

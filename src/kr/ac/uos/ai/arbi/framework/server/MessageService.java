@@ -62,8 +62,8 @@ public class MessageService{
 	}
 	
 	public void ltmMessageReceived(LTMMessage ltmMessage) {
-		System.out.println("[LTM Message]\t<" + ltmMessage.getAction().toString() + ">\t" + ltmMessage.getClient()
-				+ " : " + ltmMessage.getContent());
+	//	System.out.println("[LTM Message]\t<" + ltmMessage.getAction().toString() + ">\t" + ltmMessage.getClient()
+	//			+ " : " + ltmMessage.getContent());
 
 		if (interactionManagerStatus) {
 			deliverAdaptor.deliverToMonitor(ltmMessage);
