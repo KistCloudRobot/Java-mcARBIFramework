@@ -115,8 +115,6 @@ public class RedisSubscriber implements RedisPubSubListener<String, String>, Run
 				if(initBind != null && checkResult == true) {
 					b.copy(initBind);
 				}
-				System.out.println("b : " + b.toString());
-				System.out.println("init : " + initBind.toString());
 				if(initBind == null && tempBind == null)
 				{
 					conditionSatisfied = false;
