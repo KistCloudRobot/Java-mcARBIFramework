@@ -3,6 +3,7 @@ package kr.ac.uos.ai.arbi.agent.communication.zeromq;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.zeromq.SocketType;
 import org.zeromq.ZMQ;
 import org.zeromq.ZMQ.Context;
 import org.zeromq.ZMQ.Socket;
@@ -31,12 +32,12 @@ public class ZeroMQAgentAdaptor implements ArbiMessageAdaptor {
 		zmqContext = ZMQ.context(1);
 		this.broker = broker;
 		
-		zmqProducer = zmqContext.socket(ZMQ.DEALER);
+		zmqProducer = zmqContext.socket(SocketType.DEALER);
 		zmqProducer.connect(broker);
 		zmqProducer.setIdentity(arbiAgentURI.getBytes());
 		//zmqProducer.setSndHWM(0);
 		
-		zmqConsumer = zmqContext.socket(ZMQ.DEALER);
+		zmqConsumer = zmqContext.socket(SocketType.DEALER);
 		zmqConsumer.connect(broker);
 		zmqConsumer.setIdentity((arbiAgentURI + "/message").getBytes());
 		//zmqConsumer.setRcvHWM(0);
@@ -50,7 +51,7 @@ public class ZeroMQAgentAdaptor implements ArbiMessageAdaptor {
 	
 	public void setSocketSize(int size) {
 		for(int i = 0; i < size; i++) {
-			zmqProducer = zmqContext.socket(ZMQ.DEALER);
+			zmqProducer = zmqContext.socket(SocketType.DEALER);
 			zmqProducer.connect(broker);
 			zmqProducer.setIdentity((arbiAgentURI + Integer.toString(i)).getBytes());
 			

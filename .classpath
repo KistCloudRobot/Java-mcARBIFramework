@@ -32,7 +32,6 @@
 	<classpathentry kind="lib" path="lib/rxjava-1.1.6.jar"/>
 	<classpathentry kind="lib" path="lib/slf4j-api-1.7.13.jar"/>
 	<classpathentry kind="lib" path="lib/activemq-stomp-5.14.0.jar"/>
-	<classpathentry kind="lib" path="lib/jeromq-0.4.0.jar" sourcepath="C:/Users/Hong/AppData/Local/Temp/decompiler/source/jeromq-0.4.0-sources.jar"/>
 	<classpathentry kind="lib" path="lib/apollo/activemq-jaas-5.7.0.jar"/>
 	<classpathentry kind="lib" path="lib/apollo/airline-0.6.jar"/>
 	<classpathentry kind="lib" path="lib/apollo/apollo-amqp-1.7.1.jar"/>
@@ -104,5 +103,6 @@
 	<classpathentry kind="lib" path="lib/javaee-api-8.0.1-b5.jar"/>
 	<classpathentry kind="lib" path="lib/javax.mail-1.6.2.jar"/>
 	<classpathentry kind="lib" path="lib/javax.xml.bind.jar"/>
+	<classpathentry kind="lib" path="lib/jeromq-0.5.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

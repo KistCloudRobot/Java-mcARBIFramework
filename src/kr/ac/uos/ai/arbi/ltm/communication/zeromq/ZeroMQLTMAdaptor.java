@@ -8,6 +8,7 @@ import javax.jms.Session;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.zeromq.SocketType;
 import org.zeromq.ZMQ;
 import org.zeromq.ZMQ.Context;
 import org.zeromq.ZMQ.Socket;
@@ -34,11 +35,11 @@ public class ZeroMQLTMAdaptor implements LTMMessageAdaptor {
 		this.queue = queue;
 
 		zmqContext = ZMQ.context(1);
-		zmqProducer = zmqContext.socket(ZMQ.DEALER);
+		zmqProducer = zmqContext.socket(SocketType.DEALER);
 		zmqProducer.connect(broker);
 		zmqProducer.setIdentity((clientURI).getBytes());
 		//zmqProducer.setSndHWM(0);
-		zmqConsumer = zmqContext.socket(ZMQ.DEALER);
+		zmqConsumer = zmqContext.socket(SocketType.DEALER);
 		zmqConsumer.connect(broker);
 		zmqConsumer.setIdentity((clientURI + "/message").getBytes());
 		//zmqConsumer.setRcvHWM(0);

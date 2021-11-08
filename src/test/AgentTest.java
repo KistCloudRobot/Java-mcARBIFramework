@@ -30,13 +30,17 @@ public class AgentTest extends ArbiAgent{
 	public void onStart(){
 		System.out.println("here");
 		//this.request("agent://www.arbi.com/Lift2/BehaviorInterface", "(unload (actionID \"11\") 19)");
-		System.out.println(this.request("agent://www.arbi.com/Lift2/TestAgent2", "(hi)"));
+		DataSource ds = new DataSource();
+		ds.connect("tcp://127.0.0.1:61313", "ds://www.arbi.com/Local/TestAgent2",Broker.ZEROMQ);
+		//ds.assertFact("(context (PersonCall \"muyaho\" \"station19\" \"Storing\"))");
+		System.out.println("asserted");
+		this.send("agent://www.arbi.com/Local/MapManager", "(testing)");
 	}
 	public String onQuery(String sender, String query){
 		return "(ok)";
 		
 	}
 	public static void main(String[] args) {
-		ArbiAgentExecutor.execute("tcp://localhost:62116", "agent://www.arbi.com/Lift2/TestAgent2", new AgentTest(), 2);
+		ArbiAgentExecutor.execute("tcp://127.0.0.1:61313", "agent://www.arbi.com/Local/TestAgent2", new AgentTest(), 2);
 	}
 }

@@ -6174,3 +6174,20 @@
 [ExceptionLog 2021-10-13 13:48:08]ghost msg : (Robot_position (time 4.6701536E8) (position 8.211853 -9.55127)) action: Resultclient : ds://www.arbi.com/testAgent
 [ExceptionLog 2021-10-13 13:49:18]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/testAgent
 [ExceptionLog 2021-10-13 13:49:18]ghost msg : (Robot_position (time 4.6701536E8) (position 8.211853 -9.55127)) action: Resultclient : ds://www.arbi.com/testAgent
+[ExceptionLog 2021-11-03 20:53:46]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Local/TestAgent2
+[ExceptionLog 2021-11-03 20:57:20]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Local/TestAgent2
+[ExceptionLog 2021-11-03 20:58:44]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Local/TestAgent2
+[ExceptionLog 2021-11-04 15:50:59]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Local/TestAgent2
+[ExceptionLog 2021-11-04 16:25:11]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Local/TestAgent2
+[ExceptionLog 2021-11-04 16:27:24]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Local/TestAgent2
+[ExceptionLog 2021-11-05 22:00:22]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Local/TestAgent2
+[ExceptionLog 2021-11-05 22:11:14]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Local/TestAgent2
+[ExceptionLog 2021-11-05 22:17:36]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Local/TestAgent2
+[ExceptionLog 2021-11-05 22:20:54]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Local/TestAgent2
+[ExceptionLog 2021-11-05 22:25:13]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Local/TestAgent2
+[ExceptionLog 2021-11-05 22:26:51]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Local/TestAgent2
+[ExceptionLog 2021-11-05 22:55:25]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Local/TestAgent2
+[ExceptionLog 2021-11-05 22:56:44]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Local/TestAgent2
+[ExceptionLog 2021-11-08 13:45:08]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Local/TestAgent2
+[ExceptionLog 2021-11-08 14:08:31]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Local/TestAgent2
+[ExceptionLog 2021-11-08 14:35:49]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/Local/TestAgent2

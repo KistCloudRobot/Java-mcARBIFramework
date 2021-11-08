@@ -16,6 +16,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.zeromq.SocketType;
 import org.zeromq.ZMQ;
 import org.zeromq.ZMQ.Context;
 import org.zeromq.ZMQ.Socket;
@@ -31,7 +32,6 @@ import kr.ac.uos.ai.arbi.ltm.communication.LTMMessageQueue;
 import kr.ac.uos.ai.arbi.ltm.communication.message.LTMMessage;
 import kr.ac.uos.ai.arbi.utility.Configuration;
 import kr.ac.uos.ai.arbi.utility.DebugUtilities;
-import zmq.Poller;
 
 public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMessageAdaptor {
 	private Context zmqContext;
@@ -63,7 +63,7 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 		this.centerURL = centerURL;
 		this.brokerURL = brokerURL;
 		zmqContext = ZMQ.context(1);
-		zmqConsumer = zmqContext.socket(ZMQ.ROUTER);
+		zmqConsumer = zmqContext.socket(SocketType.ROUTER);
 		System.out.println("consumer server url : " + brokerURL);
 		zmqConsumer.setReceiveTimeOut(200);
 		zmqConsumer.bind(brokerURL);
@@ -72,7 +72,7 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 		//zmqConsumer.setSndHWM(1000000);
 		socketMap = new HashMap<String,Socket>();
 		
-		zmqProducer = zmqContext.socket(ZMQ.DEALER);
+		zmqProducer = zmqContext.socket(SocketType.DEALER);
 		zmqProducer.setIdentity(this.brokerName.getBytes());
 		System.out.println("connected to center " + centerURL );
 		zmqProducer.connect(centerURL);
@@ -275,7 +275,7 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 		
 	}
 	public void connectRouter(String serverName, String ipAddress) {
-		Socket dealer = this.zmqContext.socket(ZMQ.DEALER);
+		Socket dealer = this.zmqContext.socket(SocketType.DEALER);
 		dealer.connect(ipAddress);
 		this.socketMap.put(serverName,dealer);
 	}
@@ -295,7 +295,7 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 			String address = addressData.get("address").toString();
 			
 			if(name.equals(this.brokerName) == false && this.socketMap.containsKey(name) == false) {
-				Socket newSocket = zmqContext.socket(ZMQ.DEALER);
+				Socket newSocket = zmqContext.socket(SocketType.DEALER);
 				newSocket.setIdentity(this.brokerName.getBytes());
 				newSocket.connect(address);
 				

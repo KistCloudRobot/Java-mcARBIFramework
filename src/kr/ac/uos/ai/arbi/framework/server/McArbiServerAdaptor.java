@@ -7,6 +7,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.zeromq.SocketType;
 import org.zeromq.ZMQ;
 import org.zeromq.ZMQ.Context;
 import org.zeromq.ZMQ.Socket;
@@ -48,7 +49,7 @@ public class McArbiServerAdaptor implements MessageDeliverAdaptor, LTMMessageAda
 	public void initialize(String serverURL,String brokerURL) {
 
 		zmqContext = ZMQ.context(1);
-		zmqConsumer = zmqContext.socket(ZMQ.ROUTER);
+		zmqConsumer = zmqContext.socket(SocketType.ROUTER);
 		System.out.println("consumer server url : " + serverURL);
 		System.out.println("center run");
 		zmqConsumer.setReceiveTimeOut(2000);
@@ -68,7 +69,7 @@ public class McArbiServerAdaptor implements MessageDeliverAdaptor, LTMMessageAda
 	}
 	
 	public void routerConnected(String serverName, String ipAddress) {
-		Socket dealer = this.zmqContext.socket(ZMQ.DEALER);
+		Socket dealer = this.zmqContext.socket(SocketType.DEALER);
 		
 		dealer.connect(ipAddress);
 		dealer.setIdentity("center".getBytes());
@@ -108,7 +109,7 @@ public class McArbiServerAdaptor implements MessageDeliverAdaptor, LTMMessageAda
 	}
 	
 	public void connectRouter(String serverName, String ipAddress) {
-		Socket dealer = this.zmqContext.socket(ZMQ.DEALER);
+		Socket dealer = this.zmqContext.socket(SocketType.DEALER);
 		dealer.connect(ipAddress);
 		this.socketMap.put(serverName,dealer);
 	}
