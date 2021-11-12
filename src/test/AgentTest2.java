@@ -15,15 +15,15 @@ public class AgentTest2 extends ArbiAgent{
 	public void onNotify(String sender, String notification){}
 	
 	public AgentTest2(){
-		ArbiAgentExecutor.execute("tcp://127.0.0.1:61616","testAgent2", this,2);
+		ArbiAgentExecutor.execute("tcp://127.0.0.1:61412","agent://www.arbi.com/Tow2/testAgent2", this,2);
 		System.out.println("agent2");
 		
-		this.send("tester", "testing");
+		this.send("agent://www.arbi.com/Tow2/TaskManager", "(MoveResult (actionID \"Tow2_3\") \"success\")");
 	}
 	
 	public void onStart(){
 		
-		
+		//System.out.println(request("agent://www.arbi.com/Lift2/BehaviorInterface", "(move (actionID \"1\") (path 227 222))"));
 		/*
 		
 		DataSource dc = new DataSource();

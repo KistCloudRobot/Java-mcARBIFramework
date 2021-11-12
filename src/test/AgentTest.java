@@ -32,9 +32,29 @@ public class AgentTest extends ArbiAgent{
 		//this.request("agent://www.arbi.com/Lift2/BehaviorInterface", "(unload (actionID \"11\") 19)");
 		DataSource ds = new DataSource();
 		ds.connect("tcp://127.0.0.1:61313", "ds://www.arbi.com/Local/TestAgent2",Broker.ZEROMQ);
-		//ds.assertFact("(context (PersonCall \"muyaho\" \"station19\" \"Storing\"))");
+		//String result = this.query("noReceiver", "anyquery");
+		//System.out.println("result : " + result);
+		ds.assertFact("(context (PersonCall \"call001\" \"station22\" \"Unstoring\"))");
+
+		try {
+			Thread.sleep(100);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		ds.assertFact("(context (PersonCall \"call002\" \"station19\" \"Storing\"))");
+		
+		try {
+			Thread.sleep(100);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		ds.assertFact("(context (PersonCall \"call003\" \"station22\" \"PrepareUnstoring\"))");
 		System.out.println("asserted");
-		this.send("agent://www.arbi.com/Local/MapManager", "(testing)");
+		//this.send("agent://www.arbi.com/Local/TaskAllocator", "(testing)");
 	}
 	public String onQuery(String sender, String query){
 		return "(ok)";

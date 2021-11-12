@@ -84,6 +84,9 @@ public abstract class ArbiAgent {
 	}
 
 	public String onQuery(String sender, String query) {
+		System.out.println("on query called : " + sender + "  " + query);
+		
+		
 		return "Ignored";
 	}
 

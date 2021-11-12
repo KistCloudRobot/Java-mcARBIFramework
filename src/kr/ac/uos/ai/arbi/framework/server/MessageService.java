@@ -1,5 +1,6 @@
 package kr.ac.uos.ai.arbi.framework.server;
 
+import kr.ac.uos.ai.arbi.agent.AgentMessageAction;
 import kr.ac.uos.ai.arbi.agent.ArbiAgentMessage;
 import kr.ac.uos.ai.arbi.agent.communication.ArbiMessageQueue;
 import kr.ac.uos.ai.arbi.ltm.communication.LTMMessageQueue;
@@ -35,8 +36,10 @@ public class MessageService{
 	}
 
 	public void agentMessageReceived(ArbiAgentMessage agentMessage) {
-		System.out.println("[Agent Message]\t<" + agentMessage.getAction().toString() + ">\t" + agentMessage.getSender()
-				+ " --> " + agentMessage.getReceiver() + " : " + agentMessage.getContent());
+		if(agentMessage.getAction() != AgentMessageAction.Notify) {
+			System.out.println("[Agent Message]\t<" + agentMessage.getAction().toString() + ">\t" + agentMessage.getSender()
+					+ " --> " + agentMessage.getReceiver() + " : " + agentMessage.getContent());
+		}
 		deliverAdaptor.deliver(agentMessage);
 		
 		if (interactionManagerStatus) {
@@ -45,8 +48,8 @@ public class MessageService{
 	}
 
 	public synchronized void send(LTMMessage message) {
-		System.out.println("[LTM Message]\t<" + message.getAction().toString() + ">\t" + message.getClient() + " : "
-				+ message.getContent());
+//		System.out.println("[LTM Message]\t<" + message.getAction().toString() + ">\t" + message.getClient() + " : "
+//				+ message.getContent());
 		
 		message.setSendingFromServer(true);
 		
@@ -62,8 +65,8 @@ public class MessageService{
 	}
 	
 	public void ltmMessageReceived(LTMMessage ltmMessage) {
-	//	System.out.println("[LTM Message]\t<" + ltmMessage.getAction().toString() + ">\t" + ltmMessage.getClient()
-	//			+ " : " + ltmMessage.getContent());
+//		System.out.println("[LTM Message]\t<" + ltmMessage.getAction().toString() + ">\t" + ltmMessage.getClient()
+//				+ " : " + ltmMessage.getContent());
 
 		if (interactionManagerStatus) {
 			deliverAdaptor.deliverToMonitor(ltmMessage);

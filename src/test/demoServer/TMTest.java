@@ -26,14 +26,14 @@ public class TMTest extends ArbiAgent{
 	
 	@Override
 	public void onStart() {
-		String result1 = this.request(NCAddress, "(Move (actionID \"Lift1_1\") \"AMR_LIFT1\" 209 213)");
+		String result1 = this.request(NCAddress, "(Move (actionID \"Lift1_1\") \"AMR_LIFT1\" 209 1)");
 
 		// goal request message (Move (actionID $id) $robotID $start $end)
 		// goal response message (MoveResult (actionID $id) $robotID $result))
 		// $result is "success" or "fail"
 		
 		System.out.println(result1);
-		String result2 = this.request(NCAddress, "(Move (actionID \"Lift2_1\") \"AMR_LIFT2\" 222 229)");
+		String result2 = this.request(NCAddress, "(Move (actionID \"Lift2_1\") \"AMR_LIFT2\" 222 19)");
 
 		System.out.println(result2);
 	}
