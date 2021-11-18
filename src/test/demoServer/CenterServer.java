@@ -8,7 +8,7 @@ import kr.ac.uos.ai.arbi.framework.ArbiFrameworkServer;
 
 public class CenterServer {
 	public static void main(String[] args) {
-		String centerURL = "tcp://127.0.0.1:61616";
+		String centerURL = "tcp://192.168.0.14:61616";
 		
 		ArbiFrameworkServer server = new ArbiFrameworkServer(4, "Center");
 		server.start(centerURL, centerURL);

@@ -1,11 +1,13 @@
 package test;
 
+import java.util.Scanner;
+
 import kr.ac.uos.ai.arbi.Broker;
 import kr.ac.uos.ai.arbi.agent.ArbiAgent;
 import kr.ac.uos.ai.arbi.agent.ArbiAgentExecutor;
 import kr.ac.uos.ai.arbi.ltm.DataSource;
 
-public class AgentTest extends ArbiAgent{
+public class AgentTest3 extends ArbiAgent{
 	
 	public void onStop(){}
 	public String onRequest(String sender, String request){
@@ -21,7 +23,7 @@ public class AgentTest extends ArbiAgent{
 	public void onUnsubscribe(String sender, String subID){}
 	public void onNotify(String sender, String notification){}
 	
-	public AgentTest(){
+	public AgentTest3(){
 	}
 	
 	
@@ -34,7 +36,9 @@ public class AgentTest extends ArbiAgent{
 		ds.connect("tcp://192.168.0.14:61313", "ds://www.arbi.com/Local/TestAgent2",Broker.ZEROMQ);
 		//String result = this.query("noReceiver", "anyquery");
 		//System.out.println("result : " + result);
-		ds.assertFact("(context (PersonCall \"call001\" \"station22\" \"Unstoring\"))");
+		
+		Scanner in = new Scanner(System.in);
+		ds.assertFact("(context (PersonCall \"call001\" \"station19\" \"Storing\"))");
 
 		try {
 			Thread.sleep(100);
@@ -43,7 +47,8 @@ public class AgentTest extends ArbiAgent{
 			e.printStackTrace();
 		}
 		
-		ds.assertFact("(context (PersonCall \"call002\" \"station18\" \"PrepareStoring\"))");
+		in.nextLine();
+		ds.assertFact("(context (PersonCall \"call002\" \"station22\" \"PrepareUnstoring\"))");
 		
 		try {
 			Thread.sleep(100);
@@ -51,8 +56,8 @@ public class AgentTest extends ArbiAgent{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		ds.assertFact("(context (PersonCall \"call003\" \"station22\" \"PrepareUnstoring\"))");
+		in.nextLine();
+		ds.assertFact("(context (PersonCall \"call003\" \"station22\" \"Unstoring\"))");
 		System.out.println("asserted");
 		//this.send("agent://www.arbi.com/Local/TaskAllocator", "(testing)");
 	}
@@ -61,6 +66,6 @@ public class AgentTest extends ArbiAgent{
 		
 	}
 	public static void main(String[] args) {
-		ArbiAgentExecutor.execute("tcp://192.168.0.14:61313", "agent://www.arbi.com/Local/TestAgent2", new AgentTest(), 2);
+		ArbiAgentExecutor.execute("tcp://192.168.0.14:61313", "agent://www.arbi.com/Local/TestAgent2", new AgentTest3(), 2);
 	}
 }

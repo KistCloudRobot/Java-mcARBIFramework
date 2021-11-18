@@ -20,13 +20,13 @@ public class MessageService{
 	private ArbiMessageQueue arbiMessageQueue;
 	private ArbiAgentMessageService agentMessageService;
 	private LTMMessageService ltmMessageService;
-	private boolean isRunning = true;
+	private boolean isRunning = false;
 	
 	public MessageService(LTMMessageListener listener, int brokerType) {
 		this.ltmListener = listener;
 		this.brokerType = brokerType;
 		ltmAdaptor = null;
-		interactionManagerStatus = true;
+		interactionManagerStatus = false;
 		arbiMessageQueue = new ArbiMessageQueue();
 		ltmMessageQueue = new LTMMessageQueue();	
 		
