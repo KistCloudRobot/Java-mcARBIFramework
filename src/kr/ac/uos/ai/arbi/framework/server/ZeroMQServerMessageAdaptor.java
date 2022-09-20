@@ -146,12 +146,12 @@ public class ZeroMQServerMessageAdaptor implements MessageDeliverAdaptor, LTMMes
 						
 					String message = "";
 					message = zmqConsumer.recvStr();
-//					System.out.println(DebugUtilities.getDate() + " ZEROMQServerMessageAdaptor recvd message : " + message);
+					//System.out.println(DebugUtilities.getDate() + " ZEROMQServerMessageAdaptor recvd message : " + message);
 					
 					while(zmqConsumer.hasReceiveMore() == true) {
 						Thread.sleep(1);
 						message =  zmqConsumer.recvStr();
-//						System.out.println(DebugUtilities.getDate() + " ZEROMQServerMessageAdaptor recvd message : " + message);
+						//System.out.println(DebugUtilities.getDate() + " ZEROMQServerMessageAdaptor recvd message : " + message);
 						
 					}
 					

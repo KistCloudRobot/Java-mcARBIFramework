@@ -86,7 +86,6 @@ public class ZeroMQLTMAdaptor implements LTMMessageAdaptor {
 				try {
 					Thread.sleep(1);
 				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 				String text = "";
@@ -126,7 +125,6 @@ public class ZeroMQLTMAdaptor implements LTMMessageAdaptor {
 					}
 
 				} catch (ParseException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 
@@ -137,7 +135,6 @@ public class ZeroMQLTMAdaptor implements LTMMessageAdaptor {
 
 	@Override
 	public void notify(LTMMessage msg) {
-		// TODO Auto-generated method stub
 		
 	}
 

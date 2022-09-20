@@ -216,7 +216,6 @@ public class ServerLauncher {
 
 
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -229,7 +228,6 @@ public class ServerLauncher {
 	}
 
 	public void stop() {
-		// TODO Auto-generated method stub
 		interactionManager.stop();
 	}
 
