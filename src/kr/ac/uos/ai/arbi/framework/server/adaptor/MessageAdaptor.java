@@ -2,6 +2,7 @@ package kr.ac.uos.ai.arbi.framework.server.adaptor;
 
 import java.util.LinkedList;
 
+import javax.jms.Destination;
 import javax.json.JsonObject;
 
 import org.json.simple.JSONObject;
@@ -31,36 +32,43 @@ public abstract class MessageAdaptor {
 	
 	public abstract void initialize(String brokerURL);
 	
-	protected abstract void send(JSONObject msg);
+	protected abstract void send(String receiver, JSONObject msg);
 	
-	public void send(LTMMessage msg) {
-		JSONObject messageObject = new JSONObject();
-		messageObject.put("client", msg.getClient());
-		messageObject.put("command", "Long-Term-Memory");
-		messageObject.put("action", msg.getAction().toString());
-		messageObject.put("content", msg.getContent());
-		messageObject.put("conversationID", msg.getConversationID());
+	public void send(LTMMessage message) {
+		String clientURL = message.getClient();
 		
-		this.send(messageObject);
+		JSONObject messageObject = new JSONObject();
+		messageObject.put("client", clientURL);
+		messageObject.put("command", "Long-Term-Memory");
+		messageObject.put("action", message.getAction().toString());
+		messageObject.put("content", message.getContent());
+		messageObject.put("conversationID", message.getConversationID());
+		
+		this.send(clientURL, messageObject);
 	}
 	
 	public void deliver(ArbiAgentMessage message) {
+		String receiverURL = message.getReceiver();
+		
 		JSONObject messageObject = new JSONObject();
+		
 		messageObject.put("sender", message.getSender());
-		messageObject.put("receiver", message.getReceiver());
+		messageObject.put("receiver", receiverURL);
 		messageObject.put("command", "Arbi-Agent");
 		messageObject.put("action", message.getAction().toString());
 		messageObject.put("content", message.getContent());
 		messageObject.put("conversationID", message.getConversationID());
 		messageObject.put("timestamp", message.getTimestamp());
 		
-		this.send(messageObject);
+		this.send(receiverURL, messageObject);
 	}
 	
 	public void deliverToMonitor(ArbiAgentMessage message) {
+		String receiverURL = InteractionManager.interactionManagerURI;
+		
 		JSONObject messageObject = new JSONObject();
 		messageObject.put("sender", "Server");
-		messageObject.put("receiver", InteractionManager.interactionManagerURI);
+		messageObject.put("receiver", receiverURL);
 		messageObject.put("command", "Arbi-Agent");
 		messageObject.put("action", "System");
 		String content = "(MessageLog (Sender \"" + message.getSender() + "\") (Receiver \""
@@ -70,10 +78,12 @@ public abstract class MessageAdaptor {
 		messageObject.put("conversationID", message.getConversationID());
 		messageObject.put("timestamp", message.getTimestamp());
 
-		this.send(messageObject);
+		this.send(receiverURL, messageObject);
 	}
 	
 	public void deliverToMonitor(LTMMessage message) {
+		String receiverURL = InteractionManager.interactionManagerURI;
+		
 		JSONObject messageObject = new JSONObject();
 		messageObject.put("sender", "Server");
 		messageObject.put("receiver", InteractionManager.interactionManagerURI);
@@ -87,7 +97,7 @@ public abstract class MessageAdaptor {
 		//TODO LTM message timestamp
 		messageObject.put("timestamp", System.currentTimeMillis());
 
-		this.send(messageObject);
+		this.send(receiverURL, messageObject);
 	}
 
 	public void handleMessage(String message) {

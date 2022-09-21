@@ -12,10 +12,11 @@ public class TestAgent extends ArbiAgent{
 	
 	public TestAgent() {
 		
-		ArbiAgentExecutor.execute("tcp://127.0.0.1:61316", "test", this, BrokerType.ACTIVEMQ);
+		ArbiAgentExecutor.execute("tcp://127.0.0.1:61316", "test8", this, BrokerType.ZEROMQ);
 		System.out.println("test start!");
-		this.send("test", "(test)");
-		System.out.println("here");
+		while(true) {
+			this.send("test7", "(test8)");
+		}
 		
 	}
 	

@@ -59,6 +59,7 @@ public class MessageService {
 			break;
 		}
 
+		System.out.println("broker type : " + brokerType.toString());
 		System.out.println("broker url : " + brokerURL);
 		
 		messageAdaptor.initialize(brokerURL);
@@ -131,7 +132,7 @@ public class MessageService {
 		@Override
 		public void run() {
 			while(isRunning == true) {
-				ArbiAgentMessage msg = queue.blockingDequeue(null, 10);
+				ArbiAgentMessage msg = queue.blockingDequeue(null, 100);
 				if(msg != null) {
 					agentMessageReceived(msg);
 				}			

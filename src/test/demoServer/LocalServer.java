@@ -11,7 +11,7 @@ public class LocalServer {
 	public static void main(String[] args) {
 		String brokerURL = "tcp://127.0.0.1:61316";
 		
-		ArbiFrameworkServer server = new ArbiFrameworkServer(BrokerType.ACTIVEMQ);
+		ArbiFrameworkServer server = new ArbiFrameworkServer(BrokerType.ZEROMQ);
 		server.start(brokerURL);
 	}
 }

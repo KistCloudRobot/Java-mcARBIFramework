@@ -89,11 +89,9 @@ public class ActiveMQMessageAdaptor extends MessageAdaptor implements MessageLis
 	}
 
 	@Override
-	protected void send(JSONObject msg) {
+	protected void send(String receiver, JSONObject msg) {
 		try {
-			String receiverURL = msg.get("client").toString();
-			String receiverDestination = receiverURL + "/message";
-			Destination destination = mqSession.createQueue(receiverDestination);
+			Destination destination = mqSession.createQueue(receiver + "/message");
 	
 	        TextMessage message = mqSession.createTextMessage(msg.toJSONString());
 			mqProducer.send(destination, message);

@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="lib/activemq-client-5.13.3.jar" sourcepath="C:/Users/Hong/AppData/Local/Temp/decompiler/source/activemq-client-5.13.3-sources-1520935919116.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="lib/activemq-broker-5.13.3.jar"/>
-	<classpathentry kind="lib" path="lib/activemq-console-5.13.3.jar"/>
-	<classpathentry kind="lib" path="lib/activemq-jaas-5.13.3.jar"/>
-	<classpathentry kind="lib" path="lib/activemq-kahadb-store-5.13.3.jar"/>
-	<classpathentry kind="lib" path="lib/activemq-openwire-legacy-5.13.3.jar"/>
-	<classpathentry kind="lib" path="lib/activemq-protobuf-1.1.jar"/>
-	<classpathentry kind="lib" path="lib/activemq-spring-5.13.3.jar"/>
-	<classpathentry kind="lib" path="lib/activemq-web-5.13.3.jar"/>
 	<classpathentry kind="lib" path="lib/commons-pool2-2.4.2.jar"/>
 	<classpathentry kind="lib" path="lib/geronimo-j2ee-management_1.1_spec-1.0.1.jar"/>
 	<classpathentry kind="lib" path="lib/geronimo-jms_1.1_spec-1.1.1.jar"/>
@@ -31,7 +22,6 @@
 	<classpathentry kind="lib" path="lib/netty-transport-4.0.37.Final.jar"/>
 	<classpathentry kind="lib" path="lib/rxjava-1.1.6.jar"/>
 	<classpathentry kind="lib" path="lib/slf4j-api-1.7.13.jar"/>
-	<classpathentry kind="lib" path="lib/activemq-stomp-5.14.0.jar"/>
 	<classpathentry kind="lib" path="lib/apollo/activemq-jaas-5.7.0.jar"/>
 	<classpathentry kind="lib" path="lib/apollo/airline-0.6.jar"/>
 	<classpathentry kind="lib" path="lib/apollo/apollo-amqp-1.7.1.jar"/>
@@ -104,5 +94,6 @@
 	<classpathentry kind="lib" path="lib/javax.mail-1.6.2.jar"/>
 	<classpathentry kind="lib" path="lib/javax.xml.bind.jar"/>
 	<classpathentry kind="lib" path="lib/jeromq-0.5.3.jar"/>
+	<classpathentry kind="lib" path="lib/activemq-all-5.16.5.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

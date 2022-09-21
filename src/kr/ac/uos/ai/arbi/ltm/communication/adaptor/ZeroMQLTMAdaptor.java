@@ -81,29 +81,16 @@ public class ZeroMQLTMAdaptor implements LTMMessageAdaptor {
 		@Override
 		public void run() {
 
+			String message = "";
 			while (isAlive) {
 				try {
-					Thread.sleep(1);
-				} catch (InterruptedException e1) {
-					e1.printStackTrace();
-				}
-				String text = "";
-				String message = "";
-				try {
-					
-					
-					text = zmqConsumer.recvStr();
-					while(zmqConsumer.hasReceiveMore() == true) {
-						message = zmqConsumer.recvStr();
+					while(true) {
+						Thread.sleep(1);
+						message =  zmqConsumer.recvStr();
+						if(message != null) {
+							if(message.contains("{") || message.contains("}")) break;
+						}
 					}
-				}catch (org.zeromq.ZMQException e) {
-					System.out.println("thread terminated");
-					isAlive = false;
-					break;
-				}
-				
-				try {
-					
 					
 					JSONParser jsonParser = new JSONParser();
 					JSONObject messageObject = (JSONObject) jsonParser.parse(message);
@@ -125,6 +112,8 @@ public class ZeroMQLTMAdaptor implements LTMMessageAdaptor {
 
 				} catch (ParseException e) {
 					e.printStackTrace();
+				}catch (InterruptedException e1) {
+					e1.printStackTrace();
 				}
 
 			}

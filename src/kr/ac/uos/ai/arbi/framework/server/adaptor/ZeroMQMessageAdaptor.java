@@ -53,7 +53,7 @@ public class ZeroMQMessageAdaptor extends MessageAdaptor {
 		this.brokerURL = brokerURL;
 		zmqContext = ZMQ.context(1);
 		zmqConsumer = zmqContext.socket(SocketType.ROUTER);
-		zmqConsumer.setReceiveTimeOut(200);
+		zmqConsumer.setReceiveTimeOut(1);
 		zmqConsumer.bind(brokerURL);
 		
 		messageRecvTask = new MessageRecvTask();
@@ -68,26 +68,23 @@ public class ZeroMQMessageAdaptor extends MessageAdaptor {
 		public void run() {
 			try {
 				while (true) {
-
-					Thread.sleep(1);
-						
 					String message = "";
-					message = zmqConsumer.recvStr();
-					//System.out.println(DebugUtilities.getDate() + " ZEROMQServerMessageAdaptor recvd message : " + message);
 					
-					while(zmqConsumer.hasReceiveMore() == true) {
+//					message = zmqConsumer.recvStr();
+//					message = zmqConsumer.recvStr();
+//					message = zmqConsumer.recvStr();
+					
+					while(true) {
 						Thread.sleep(1);
 						message =  zmqConsumer.recvStr();
-						//System.out.println(DebugUtilities.getDate() + " ZEROMQServerMessageAdaptor recvd message : " + message);
-						
+						if(message != null) {
+							if(message.contains("{") || message.contains("}")) break;
+						}
 					}
-					
-					if(message != null)
-						handleMessage(message);
-					//testing
-				}
+					handleMessage(message);
+				} 
 			} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
+				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
@@ -95,9 +92,8 @@ public class ZeroMQMessageAdaptor extends MessageAdaptor {
 	}
 
 	@Override
-	protected void send(JSONObject msg) {
-		String receiverURL = msg.get("client").toString();
-		String receiverDestination = receiverURL + "/message";
+	protected synchronized void send(String receiver, JSONObject msg) {
+		String receiverDestination = receiver + "/message";
 		
 		zmqConsumer.sendMore(receiverDestination);
 		zmqConsumer.sendMore("");

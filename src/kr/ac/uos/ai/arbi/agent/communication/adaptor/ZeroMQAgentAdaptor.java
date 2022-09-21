@@ -48,15 +48,6 @@ public class ZeroMQAgentAdaptor implements ArbiMessageAdaptor {
 		System.out.println("Broker Connected : " + broker);
 	}
 	
-	public void setSocketSize(int size) {
-		for(int i = 0; i < size; i++) {
-			zmqProducer = zmqContext.socket(SocketType.DEALER);
-			zmqProducer.connect(broker);
-			zmqProducer.setIdentity((arbiAgentURI + Integer.toString(i)).getBytes());
-			
-		}
-	}
-	
 	public boolean isAlive() {
 		return isAlive;
 	}
@@ -86,7 +77,6 @@ public class ZeroMQAgentAdaptor implements ArbiMessageAdaptor {
 		messageObject.put("conversationID", message.getConversationID());
 		messageObject.put("timestamp", message.getTimestamp());
 		
-		zmqProducer.sendMore(message.getReceiver());
 		zmqProducer.sendMore("");
 		zmqProducer.send(messageObject.toJSONString());
 	}
@@ -99,11 +89,15 @@ public class ZeroMQAgentAdaptor implements ArbiMessageAdaptor {
 			while (isAlive == true) {
 				
 				try {
+//					message = zmqConsumer.recvStr();
+//					message = zmqConsumer.recvStr();
 					
-					message = zmqConsumer.recvStr();
-					
-					while(zmqConsumer.hasReceiveMore() == true) {
-						message = zmqConsumer.recvStr();
+					while(true) {
+						Thread.sleep(1);
+						message =  zmqConsumer.recvStr();
+						if(message != null) {
+							if(message.contains("{") || message.contains("}")) break;
+						}
 					}
 					
 					JSONParser jsonParser = new JSONParser();
@@ -130,6 +124,9 @@ public class ZeroMQAgentAdaptor implements ArbiMessageAdaptor {
 					break;
 				}
 				catch (ParseException e) {
+					e.printStackTrace();
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
