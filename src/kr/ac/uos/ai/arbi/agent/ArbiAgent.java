@@ -47,6 +47,7 @@ public abstract class ArbiAgent {
 		
 		System.out.println("agentName : " + agentURI);
 		System.out.println("brokerType : " + brokerType.toString());
+		System.out.println("brokerURL : " + brokerURL);
 		
 		messageToolkit = new ArbiAgentMessageToolkit(broker, arbiAgentURI, this, brokerType);
 		dataStream = new DataStream();
