@@ -1,16 +1,14 @@
 package kr.ac.uos.ai.arbi.ltm.communication.adaptor;
 
-import java.util.Properties;
-
 import javax.jms.Connection;
 import javax.jms.Destination;
 import javax.jms.JMSException;
-import javax.jms.MapMessage;
 import javax.jms.Message;
 import javax.jms.MessageConsumer;
 import javax.jms.MessageListener;
 import javax.jms.MessageProducer;
 import javax.jms.Session;
+import javax.jms.TextMessage;
 
 import kr.ac.uos.ai.arbi.framework.ArbiFrameworkServer;
 import kr.ac.uos.ai.arbi.ltm.LTMMessageAction;
@@ -19,8 +17,9 @@ import kr.ac.uos.ai.arbi.ltm.communication.LTMMessageQueue;
 import kr.ac.uos.ai.arbi.ltm.communication.message.LTMMessage;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
-
-
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 public class ActiveMQAdaptor implements LTMMessageAdaptor, MessageListener {
 	private String					clientURI;
@@ -92,15 +91,16 @@ public class ActiveMQAdaptor implements LTMMessageAdaptor, MessageListener {
 	}
 
 	public void send(LTMMessage message)  {
-		MapMessage mqMessage;
 		try {
-			mqMessage = mqSession.createMapMessage();
-			mqMessage.setString("client", message.getClient());
-			mqMessage.setString("command", "Long-Term-Memory");
-			mqMessage.setString("action", message.getAction().toString());
-			mqMessage.setString("content", message.getContent());
-			mqMessage.setJMSCorrelationID(message.getConversationID());
-			mqProducer.send(mqMessage);
+			JSONObject messageObject = new JSONObject();
+			messageObject.put("client", message.getClient());
+			messageObject.put("command", "Long-Term-Memory");
+			messageObject.put("action", message.getAction().toString());
+			messageObject.put("content", message.getContent());
+			messageObject.put("conversationID", message.getConversationID());
+			
+			TextMessage textMessage = mqSession.createTextMessage(messageObject.toJSONString());
+			mqProducer.send(textMessage);
 		} catch (JMSException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -109,27 +109,32 @@ public class ActiveMQAdaptor implements LTMMessageAdaptor, MessageListener {
 
 	@Override
 	public void onMessage(Message message) {
-		if (message instanceof MapMessage) {
-			MapMessage mapMessage = (MapMessage)message;
+		if (message instanceof TextMessage) {
 			try {
-				String command = mapMessage.getString("command");
-				if (command == null) {
-					return;
-				}
-				if(command.startsWith("Long-Term-Memory")) {
-					String client = mapMessage.getString("client");
-					String action = mapMessage.getString("action");
-					String content = mapMessage.getString("content");
-					String conversationID = mapMessage.getJMSCorrelationID();
+	            TextMessage textMessage = (TextMessage) message;
+				String text = textMessage.getText();			
+				JSONParser jsonParser = new JSONParser();
+				JSONObject messageObject = (JSONObject) jsonParser.parse(text);
+				
+				String command = messageObject.get("command").toString();
+				if (command.startsWith("Long-Term-Memory")) {
+					String client = messageObject.get("client").toString();
+					String action = messageObject.get("action").toString();
+					String content = messageObject.get("content").toString();
+					String conversationID = messageObject.get("conversationID").toString();
 					LTMMessageFactory f = LTMMessageFactory.getInstance();
-					LTMMessage ltmMessage = f.newMessage(client, LTMMessageAction.valueOf(action), content, conversationID);
+					LTMMessage ltmMessage = f.newMessage(client, LTMMessageAction.valueOf(action), content,
+							conversationID);
 					queue.enqueue(ltmMessage);
 				}
-			} catch(JMSException e) {
+			} catch (JMSException | ParseException e) {
+				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
-		
+		else {
+			System.out.println(message.toString());
+		}
 	}
 	@Override
 	public void notify(LTMMessage msg) {

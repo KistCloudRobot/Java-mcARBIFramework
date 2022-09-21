@@ -20,6 +20,8 @@ import kr.ac.uos.ai.arbi.framework.ArbiFrameworkServer;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 
 
@@ -49,7 +51,7 @@ public class ActiveMQAdaptor implements ArbiMessageAdaptor, MessageListener {
 			mqSession 	= mqConnection.createSession(false, Session.AUTO_ACKNOWLEDGE);
 			Destination blackboardServerDestination = mqSession.createQueue(ArbiFrameworkServer.URL);
 			mqProducer 	= mqSession.createProducer(blackboardServerDestination);
-
+			System.out.println("my dest : " + arbiAgentURI + "/message");
 			Destination srcDestination = mqSession.createQueue(arbiAgentURI + "/message");
 			mqConsumer 	= mqSession.createConsumer(srcDestination);
 			mqConnection.start();
@@ -120,27 +122,29 @@ public class ActiveMQAdaptor implements ArbiMessageAdaptor, MessageListener {
 
 	@Override
 	public void onMessage(Message message) {
-		if (message instanceof MapMessage) {
-			MapMessage mapMessage = (MapMessage)message;
-			try {
-				String command = mapMessage.getString("command");
-				if (command == null) {
-					return;
-				}
-				if(command.startsWith("Arbi-Agent")) {
-					String sender = mapMessage.getString("sender");
-					String receiver = mapMessage.getString("receiver");
-					String action = mapMessage.getString("action");
-					String content = mapMessage.getString("content");
-					String conversationID = mapMessage.getJMSCorrelationID();
-					ArbiAgentMessage agentMessage = new ArbiAgentMessage(sender, receiver, AgentMessageAction.valueOf(action), content, conversationID);
+		try {
+			if (message instanceof TextMessage) {
+	            TextMessage textMessage = (TextMessage) message;
+				String text = textMessage.getText();
+				JSONParser jsonParser = new JSONParser();
+				JSONObject messageObject = (JSONObject) jsonParser.parse(text);
+				
+				String command = messageObject.get("command").toString();
+				if (command.startsWith("Arbi-Agent")) {
+					String sender = messageObject.get("sender").toString();
+					String receiver = messageObject.get("receiver").toString();
+					String action = messageObject.get("action").toString();
+					String content = messageObject.get("content").toString();
+					String conversationID = messageObject.get("conversationID").toString();
+					long timestamp = Long.parseLong(messageObject.get("timestamp").toString());
+					ArbiAgentMessage agentMessage = new ArbiAgentMessage(sender, receiver,
+							AgentMessageAction.valueOf(action), content, conversationID, timestamp);
 					queue.enqueue(agentMessage);
 				}
-			} catch(JMSException e) {
-				e.printStackTrace();
 			}
+		} catch (JMSException | ParseException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
 		}
-		
 	}
-
 }

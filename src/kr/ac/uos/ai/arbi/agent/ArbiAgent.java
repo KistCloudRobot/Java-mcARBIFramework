@@ -14,6 +14,7 @@ import kr.ac.uos.ai.arbi.model.parser.ParseException;
 
 public abstract class ArbiAgent {
 	private String arbiAgentURI;
+	protected BrokerType brokerType;
 	private ArbiAgentMessageToolkit messageToolkit;
 	private DataStream dataStream;
 	private static final int BROKER_TYPE_ZEROMQ = 2;
@@ -39,13 +40,13 @@ public abstract class ArbiAgent {
 	
 	public final void initialize(String brokerURL, String agentURI, BrokerType brokerType) {
 		arbiAgentURI = agentURI;
+		this.brokerType = brokerType;
 	
 		String broker = brokerURL;
 		running = true;
 		
 		System.out.println("agentName : " + agentURI);
 		System.out.println("brokerType : " + brokerType.toString());
-		
 		
 		messageToolkit = new ArbiAgentMessageToolkit(broker, arbiAgentURI, this, brokerType);
 		dataStream = new DataStream();

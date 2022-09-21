@@ -76,13 +76,10 @@ public class ActiveMQMessageAdaptor extends MessageAdaptor implements MessageLis
 
 	@Override
 	public void onMessage(Message message) {
-		System.out.println("here : " + message.toString());
-
 		try {
 			if (message instanceof TextMessage) {
 	            TextMessage textMessage = (TextMessage) message;
 				String text = textMessage.getText();
-	            System.out.println("Received: " + text);
 	            this.handleMessage(text);
 			}
 		} catch (JMSException e1) {
@@ -103,28 +100,5 @@ public class ActiveMQMessageAdaptor extends MessageAdaptor implements MessageLis
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-	}
-
-	@Override
-	public void send(LTMMessage msg) {
-		try {
-			String receiverURL = msg.getClient();
-			String receiverDestination = receiverURL + "/message";
-			Destination destination = mqSession.createQueue(receiverDestination);
-			
-			MapMessage mqMessage = mqSession.createMapMessage();
-			mqMessage.setString("client", msg.getClient());
-			mqMessage.setString("command", "Long-Term-Memory");
-			mqMessage.setString("action", msg.getAction().toString());
-			mqMessage.setString("content", msg.getContent());
-			mqMessage.setJMSCorrelationID(msg.getConversationID());
-			
-			mqProducer.send(destination, mqMessage);
-
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-		
-		
 	}
 }
