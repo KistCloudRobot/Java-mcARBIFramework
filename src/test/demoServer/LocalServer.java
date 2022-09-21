@@ -13,6 +13,5 @@ public class LocalServer {
 		
 		ArbiFrameworkServer server = new ArbiFrameworkServer(BrokerType.ACTIVEMQ);
 		server.start(brokerURL);
-		System.out.println("server start finished");
 	}
 }

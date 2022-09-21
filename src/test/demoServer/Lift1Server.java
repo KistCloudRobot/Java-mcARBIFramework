@@ -9,18 +9,9 @@ import kr.ac.uos.ai.arbi.framework.ArbiFrameworkServer;
 
 public class Lift1Server {
 	public static void main(String[] args) {
-
-		String brokerAddress;
-		String robotID;
-		if(args.length == 0) {
-			brokerAddress = "tcp://127.0.0.1:61116";
-			robotID = "AMR_LIFT1";	
-		} else {
-			robotID = args[0];
-			brokerAddress = args[1];
-		}
+		String brokerURL = "tcp://127.0.0.1:61116";
 		
 		ArbiFrameworkServer server = new ArbiFrameworkServer(BrokerType.ACTIVEMQ);
-		server.start(brokerAddress);
+		server.start(brokerURL);
 	}
 }
