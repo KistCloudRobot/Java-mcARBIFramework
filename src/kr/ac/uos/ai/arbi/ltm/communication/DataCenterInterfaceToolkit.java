@@ -6,12 +6,14 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedBlockingQueue;
 
 import kr.ac.uos.ai.arbi.ltm.LTMMessageAction;
+import kr.ac.uos.ai.arbi.BrokerType;
 import kr.ac.uos.ai.arbi.agent.datastream.DataStreamToolkit;
 import kr.ac.uos.ai.arbi.ltm.DataSource;
-import kr.ac.uos.ai.arbi.ltm.communication.activemq.ActiveMQAdaptor;
+import kr.ac.uos.ai.arbi.ltm.communication.adaptor.ActiveMQAdaptor;
+import kr.ac.uos.ai.arbi.ltm.communication.adaptor.LTMMessageAdaptor;
+import kr.ac.uos.ai.arbi.ltm.communication.adaptor.ZeroMQLTMAdaptor;
 import kr.ac.uos.ai.arbi.ltm.communication.message.LTMMessage;
 import kr.ac.uos.ai.arbi.ltm.communication.task.DispatchOnNotifyTask;
-import kr.ac.uos.ai.arbi.ltm.communication.zeromq.ZeroMQLTMAdaptor;
 import kr.ac.uos.ai.arbi.utility.DebugUtilities;
 
 public class DataCenterInterfaceToolkit extends Thread {
@@ -25,12 +27,12 @@ public class DataCenterInterfaceToolkit extends Thread {
 
 	private final LTMMessageFactory factory;
 
-	public DataCenterInterfaceToolkit(String brokerURL, String dataSourceURI, DataSource dataSource, int brokerType) {
+	public DataCenterInterfaceToolkit(String brokerURL, String dataSourceURI, DataSource dataSource, BrokerType brokerType) {
 
 		this.factory = LTMMessageFactory.getInstance();
 		this.dataSource = dataSource;
 		this.queue = new LTMMessageQueue();
-		if (brokerType == 2) {
+		if (brokerType == BrokerType.ZEROMQ) {
 			this.adaptor = new ZeroMQLTMAdaptor(brokerURL, dataSourceURI, queue);
 		} else {
 			this.adaptor = new ActiveMQAdaptor(brokerURL, dataSourceURI, queue);

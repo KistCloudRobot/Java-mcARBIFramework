@@ -1,31 +1,34 @@
 package kr.ac.uos.ai.arbi.framework.server;
 
+import kr.ac.uos.ai.arbi.BrokerType;
 import kr.ac.uos.ai.arbi.agent.AgentMessageAction;
 import kr.ac.uos.ai.arbi.agent.ArbiAgentMessage;
 import kr.ac.uos.ai.arbi.agent.communication.ArbiMessageQueue;
+import kr.ac.uos.ai.arbi.framework.server.adaptor.ActiveMQMessageAdaptor;
+import kr.ac.uos.ai.arbi.framework.server.adaptor.MessageAdaptor;
+import kr.ac.uos.ai.arbi.framework.server.adaptor.ZeroMQMessageAdaptor;
 import kr.ac.uos.ai.arbi.ltm.communication.LTMMessageQueue;
-import kr.ac.uos.ai.arbi.ltm.communication.activemq.ActiveMQAdaptor;
+import kr.ac.uos.ai.arbi.ltm.communication.adaptor.ActiveMQAdaptor;
+import kr.ac.uos.ai.arbi.ltm.communication.adaptor.ZeroMQLTMAdaptor;
 import kr.ac.uos.ai.arbi.ltm.communication.message.LTMMessage;
-import kr.ac.uos.ai.arbi.ltm.communication.zeromq.ZeroMQLTMAdaptor;
 import kr.ac.uos.ai.arbi.ltm.LTMMessageAction;
 
-public class MessageService{
-	private MessageDeliverAdaptor deliverAdaptor;
-	private kr.ac.uos.ai.arbi.ltm.communication.LTMMessageAdaptor ltmAdaptor;
+public class MessageService {
+	private MessageAdaptor messageAdaptor;
+//	private kr.ac.uos.ai.arbi.ltm.communication.LTMMessageAdaptor ltmAdaptor;
 	private LTMMessageListener ltmListener;
 	private boolean interactionManagerStatus;
-	private int brokerType;
+	private BrokerType brokerType;
 	private LTMMessageQueue ltmMessageQueue;
-	private LTMMessageAdaptor ltmMessageAdaptor;
 	private ArbiMessageQueue arbiMessageQueue;
 	private ArbiAgentMessageService agentMessageService;
 	private LTMMessageService ltmMessageService;
 	private boolean isRunning = false;
 	
-	public MessageService(LTMMessageListener listener, int brokerType) {
+	public MessageService(LTMMessageListener listener, BrokerType brokerType) {
 		this.ltmListener = listener;
 		this.brokerType = brokerType;
-		ltmAdaptor = null;
+//		ltmAdaptor = null;
 		interactionManagerStatus = false;
 		arbiMessageQueue = new ArbiMessageQueue();
 		ltmMessageQueue = new LTMMessageQueue();	
@@ -35,15 +38,46 @@ public class MessageService{
 		
 	}
 
+
+	public void initialize(String brokerURL) {
+	
+		switch(brokerType) {
+		case ACTIVEMQ:
+			this.messageAdaptor = new ActiveMQMessageAdaptor(this, arbiMessageQueue, ltmMessageQueue);
+//			this.ltmAdaptor = new ActiveMQAdaptor(brokerURL, "tcp://ltmServer", ltmMessageQueue);
+			break;
+		case APOLLO:
+			//TODO apollo
+			System.out.println("Apollo not developted");
+			break;
+		case ZEROMQ:
+			this.messageAdaptor = new ZeroMQMessageAdaptor(this, arbiMessageQueue, ltmMessageQueue);
+//			this.ltmAdaptor = new ZeroMQLTMAdaptor(brokerURL, "tcp://ltmServer", ltmMessageQueue);
+			break;
+		default:
+			System.out.println("undefined broker type : " + brokerType.toString());
+			break;
+		}
+
+		System.out.println("broker url : " + brokerURL);
+		
+		messageAdaptor.initialize(brokerURL);
+		Thread t1 = new Thread(this.agentMessageService);
+		Thread t2 = new Thread(this.ltmMessageService);
+		t1.start();
+		t2.start();
+	}
+	
+
 	public void agentMessageReceived(ArbiAgentMessage agentMessage) {
 		if(agentMessage.getAction() != AgentMessageAction.Notify) {
 			System.out.println("[Agent Message]\t<" + agentMessage.getAction().toString() + ">\t" + agentMessage.getSender()
 					+ " --> " + agentMessage.getReceiver() + " : " + agentMessage.getContent());
 		}
-		deliverAdaptor.deliver(agentMessage);
+		messageAdaptor.deliver(agentMessage);
 		
 		if (interactionManagerStatus) {
-			deliverAdaptor.deliverToMonitor(agentMessage);
+			messageAdaptor.deliverToMonitor(agentMessage);
 		}
 	}
 
@@ -69,10 +103,10 @@ public class MessageService{
 //				+ " : " + ltmMessage.getContent());
 
 		if (interactionManagerStatus) {
-			deliverAdaptor.deliverToMonitor(ltmMessage);
+			messageAdaptor.deliverToMonitor(ltmMessage);
 		}
 		if(ltmMessage.getAction() == LTMMessageAction.Notify || ltmMessage.isSendingFromServer() == true) {
-			ltmMessageAdaptor.send(ltmMessage);
+			messageAdaptor.send(ltmMessage);
 		}else {
 			ltmListener.messageRecieved(ltmMessage);
 		}
@@ -85,27 +119,6 @@ public class MessageService{
 			interactionManagerStatus = true;
 		else if (status.equals("OFF"))
 			interactionManagerStatus = false;
-	}
-
-	public void initialize(String serverURL, String brokerURL, String brokerName) {
-	
-		if(brokerType == 2) {
-			this.deliverAdaptor = new ZeroMQServerMessageAdaptor(this,arbiMessageQueue,ltmMessageQueue,brokerName);
-			this.ltmAdaptor = new ZeroMQLTMAdaptor(brokerURL, "tcp://ltmServer", ltmMessageQueue);
-		}else if (brokerType == 4){
-			this.deliverAdaptor = new McArbiServerAdaptor(this,arbiMessageQueue,ltmMessageQueue);	
-			this.ltmAdaptor = new ZeroMQLTMAdaptor(brokerURL, "tcp://ltmServer",ltmMessageQueue);
-		}else {
-			this.deliverAdaptor = new ActiveMQMessageAdaptor(this);
-			this.ltmAdaptor = new ActiveMQAdaptor(brokerURL, "tcp://ltmServer", ltmMessageQueue);
-		}
-		deliverAdaptor.initialize(serverURL,brokerURL);
-		ltmMessageAdaptor = (LTMMessageAdaptor)deliverAdaptor;
-		Thread t1 = new Thread(this.agentMessageService);
-		Thread t2 = new Thread(this.ltmMessageService);
-		t1.start();
-		t2.start();
-	
 	}
 	
 	class ArbiAgentMessageService implements Runnable{

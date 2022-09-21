@@ -1,6 +1,6 @@
 package test.stability;
 
-import kr.ac.uos.ai.arbi.Broker;
+import kr.ac.uos.ai.arbi.BrokerType;
 import kr.ac.uos.ai.arbi.agent.ArbiAgent;
 import kr.ac.uos.ai.arbi.agent.ArbiAgentExecutor;
 import kr.ac.uos.ai.arbi.ltm.DataSource;
@@ -15,7 +15,7 @@ public class MassAssertAgent extends ArbiAgent implements Runnable{
 		this.id = Integer.toString(num);
 		ArbiAgentExecutor.execute("tcp://127.0.0.1:61616",id, this,2);
 		ds = new DataSource();
-		ds.connect("tcp://127.0.0.1:61616", "assertAgentDS" + this.id ,Broker.ZEROMQ);
+		ds.connect("tcp://127.0.0.1:61616", "assertAgentDS" + this.id ,BrokerType.ZEROMQ);
 		
 		
 	}

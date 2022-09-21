@@ -2,7 +2,7 @@ package kr.ac.uos.ai.arbi.framework.broker;
 
 import org.apache.activemq.broker.BrokerService;
 
-public class ActiveMQBroker {
+public class ActiveMQBroker implements Broker {
 	private BrokerService				broker;
 	
 	public ActiveMQBroker() {

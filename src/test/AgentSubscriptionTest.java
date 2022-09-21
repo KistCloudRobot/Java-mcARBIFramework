@@ -2,7 +2,7 @@ package test;
 
 import java.util.Scanner;
 
-import kr.ac.uos.ai.arbi.Broker;
+import kr.ac.uos.ai.arbi.BrokerType;
 import kr.ac.uos.ai.arbi.ltm.DataSource;
 
 public class AgentSubscriptionTest {
@@ -19,7 +19,7 @@ public class AgentSubscriptionTest {
 			}		
 		};
 		
-		ds.connect("tcp://127.0.0.1:61616", "ds://www.arbi.com/TestAgent",Broker.ZEROMQ);
+		ds.connect("tcp://127.0.0.1:61616", "ds://www.arbi.com/TestAgent",BrokerType.ZEROMQ);
 		String subscribeID = ds.subscribe("(rule (fact (TestSenseResult \"robotID314\" $model)) --> (notify (TestSenseResult $model)))");
 		
 		ds.assertFact("(TestSenseResult \"robotID314\" 3)");

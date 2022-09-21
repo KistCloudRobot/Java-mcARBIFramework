@@ -1,6 +1,6 @@
 package test.timeget;
 
-import kr.ac.uos.ai.arbi.Broker;
+import kr.ac.uos.ai.arbi.BrokerType;
 import kr.ac.uos.ai.arbi.agent.ArbiAgent;
 import kr.ac.uos.ai.arbi.agent.ArbiAgentExecutor;
 import kr.ac.uos.ai.arbi.ltm.DataSource;
@@ -33,7 +33,7 @@ public class TimeGetTest extends ArbiAgent{
 		
 		DataSource ds = new DataSource();
 		System.out.println("started");
-		ds.connect("tcp://127.0.0.1:61616", "timegetTest",Broker.ZEROMQ);
+		ds.connect("tcp://127.0.0.1:61616", "timegetTest",BrokerType.ZEROMQ);
 		
 		ds.assertFact("(testFact \"testing\")");
 		try {

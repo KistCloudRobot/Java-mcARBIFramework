@@ -12,7 +12,7 @@ public class Lift1Server {
 		String brokerAddress;
 		String robotID;
 		if(args.length == 0) {
-			brokerAddress = "tcp://172.16.165.141:61116";
+			brokerAddress = "tcp://127.0.0.1:61116";
 			robotID = "AMR_LIFT1";	
 		} else {
 			robotID = args[0];

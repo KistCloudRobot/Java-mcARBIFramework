@@ -3,6 +3,7 @@ package kr.ac.uos.ai.arbi.interaction;
 import java.util.HashMap;
 import java.util.Map;
 
+import kr.ac.uos.ai.arbi.BrokerType;
 import kr.ac.uos.ai.arbi.interaction.adaptor.ActiveMQAdaptor;
 import kr.ac.uos.ai.arbi.interaction.adaptor.ActiveMQStompAdaptor;
 import kr.ac.uos.ai.arbi.interaction.adaptor.InteractionMessageAdaptor;
@@ -76,8 +77,8 @@ public class MonitorMessageToolkit extends Thread {
 			adaptorMap.get(protocol).send(monitorID, message);
 	}
 	
-	public void sendStatus(String serverURL, String status, int brokerType) {
-		if(brokerType == 2) {
+	public void sendStatus(String serverURL, String status, BrokerType brokerType) {
+		if(brokerType == BrokerType.ZEROMQ) {
 			zeroMQAdaptor.sendStatus(status);
 		} else {
 		//	activeMQAdaptor.sendStatus(status);

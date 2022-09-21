@@ -8,11 +8,17 @@ import kr.ac.uos.ai.arbi.framework.ArbiFrameworkServer;
 
 public class Lift2Server {
 	public static void main(String[] args) {
-		String centerURL = "tcp://172.16.165.141:61616";
-		String brokerURL = "tcp://172.16.165.141:61115";
-		String brokerName = "Lift2";
+		String brokerAddress;
+		String robotID;
+		if(args.length == 0) {
+			brokerAddress = "tcp://127.0.0.1:61115";
+			robotID = "AMR_LIFT2";	
+		} else {
+			robotID = args[0];
+			brokerAddress = args[1];
+		}
 		
-		ArbiFrameworkServer server = new ArbiFrameworkServer(2, brokerName);
-		server.start(brokerURL, brokerURL);
+		ArbiFrameworkServer server = new ArbiFrameworkServer(2, robotID);
+		server.start(brokerAddress, brokerAddress);
 	}
 }

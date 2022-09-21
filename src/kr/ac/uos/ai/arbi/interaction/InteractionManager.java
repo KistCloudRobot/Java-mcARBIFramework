@@ -7,6 +7,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import kr.ac.uos.ai.arbi.BrokerType;
 import kr.ac.uos.ai.arbi.agent.ArbiAgent;
 import kr.ac.uos.ai.arbi.interaction.proxy.MonitorProxy;
 import kr.ac.uos.ai.arbi.ltm.DataSource;
@@ -38,7 +39,7 @@ public class InteractionManager extends ArbiAgent {
 		tempMessageQueue = new MonitorMessageQueue();
 	}
 	
-	public void start(String serverURI, int brokerType){
+	public void start(String serverURI, BrokerType brokerType){
 		initMessageToolkit();
 		monitorMessageToolkit.sendStatus(serverURI, "ON", brokerType);
 		//initDataSource(serverURI, brokerType);

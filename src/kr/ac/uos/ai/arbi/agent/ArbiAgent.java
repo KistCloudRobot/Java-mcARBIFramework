@@ -3,6 +3,7 @@ package kr.ac.uos.ai.arbi.agent;
 import java.net.Inet4Address;
 import java.net.UnknownHostException;
 
+import kr.ac.uos.ai.arbi.BrokerType;
 import kr.ac.uos.ai.arbi.agent.communication.ArbiAgentMessageToolkit;
 import kr.ac.uos.ai.arbi.agent.datastream.DataStream;
 import kr.ac.uos.ai.arbi.agent.datastream.StreamReceiver;
@@ -12,7 +13,7 @@ import kr.ac.uos.ai.arbi.model.GeneralizedList;
 import kr.ac.uos.ai.arbi.model.parser.ParseException;
 
 public abstract class ArbiAgent {
-	private String ArbiAgentURI;
+	private String arbiAgentURI;
 	private ArbiAgentMessageToolkit messageToolkit;
 	private DataStream dataStream;
 	private static final int BROKER_TYPE_ZEROMQ = 2;
@@ -36,28 +37,23 @@ public abstract class ArbiAgent {
 	
 	public ArbiAgentMessageToolkit GetMessageToolkit() { return messageToolkit; }
 	
-	public final void initialize(String brokerURL, String agentURI, int brokerType) {
-		ArbiAgentURI = agentURI;
+	public final void initialize(String brokerURL, String agentURI, BrokerType brokerType) {
+		arbiAgentURI = agentURI;
 	
 		String broker = brokerURL;
 		running = true;
 		
 		System.out.println("agentName : " + agentURI);
-		String brokerTypeName = "activemq";
-		if(brokerType == 2) {
-			brokerTypeName = "zeromq";
-		}
-		
-		System.out.println("brokerType : " + brokerTypeName);
+		System.out.println("brokerType : " + brokerType.toString());
 		
 		
-		messageToolkit = new ArbiAgentMessageToolkit(broker, ArbiAgentURI, this, brokerType);
+		messageToolkit = new ArbiAgentMessageToolkit(broker, arbiAgentURI, this, brokerType);
 		dataStream = new DataStream();
-		LoggerManager.getInstance().initLoggerManager(brokerURL, agentURI, brokerType,this);
+		LoggerManager.getInstance().initLoggerManager(brokerURL, agentURI, this);
 		this.onStart();
 	}
-	public final void initialize(String agentURI, int brokerType) {
-		ArbiAgentURI = agentURI;
+	public final void initialize(String agentURI, BrokerType brokerType) {
+		arbiAgentURI = agentURI;
 		
 		String broker = null;
 		try {
@@ -68,9 +64,9 @@ public abstract class ArbiAgent {
 		}
 		running = true;
 
-		messageToolkit = new ArbiAgentMessageToolkit(broker, ArbiAgentURI, this, brokerType);
+		messageToolkit = new ArbiAgentMessageToolkit(broker, arbiAgentURI, this, brokerType);
 		dataStream = new DataStream();
-		LoggerManager.getInstance().initLoggerManager(broker, agentURI, brokerType,this);
+		LoggerManager.getInstance().initLoggerManager(broker, agentURI,this);
 		this.onStart();
 	}
 	public void onStart() {

@@ -1,6 +1,6 @@
 package test;
 
-import kr.ac.uos.ai.arbi.Broker;
+import kr.ac.uos.ai.arbi.BrokerType;
 import kr.ac.uos.ai.arbi.agent.ArbiAgentExecutor;
 import kr.ac.uos.ai.arbi.framework.ArbiFrameworkServer;
 import kr.ac.uos.ai.arbi.framework.broker.ApolloBroker;
@@ -23,8 +23,8 @@ public class ApolloServerStart {
 		}
 		
 		InteractionManager interactionManager = new InteractionManager();
-		interactionManager.start("tcp://localhost:61616",Broker.APOLLO);
-		ArbiAgentExecutor.execute("tcp://localhost:61616", InteractionManager.interactionAgentURI, interactionManager, Broker.APOLLO);
+		interactionManager.start("tcp://localhost:61616",BrokerType.APOLLO);
+		ArbiAgentExecutor.execute("tcp://localhost:61616", InteractionManager.interactionAgentURI, interactionManager, BrokerType.APOLLO);
 		
 	}
 }

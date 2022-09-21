@@ -4,7 +4,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.Base64;
 import java.util.Base64.Encoder;
 
-import kr.ac.uos.ai.arbi.Broker;
+import kr.ac.uos.ai.arbi.BrokerType;
 import kr.ac.uos.ai.arbi.agent.ArbiAgent;
 import kr.ac.uos.ai.arbi.agent.ArbiAgentExecutor;
 import kr.ac.uos.ai.arbi.ltm.DataSource;
@@ -40,7 +40,7 @@ public class AgentExecuteTest {
 		}
 			
 		};
-		dc.connect("tcp://0.0.0.0:61616", "dc://testdc2", Broker.ZEROMQ);
+		dc.connect("tcp://0.0.0.0:61616", "dc://testdc2", BrokerType.ZEROMQ);
 		dc.assertFact("(test 1)");
 		dc.assertFact("(test 2)");
 		String data = dc.match("(test $a)");

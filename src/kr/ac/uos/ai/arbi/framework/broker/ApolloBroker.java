@@ -5,7 +5,7 @@ import org.apache.activemq.apollo.dto.AcceptingConnectorDTO;
 import org.apache.activemq.apollo.dto.BrokerDTO;
 import org.apache.activemq.apollo.dto.VirtualHostDTO;
 
-public class ApolloBroker {
+public class ApolloBroker implements kr.ac.uos.ai.arbi.framework.broker.Broker  {
 
 	private Broker broker;
 

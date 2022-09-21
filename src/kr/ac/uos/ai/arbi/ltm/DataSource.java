@@ -1,5 +1,6 @@
 package kr.ac.uos.ai.arbi.ltm;
 
+import kr.ac.uos.ai.arbi.BrokerType;
 import kr.ac.uos.ai.arbi.agent.datastream.DataStreamToolkit;
 import kr.ac.uos.ai.arbi.ltm.communication.DataCenterInterfaceToolkit;
 
@@ -17,7 +18,7 @@ public class DataSource {
 		this.running = false;
 	}
 	
-	public final void connect(String brokerURL, String dataSourceURI, int brokerType) {
+	public final void connect(String brokerURL, String dataSourceURI, BrokerType brokerType) {
 		this.dataSourceURI = dataSourceURI;
 		running = true;
 		dataInterfaceToolkit = new DataCenterInterfaceToolkit(brokerURL, dataSourceURI, this, brokerType);

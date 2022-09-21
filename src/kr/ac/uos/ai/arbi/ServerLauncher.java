@@ -29,7 +29,7 @@ public class ServerLauncher {
 	public static final int DefaultBrokerPort = 61616;
 	public static final String DefualtBrokerHost = "localhost";
 
-	public static int brokerType = 2;
+	public static BrokerType brokerType = BrokerType.ZEROMQ;
 
 	private InteractionManager interactionManager;
 
@@ -43,7 +43,6 @@ public class ServerLauncher {
 		boolean arbiFrameworkMonitorStart = false;
 		boolean isCenter = true;
 		String centerURL = "";
-		String brokerName = "";
 		String configurationPath = "configuration/ServerConfiguration.xml";
 		
 		if(args.length > 0) {
@@ -141,19 +140,11 @@ public class ServerLauncher {
 					boolean isTrue = brokerPropertyElement.getAttribute("Center").equals("true");
 					System.out.println("wat? " + isTrue);
 					
-					if (brokerPropertyElement.getAttribute("Center").equals("true")) {
-						brokerType = 4;
-					}else {
-						brokerType = 2;
-					}
 					if (portElement != null) {
 						brokerPort = Integer.parseInt(portElement.getTextContent());
 					}
 					if (hostElement != null) {
 						brokerHost = hostElement.getTextContent();
-					}
-					if (nameElement != null) {
-						brokerName = nameElement.getTextContent();
 					}
 				}
 
@@ -178,25 +169,12 @@ public class ServerLauncher {
 				stompBroker.setURL(InteractionManagerBrokerConfiguration.getStompBroker());
 				stompBroker.start();
 			}
-//				System.out.println("Connect to " + brokerURL);
 			
 			
 			String brokerURL = "tcp://" + brokerHost + ":" + brokerPort;
 			
-			if(brokerType == 4) {
-				System.out.println("????");
-				centerURL = brokerURL;
-			}
-			
-			/*
-			 * if (brokerType == 2){ System.out.println(brokerURL); serverURL = "tcp://" +
-			 * brokerHost + ":5671"; } else
-			 */
-			
-			System.out.println(centerURL + " : " + brokerURL);
-			
-			ArbiFrameworkServer server = new ArbiFrameworkServer(brokerType,brokerName);
-			server.start(centerURL,brokerURL);
+			ArbiFrameworkServer server = new ArbiFrameworkServer(brokerType);
+			server.start(brokerURL);
 
 			if (interactionManagerStart) {
 

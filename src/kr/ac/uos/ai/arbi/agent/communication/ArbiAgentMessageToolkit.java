@@ -6,11 +6,22 @@ import java.util.concurrent.Executors;
 
 import org.eclipse.jetty.util.BlockingArrayQueue;
 
+import kr.ac.uos.ai.arbi.BrokerType;
 import kr.ac.uos.ai.arbi.agent.AgentMessageAction;
 import kr.ac.uos.ai.arbi.agent.ArbiAgent;
 import kr.ac.uos.ai.arbi.agent.ArbiAgentMessage;
-import kr.ac.uos.ai.arbi.agent.communication.activemq.ActiveMQAdaptor;
-import kr.ac.uos.ai.arbi.agent.communication.zeromq.ZeroMQAgentAdaptor;
+import kr.ac.uos.ai.arbi.agent.communication.adaptor.ActiveMQAdaptor;
+import kr.ac.uos.ai.arbi.agent.communication.adaptor.ArbiMessageAdaptor;
+import kr.ac.uos.ai.arbi.agent.communication.adaptor.ZeroMQAgentAdaptor;
+import kr.ac.uos.ai.arbi.agent.communication.dispatchTask.DispatchDataTask;
+import kr.ac.uos.ai.arbi.agent.communication.dispatchTask.DispatchNotifyTask;
+import kr.ac.uos.ai.arbi.agent.communication.dispatchTask.DispatchQueryTask;
+import kr.ac.uos.ai.arbi.agent.communication.dispatchTask.DispatchReleaseStreamTask;
+import kr.ac.uos.ai.arbi.agent.communication.dispatchTask.DispatchRequestStreamTask;
+import kr.ac.uos.ai.arbi.agent.communication.dispatchTask.DispatchRequestTask;
+import kr.ac.uos.ai.arbi.agent.communication.dispatchTask.DispatchSubscribeTask;
+import kr.ac.uos.ai.arbi.agent.communication.dispatchTask.DispatchSystemTask;
+import kr.ac.uos.ai.arbi.agent.communication.dispatchTask.DispatchUnsubscribeTask;
 
 public class ArbiAgentMessageToolkit extends Thread {
 	private final int nThread = 5;
@@ -24,12 +35,12 @@ public class ArbiAgentMessageToolkit extends Thread {
 
 	private BlockingArrayQueue<ArbiAgentMessage> waitingResponse;
 
-	public ArbiAgentMessageToolkit(String brokerURL, String agentURI, ArbiAgent agent, int brokerType) {
+	public ArbiAgentMessageToolkit(String brokerURL, String agentURI, ArbiAgent agent, BrokerType brokerType) {
 		this.agentURI = agentURI;
 		this.queue = new ArbiMessageQueue();
 		this.messageThreadPool = Executors.newFixedThreadPool(nThread);
 	
-		if (brokerType == 2 || brokerType == 4) {
+		if (brokerType == BrokerType.ZEROMQ) {
 			this.adaptor = new ZeroMQAgentAdaptor(brokerURL, agentURI, queue);
 		} else {
 			this.adaptor = new ActiveMQAdaptor(brokerURL, agentURI, queue);

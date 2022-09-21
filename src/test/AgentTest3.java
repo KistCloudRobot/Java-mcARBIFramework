@@ -2,7 +2,7 @@ package test;
 
 import java.util.Scanner;
 
-import kr.ac.uos.ai.arbi.Broker;
+import kr.ac.uos.ai.arbi.BrokerType;
 import kr.ac.uos.ai.arbi.agent.ArbiAgent;
 import kr.ac.uos.ai.arbi.agent.ArbiAgentExecutor;
 import kr.ac.uos.ai.arbi.ltm.DataSource;
@@ -33,7 +33,7 @@ public class AgentTest3 extends ArbiAgent{
 		System.out.println("here");
 		//this.request("agent://www.arbi.com/Lift2/BehaviorInterface", "(unload (actionID \"11\") 19)");
 		DataSource ds = new DataSource();
-		ds.connect("tcp://192.168.0.14:61313", "ds://www.arbi.com/Local/TestAgent2",Broker.ZEROMQ);
+		ds.connect("tcp://192.168.0.14:61313", "ds://www.arbi.com/Local/TestAgent2",BrokerType.ZEROMQ);
 		//String result = this.query("noReceiver", "anyquery");
 		//System.out.println("result : " + result);
 		

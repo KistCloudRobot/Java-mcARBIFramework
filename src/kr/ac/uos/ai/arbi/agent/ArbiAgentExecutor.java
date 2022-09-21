@@ -8,6 +8,8 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
+import kr.ac.uos.ai.arbi.BrokerType;
+
 public class ArbiAgentExecutor {
 
 	public static void execute(String agentXML, ArbiAgent agent) {
@@ -25,18 +27,13 @@ public class ArbiAgentExecutor {
 				Element agentNameElement = (Element) agentElement.getElementsByTagName("AgentName").item(0);
 				String brokerTypeElement = agentElement.getElementsByTagName("BrokerType").item(0).getTextContent();
 				
-				System.out.println("agentName : " +agentNameElement.getTextContent());
-				
-				int brokerType = 2;
+				BrokerType brokerType = BrokerType.ZEROMQ;
 				if (brokerTypeElement.toLowerCase().equals("activemq")) {
-					System.out.println("broker type : activamq");
-					brokerType = 0;
+					brokerType = BrokerType.ACTIVEMQ;
 				} else if (brokerTypeElement.toLowerCase().equals("apollo")) {
-					System.out.println("broker type : apollo");
-					brokerType = 1;
+					brokerType = BrokerType.APOLLO;
 				} else if(brokerTypeElement.toLowerCase().equals("zeromq")) {
-					brokerType = 2;
-					System.out.println("broker type : zeromq");
+					brokerType = BrokerType.ZEROMQ;
 				}
 				
 
@@ -54,10 +51,10 @@ public class ArbiAgentExecutor {
 		}
 	}
 
-	public static void execute(String agentName, ArbiAgent agent, int brokerType) {
+	public static void execute(String agentName, ArbiAgent agent, BrokerType brokerType) {
 		agent.initialize(agentName, brokerType);
 	}
-	public static void execute(String brokerAddress, String agentName, ArbiAgent agent, int brokerType) {
+	public static void execute(String brokerAddress, String agentName, ArbiAgent agent, BrokerType brokerType) {
 		agent.initialize(brokerAddress,agentName, brokerType);
 	}
 

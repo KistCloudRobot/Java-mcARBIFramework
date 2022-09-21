@@ -1,6 +1,6 @@
 package test;
 
-import kr.ac.uos.ai.arbi.Broker;
+import kr.ac.uos.ai.arbi.BrokerType;
 import kr.ac.uos.ai.arbi.agent.ArbiAgent;
 import kr.ac.uos.ai.arbi.agent.ArbiAgentExecutor;
 import kr.ac.uos.ai.arbi.ltm.DataSource;
@@ -18,7 +18,7 @@ public class SubUnsubTest {
 		System.out.println("Agent start");
 
 		ArbiAgentExecutor.execute("tcp://127.0.0.1:61616", "agent://www.arbi.com/Lift2/TaskManager", taskManager,
-				Broker.ZEROMQ);
+				BrokerType.ZEROMQ);
 
 		DataSource ds = new DataSource() {
 			@Override
@@ -27,7 +27,7 @@ public class SubUnsubTest {
 				System.out.println("Notified! : " + content);
 			}
 		};
-		ds.connect("tcp://127.0.0.1:61616", "ds://www.arbi.com/Lift2/TaskManager", Broker.ZEROMQ);
+		ds.connect("tcp://127.0.0.1:61616", "ds://www.arbi.com/Lift2/TaskManager", BrokerType.ZEROMQ);
 		System.out.println("connected");
 
 		String subscribeID1 = ds.subscribe("(rule (fact (context $context)) --> (notify (context $context)))");

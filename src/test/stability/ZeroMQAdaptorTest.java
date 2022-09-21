@@ -11,9 +11,9 @@ import org.zeromq.ZMQ.Context;
 import org.zeromq.ZMQ.Socket;
 
 import kr.ac.uos.ai.arbi.ltm.LTMMessageAction;
-import kr.ac.uos.ai.arbi.ltm.communication.LTMMessageAdaptor;
 import kr.ac.uos.ai.arbi.ltm.communication.LTMMessageFactory;
 import kr.ac.uos.ai.arbi.ltm.communication.LTMMessageQueue;
+import kr.ac.uos.ai.arbi.ltm.communication.adaptor.LTMMessageAdaptor;
 import kr.ac.uos.ai.arbi.ltm.communication.message.LTMMessage;
 
 public class ZeroMQAdaptorTest implements LTMMessageAdaptor {

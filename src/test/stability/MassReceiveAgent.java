@@ -1,6 +1,6 @@
 package test.stability;
 
-import kr.ac.uos.ai.arbi.Broker;
+import kr.ac.uos.ai.arbi.BrokerType;
 import kr.ac.uos.ai.arbi.agent.ArbiAgent;
 import kr.ac.uos.ai.arbi.agent.ArbiAgentExecutor;
 import kr.ac.uos.ai.arbi.ltm.DataSource;
@@ -20,7 +20,7 @@ public class MassReceiveAgent extends ArbiAgent{
 				System.out.println("notified" + content);
 			}
 		};
-		ds.connect("tcp://127.0.0.1:61616", "ds" + id, Broker.ZEROMQ);
+		ds.connect("tcp://127.0.0.1:61616", "ds" + id, BrokerType.ZEROMQ);
 		String subscribeID = ds.subscribe("(rule (fact (SendTest \"sendAgent\" "+ id + " $i)) --> (notify (SendTest " + id +" $i)))");
 		
 	}
