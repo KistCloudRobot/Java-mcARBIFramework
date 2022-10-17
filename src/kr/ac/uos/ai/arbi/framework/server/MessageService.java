@@ -83,8 +83,8 @@ public class MessageService {
 	}
 
 	public synchronized void send(LTMMessage message) {
-		System.out.println("[LTM Message]\t<" + message.getAction().toString() + ">\t" + message.getClient() + " : "
-				+ message.getContent());
+//		System.out.println("[LTM Message]\t<" + message.getAction().toString() + ">\t" + message.getClient() + " : "
+//				+ message.getContent());
 		
 		message.setSendingFromServer(true);
 		
@@ -105,8 +105,8 @@ public class MessageService {
 		if(ltmMessage.getAction() == LTMMessageAction.Notify || ltmMessage.isSendingFromServer() == true) {
 			messageAdaptor.send(ltmMessage);
 		}else {
-			System.out.println("[LTM Message]\t<" + ltmMessage.getAction().toString() + ">\t" + ltmMessage.getClient()
-			+ " : " + ltmMessage.getContent());
+//			System.out.println("[LTM Message]\t<" + ltmMessage.getAction().toString() + ">\t" + ltmMessage.getClient()
+//			+ " : " + ltmMessage.getContent());
 			ltmListener.messageRecieved(ltmMessage);
 		}
 		
