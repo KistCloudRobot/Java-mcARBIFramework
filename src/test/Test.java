@@ -51,6 +51,16 @@ public class Test {
 	}
 	
 	public static void main(String[] args) {
+		
+		String str = "(GoalRequest (RackLoadingPrepared &quot;agent://www.mcarbi.com/AMR_LIFT3&quot; &quot;agent://www.mcarbi.com/AMR_LIFT3_1&quot; &quot;(RackLoadingPrepared &amp;quot;AMR_LIFT3&amp;quot; 2)&quot;))";
+		try {
+			GeneralizedList gl = GLFactory.newGLFromGLString(str);
+			System.out.println(gl);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+				
 		new Test();
 	}
 }

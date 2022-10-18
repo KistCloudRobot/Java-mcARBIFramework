@@ -12,12 +12,9 @@ public class TestAgent extends ArbiAgent{
 	
 	public TestAgent() {
 		
-		ArbiAgentExecutor.execute("tcp://127.0.0.1:61316", "test8", this, BrokerType.ZEROMQ);
-		System.out.println("test start!");
-		while(true) {
-			this.send("test7", "(test8)");
-		}
+		ArbiAgentExecutor.execute("tcp://172.16.165.141:61316", "test8", this, BrokerType.ZEROMQ);
 		
+		this.request("agent://www.arbi.com/MultiAgentPathFinder", "(MultiRobotPath (RobotPath \"AMR_LIFT1\" 146 103)(RobotPath \"AMR_LIFT2\" 114 145) (RobotPath \"AMR_LIFT3\" 152 124) (RobotPath \"AMR_LIFT4\" 135 102))");
 	}
 	
 	@Override

@@ -25,6 +25,7 @@ public class InMemoryLTMService implements LTMServiceInterface{
 	private LTMSubscriptionManager subscriptionManager;
 	private Thread t;
 	
+	
 	public InMemoryLTMService() {
 		ltmMap = new ConcurrentHashMap<String,LinkedBlockingQueue<PredicateContainer>>();
 		cashMap = new ConcurrentHashMap<String, PredicateContainer>();
@@ -135,9 +136,12 @@ public class InMemoryLTMService implements LTMServiceInterface{
 		
 		if(foundContainer != null) {
 			String retractName = foundContainer.getPredicate().getName();
-			if(cashMap.get(retractName).getCreateTime() == foundContainer.getCreateTime()) {
-				cashMap.remove(retractName);
+			if (cashMap.containsKey(retractName)) {
+				if(cashMap.get(retractName).getCreateTime() == foundContainer.getCreateTime()) {
+					cashMap.remove(retractName);
+				}
 			}
+
 			this.ltmMap.get(retractName).remove(foundContainer);			
 			
 			return foundContainer.getPredicate().toString();			
