@@ -9,7 +9,8 @@ import kr.ac.uos.ai.arbi.framework.ArbiFrameworkServer;
 
 public class LocalServer {
 	public static void main(String[] args) {
-		String brokerURL = "tcp://172.16.165.141:61316";
+		String brokerURL = "tcp://127.0.0.1:61316";
+		//String brokerURL = "tcp://172.16.165.141:61316";
 		
 		ArbiFrameworkServer server = new ArbiFrameworkServer(BrokerType.ZEROMQ);
 		server.start(brokerURL);
