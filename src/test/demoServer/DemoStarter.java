@@ -1,5 +1,7 @@
 package test.demoServer;
 
+import java.util.Scanner;
+
 import kr.ac.uos.ai.arbi.BrokerType;
 import kr.ac.uos.ai.arbi.agent.ArbiAgent;
 import kr.ac.uos.ai.arbi.agent.ArbiAgentExecutor;
@@ -9,7 +11,8 @@ public class DemoStarter extends ArbiAgent {
 
 	private final String MY_ADDRESS = "agent://www.arbi.com/demoStarter";
 	DataSource dc;
-	private String ip = "tcp://172.16.165.141:61316";
+//	private String ip = "tcp://172.16.165.141:61316";
+	String ip = "tcp://192.168.100.10:61116";
 	
 	public DemoStarter() {
 		
@@ -40,7 +43,7 @@ public class DemoStarter extends ArbiAgent {
 		String brokerAddress;
 		String robotID;
 		if(args.length == 0) {
-			brokerAddress = "tcp://127.0.0.1:61316";
+			brokerAddress = "tcp://192.168.100.10:61316";
 			robotID = "Local";	
 		} else {
 			robotID = args[0];
@@ -49,8 +52,9 @@ public class DemoStarter extends ArbiAgent {
 		
 		DemoStarter demo = new DemoStarter(brokerAddress);
 
-		//Scanner in = new Scanner(System.in);
-		//in.nextLine();
+		Scanner in = new Scanner(System.in);
+		in.nextLine();
+		System.out.println("demo start!");
 		
 		demo.startDemo();
 	}

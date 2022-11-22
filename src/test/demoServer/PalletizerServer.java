@@ -12,8 +12,8 @@ public class PalletizerServer {
 //		String brokerURL = "tcp://127.0.0.1:62112";
 		String brokerURL = "tcp://192.168.100.10:62112";
 		//String brokerURL = "tcp://172.16.165.141:61112";
-		
-		ArbiFrameworkServer server = new ArbiFrameworkServer(BrokerType.ZEROMQ);
+
+		ArbiFrameworkServer server = new ArbiFrameworkServer(BrokerType.ACTIVEMQ);
 		server.start(brokerURL);
 	}
 }

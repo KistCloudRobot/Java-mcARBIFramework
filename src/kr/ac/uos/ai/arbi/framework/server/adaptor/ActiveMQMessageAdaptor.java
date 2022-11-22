@@ -36,19 +36,18 @@ public class ActiveMQMessageAdaptor extends MessageAdaptor implements MessageLis
 	@Override
 	public void deliver(ArbiAgentMessage message) {
 		try {
-			String receiverURL = message.getReceiver();
-			String receiverDestination = receiverURL + "/message";
-			Destination destination = mqSession.createQueue(receiverDestination);
+			JSONObject messageObject = new JSONObject();
 			
-			MapMessage mqMessage = mqSession.createMapMessage();
-			mqMessage.setString("sender", message.getSender());
-			mqMessage.setString("receiver", message.getReceiver());
-			mqMessage.setString("command", "Arbi-Agent");
-			mqMessage.setString("action", message.getAction().toString());
-			mqMessage.setString("content", message.getContent());
-			mqMessage.setJMSCorrelationID(message.getConversationID());
-			mqProducer.send(destination, mqMessage);
-	
+			String receiver = message.getReceiver();
+			messageObject.put("sender", message.getSender());
+			messageObject.put("receiver", receiver);
+			messageObject.put("command", "Arbi-Agent");
+			messageObject.put("action", message.getAction().toString());
+			messageObject.put("content", message.getContent());
+			messageObject.put("conversationID", message.getConversationID());
+			messageObject.put("timestamp", message.getTimestamp());
+			
+			this.send(receiver, messageObject);
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
@@ -93,7 +92,7 @@ public class ActiveMQMessageAdaptor extends MessageAdaptor implements MessageLis
 		try {
 			Destination destination = mqSession.createQueue(receiver + "/message");
 	
-	        TextMessage message = mqSession.createTextMessage(msg.toJSONString());
+	       TextMessage message = mqSession.createTextMessage(msg.toJSONString());
 			mqProducer.send(destination, message);
 		} catch(Exception e) {
 			e.printStackTrace();

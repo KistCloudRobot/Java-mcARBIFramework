@@ -13,7 +13,7 @@ public class Lift1Server {
 		String brokerURL = "tcp://192.168.100.10:61116";
 		//String brokerURL = "tcp://172.16.165.141:61116";
 		
-		ArbiFrameworkServer server = new ArbiFrameworkServer(BrokerType.ZEROMQ);
+		ArbiFrameworkServer server = new ArbiFrameworkServer(BrokerType.ACTIVEMQ);
 		server.start(brokerURL);
 	}
 }

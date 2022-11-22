@@ -20,7 +20,7 @@ public class AgentSubscriptionTest {
 
 			}		
 		};
-		ds.connect("tcp://127.0.0.1:61316", "ds://www.arbi.com/TestAgent",BrokerType.ACTIVEMQ);
+		ds.connect("tcp://192.168.100.10:61116", "ds://www.arbi.com/TestAgent",BrokerType.ACTIVEMQ);
 		String subscribeID = ds.subscribe("(rule (fact (TestSenseResult \"robotID314\" $model)) --> (notify (TestSenseResult $model)))");
 		System.out.println(3);
 		
