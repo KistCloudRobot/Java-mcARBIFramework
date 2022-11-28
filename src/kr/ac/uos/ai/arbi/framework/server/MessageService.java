@@ -15,58 +15,50 @@ import kr.ac.uos.ai.arbi.ltm.LTMMessageAction;
 
 public class MessageService {
 	private MessageAdaptor messageAdaptor;
-//	private kr.ac.uos.ai.arbi.ltm.communication.LTMMessageAdaptor ltmAdaptor;
+//	private LTMMessageAdaptor ltmAdaptor;
 	private LTMMessageListener ltmListener;
 	private boolean interactionManagerStatus;
-	private BrokerType brokerType;
 	private LTMMessageQueue ltmMessageQueue;
 	private ArbiMessageQueue arbiMessageQueue;
 	private ArbiAgentMessageService agentMessageService;
 	private LTMMessageService ltmMessageService;
 	private boolean isRunning = false;
 	
-	public MessageService(LTMMessageListener listener, BrokerType brokerType) {
+	public MessageService(LTMMessageListener listener, BrokerType brokerType, String host, int port) {
 		this.ltmListener = listener;
-		this.brokerType = brokerType;
-//		ltmAdaptor = null;
 		interactionManagerStatus = false;
 		arbiMessageQueue = new ArbiMessageQueue();
 		ltmMessageQueue = new LTMMessageQueue();	
 		
 		agentMessageService = new ArbiAgentMessageService(arbiMessageQueue);
 		ltmMessageService = new LTMMessageService(ltmMessageQueue);
-		
+
+		switch(brokerType) {
+			case ACTIVEMQ:
+				this.messageAdaptor = new ActiveMQMessageAdaptor(this, arbiMessageQueue, ltmMessageQueue, host, port);
+	//			this.ltmAdaptor = new ActiveMQAdaptor(brokerURL, "tcp://ltmServer", ltmMessageQueue);
+				break;
+			case APOLLO:
+				//TODO apollo
+				System.out.println("Apollo not developted");
+				break;
+			case ZEROMQ:
+				this.messageAdaptor = new ZeroMQMessageAdaptor(this, arbiMessageQueue, ltmMessageQueue, host, port);
+	//			this.ltmAdaptor = new ZeroMQLTMAdaptor(brokerURL, "tcp://ltmServer", ltmMessageQueue);
+				break;
+			default:
+				System.out.println("undefined broker type : " + brokerType.toString());
+				break;
+		}
 	}
 
 
-	public void initialize(String brokerURL) {
-	
-		switch(brokerType) {
-		case ACTIVEMQ:
-			this.messageAdaptor = new ActiveMQMessageAdaptor(this, arbiMessageQueue, ltmMessageQueue);
-//			this.ltmAdaptor = new ActiveMQAdaptor(brokerURL, "tcp://ltmServer", ltmMessageQueue);
-			break;
-		case APOLLO:
-			//TODO apollo
-			System.out.println("Apollo not developted");
-			break;
-		case ZEROMQ:
-			this.messageAdaptor = new ZeroMQMessageAdaptor(this, arbiMessageQueue, ltmMessageQueue);
-//			this.ltmAdaptor = new ZeroMQLTMAdaptor(brokerURL, "tcp://ltmServer", ltmMessageQueue);
-			break;
-		default:
-			System.out.println("undefined broker type : " + brokerType.toString());
-			break;
-		}
-
-		System.out.println("broker type : " + brokerType.toString());
-		System.out.println("broker url : " + brokerURL);
-		
-		messageAdaptor.initialize(brokerURL);
-		Thread t1 = new Thread(this.agentMessageService);
-		Thread t2 = new Thread(this.ltmMessageService);
-		t1.start();
-		t2.start();
+	public void start() {
+		Thread agentMessageServiceThread = new Thread(this.agentMessageService);
+		Thread ltmMessageServiceThread = new Thread(this.ltmMessageService);
+		agentMessageServiceThread.start();
+		ltmMessageServiceThread.start();
+		this.messageAdaptor.start();
 	}
 	
 

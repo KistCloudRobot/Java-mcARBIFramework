@@ -8,21 +8,26 @@ import kr.ac.uos.ai.arbi.agent.ArbiAgentExecutor;
 import kr.ac.uos.ai.arbi.ltm.DataSource;
 
 public class DemoStarter extends ArbiAgent {
+	static String agentURI = "agent://www.arbi.com/demoStarter";
+	static String host = "127.0.0.1";
+//	static String host = "192.168.100.10";
+//	static String host = "172.16.165.141";
+	static int port = 61116;
+	
+	public static void main(String[] args) {
+		DemoStarter demo = new DemoStarter(BrokerType.ACTIVEMQ);
 
-	private final String MY_ADDRESS = "agent://www.arbi.com/demoStarter";
-	DataSource dc;
-//	private String ip = "tcp://172.16.165.141:61316";
-	String ip = "tcp://192.168.100.10:61116";
-	
-	public DemoStarter() {
+		Scanner in = new Scanner(System.in);
+		in.nextLine();
+		System.out.println("demo start!");
 		
-		ArbiAgentExecutor.execute(ip, MY_ADDRESS, this, BrokerType.ZEROMQ);
+		demo.startDemo();
 	}
+
+	DataSource dc;
 	
-	public DemoStarter(String brokerAddress) {
-		
-		this.ip = brokerAddress;
-		ArbiAgentExecutor.execute(brokerAddress, MY_ADDRESS, this, BrokerType.ZEROMQ);
+	public DemoStarter(BrokerType brokerType) {
+		ArbiAgentExecutor.execute(host, port, agentURI, this, brokerType);
 
 		//communicator.getBaseChannel().request("agent://www.mcarbi.com/organizationDispatcher", "(DiapatchOrganization)");
 	}
@@ -32,31 +37,9 @@ public class DemoStarter extends ArbiAgent {
 	public void onStart() {
 		
 		dc = new DataSource();
-		
-		dc.connect(ip, "dc://www.agent.com/demoStarter", BrokerType.ZEROMQ);
+		dc.connect(host, port, "dc://www.agent.com/demoStarter", BrokerType.ZEROMQ);
 		
 		//send("agent://www.arbi.com/TaskAllocator", "(hi)");
-	}
-	
-	public static void main(String[] args) {
-
-		String brokerAddress;
-		String robotID;
-		if(args.length == 0) {
-			brokerAddress = "tcp://192.168.100.10:61316";
-			robotID = "Local";	
-		} else {
-			robotID = args[0];
-			brokerAddress = args[1];
-		}
-		
-		DemoStarter demo = new DemoStarter(brokerAddress);
-
-		Scanner in = new Scanner(System.in);
-		in.nextLine();
-		System.out.println("demo start!");
-		
-		demo.startDemo();
 	}
 	
 	public void startDemo() {

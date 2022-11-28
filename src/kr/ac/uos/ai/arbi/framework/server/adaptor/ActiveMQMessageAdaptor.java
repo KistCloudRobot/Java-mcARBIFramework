@@ -1,17 +1,10 @@
 package kr.ac.uos.ai.arbi.framework.server.adaptor;
 
-import javax.jms.Connection;
-import javax.jms.Destination;
-import javax.jms.JMSException;
-import javax.jms.MapMessage;
-import javax.jms.Message;
-import javax.jms.MessageConsumer;
-import javax.jms.MessageListener;
-import javax.jms.MessageProducer;
-import javax.jms.Session;
-import javax.jms.TextMessage;
+import java.io.EOFException;
+import java.net.SocketTimeoutException;
 
-import org.apache.activemq.ActiveMQConnectionFactory;
+import org.apache.activemq.transport.stomp.StompConnection;
+import org.apache.activemq.transport.stomp.StompFrame;
 import org.json.simple.JSONObject;
 
 import kr.ac.uos.ai.arbi.agent.ArbiAgentMessage;
@@ -19,19 +12,32 @@ import kr.ac.uos.ai.arbi.agent.communication.ArbiMessageQueue;
 import kr.ac.uos.ai.arbi.framework.ArbiFrameworkServer;
 import kr.ac.uos.ai.arbi.framework.server.MessageService;
 import kr.ac.uos.ai.arbi.ltm.communication.LTMMessageQueue;
-import kr.ac.uos.ai.arbi.ltm.communication.message.LTMMessage;
 
-public class ActiveMQMessageAdaptor extends MessageAdaptor implements MessageListener {
-	private Connection 					mqConnection;
-	private Session						mqSession;
-	private MessageConsumer				mqConsumer;
-	private MessageProducer				mqProducer;
-	private MessageService				service;
+public class ActiveMQMessageAdaptor extends MessageAdaptor {
+	private StompConnection	connection;
+	private MessageRecvTask messageRecvTask;
 
-	public ActiveMQMessageAdaptor(MessageService service,ArbiMessageQueue arbiQueue,LTMMessageQueue ltmQueue) {
+	public ActiveMQMessageAdaptor(MessageService service,ArbiMessageQueue arbiQueue,LTMMessageQueue ltmQueue, String host, int port) {
 		super(service, arbiQueue, ltmQueue);
+		try {
+			connection = new StompConnection();
+			connection.open(host, port);
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
+	@Override
+	public void start() {	
+		try {	
+			connection.connect("system", "manager");
+			connection.subscribe(ArbiFrameworkServer.URL);
+			messageRecvTask = new MessageRecvTask();
+			messageRecvTask.start();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
 	
 	@Override
 	public void deliver(ArbiAgentMessage message) {
@@ -53,48 +59,42 @@ public class ActiveMQMessageAdaptor extends MessageAdaptor implements MessageLis
 		}
 	}
 	
-	
-	@Override
-	public void initialize(String brokerURL) {
-		try {
-			ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory();
-			connectionFactory.setBrokerURL(brokerURL);
-			mqConnection 	= connectionFactory.createConnection();
-			mqSession 	= mqConnection.createSession(false, Session.AUTO_ACKNOWLEDGE);
-			Destination serverDestination = mqSession.createQueue(ArbiFrameworkServer.URL);
-			mqConsumer 	= mqSession.createConsumer(serverDestination);
-			mqProducer 	= mqSession.createProducer(null);
-
-			mqConnection.start();
-			mqConsumer.setMessageListener(this);
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-		
-	}
-
-	@Override
-	public void onMessage(Message message) {
-		try {
-			if (message instanceof TextMessage) {
-	            TextMessage textMessage = (TextMessage) message;
-				String text = textMessage.getText();
-	            this.handleMessage(text);
-			}
-		} catch (JMSException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
+	private class MessageRecvTask extends Thread {
+		@Override
+		public void run() {
+			while (true) {
+				String message = "";
+				try {
+					StompFrame messageFrame;
+					messageFrame = connection.receive();
+					if(messageFrame != null) message = messageFrame.getBody();
+					else continue;
+				}
+				catch(SocketTimeoutException e) {
+					continue;
+				}
+				catch(EOFException e) {
+					System.err.println("server connection disconnected.");
+					break;
+				}
+				catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+					continue;
+				}
+//				System.out.println("on message : " + message);
+				handleMessage(message);
+			} 
 		}
 	}
 
 	@Override
 	protected void send(String receiver, JSONObject msg) {
 		try {
-			Destination destination = mqSession.createQueue(receiver + "/message");
-	
-	       TextMessage message = mqSession.createTextMessage(msg.toJSONString());
-			mqProducer.send(destination, message);
-		} catch(Exception e) {
+			receiver = receiver + "/message";
+			connection.send(receiver, msg.toJSONString());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

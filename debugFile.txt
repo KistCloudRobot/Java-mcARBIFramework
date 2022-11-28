@@ -262,3 +262,15 @@
 [ExceptionLog 2022-11-22 17:14:57]ghost msg : (ok) action: Resultclient : dc://www.agent.com/demoStarter
 [ExceptionLog 2022-11-22 17:14:58]ghost msg : (ok) action: Resultclient : dc://www.agent.com/demoStarter
 [ExceptionLog 2022-11-22 17:14:59]ghost msg : (ok) action: Resultclient : dc://www.agent.com/demoStarter
+[ExceptionLog 2022-11-28 16:46:47]ghost msg : Subscribe:1669621607145 action: Resultclient : ds://www.arbi.com/TestDataSource
+[ExceptionLog 2022-11-28 16:46:47]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TestDataSource
+[ExceptionLog 2022-11-28 16:47:07]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TestDataSource
+[ExceptionLog 2022-11-28 16:47:08]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TestDataSource
+[ExceptionLog 2022-11-28 16:48:15]ghost msg : Subscribe:1669621695766 action: Resultclient : ds://www.arbi.com/TestDataSource
+[ExceptionLog 2022-11-28 16:48:15]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TestDataSource
+[ExceptionLog 2022-11-28 16:48:49]ghost msg : Subscribe:1669621729269 action: Resultclient : ds://www.arbi.com/TestDataSource
+[ExceptionLog 2022-11-28 16:48:49]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TestDataSource
+[ExceptionLog 2022-11-28 16:48:51]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TestDataSource
+[ExceptionLog 2022-11-28 16:48:53]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TestDataSource
+[ExceptionLog 2022-11-28 16:50:15]ghost msg : Subscribe:1669621814993 action: Resultclient : ds://www.arbi.com/TestDataSource
+[ExceptionLog 2022-11-28 16:50:15]ghost msg : (ok) action: Resultclient : ds://www.arbi.com/TestDataSource

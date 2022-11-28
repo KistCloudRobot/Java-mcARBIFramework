@@ -17,7 +17,7 @@ public class AgentSubscriptionTest2 {
 			}		
 		};
 		
-		ds.connect("tcp://127.0.0.1:61616", "ds://www.arbi.com/TestAgent2",BrokerType.ZEROMQ);
+		ds.connect("127.0.0.1", 61616, "ds://www.arbi.com/TestAgent2",BrokerType.ZEROMQ);
 		String subscribeID = ds.subscribe("(rule (fact (TestSenseResult \"robotID314\" $model)) --> (notify (TestSenseResult $model)))");
 		
 	}

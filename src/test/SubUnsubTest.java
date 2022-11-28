@@ -17,8 +17,7 @@ public class SubUnsubTest {
 		};
 		System.out.println("Agent start");
 
-		ArbiAgentExecutor.execute("tcp://127.0.0.1:61616", "agent://www.arbi.com/Lift2/TaskManager", taskManager,
-				BrokerType.ZEROMQ);
+		ArbiAgentExecutor.execute("127.0.0.1", 61616, "agent://www.arbi.com/Lift2/TaskManager", taskManager, BrokerType.ZEROMQ);
 
 		DataSource ds = new DataSource() {
 			@Override
@@ -27,7 +26,7 @@ public class SubUnsubTest {
 				System.out.println("Notified! : " + content);
 			}
 		};
-		ds.connect("tcp://127.0.0.1:61616", "ds://www.arbi.com/Lift2/TaskManager", BrokerType.ZEROMQ);
+		ds.connect("127.0.0.1", 61616, "ds://www.arbi.com/Lift2/TaskManager", BrokerType.ZEROMQ);
 		System.out.println("connected");
 
 		String subscribeID1 = ds.subscribe("(rule (fact (context $context)) --> (notify (context $context)))");

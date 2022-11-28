@@ -36,7 +36,7 @@ import kr.ac.uos.ai.arbi.utility.DebugUtilities;
 
 public class ZeroMQMessageAdaptor extends MessageAdaptor {
 	private Context zmqContext;
-	private Socket zmqConsumer;
+	private Socket zmqRouter;
 	private Object recvLock = new Object();
 	private Object sendLock = new Object();
 	private MessageRecvTask messageRecvTask;
@@ -44,20 +44,18 @@ public class ZeroMQMessageAdaptor extends MessageAdaptor {
 	private String brokerName = "";
 	private String brokerURL = "";
 	
-	public ZeroMQMessageAdaptor(MessageService service,ArbiMessageQueue arbiQueue,LTMMessageQueue ltmQueue) {
+	public ZeroMQMessageAdaptor(MessageService service,ArbiMessageQueue arbiQueue,LTMMessageQueue ltmQueue, String host, int port) {
 		super(service, arbiQueue, ltmQueue);
+		String url = "tcp://" + host + ":" + port;
+		zmqContext = ZMQ.context(1);
+		zmqRouter = zmqContext.socket(SocketType.ROUTER);
+		zmqRouter.setReceiveTimeOut(1);
+		zmqRouter.bind(url);
 	}
 
 	@Override
-	public void initialize(String brokerURL) {
-		this.brokerURL = brokerURL;
-		zmqContext = ZMQ.context(1);
-		zmqConsumer = zmqContext.socket(SocketType.ROUTER);
-		zmqConsumer.setReceiveTimeOut(1);
-		zmqConsumer.bind(brokerURL);
-		
+	public void start() {
 		messageRecvTask = new MessageRecvTask();
-		messageRecvTask.setName("serverAdapterThread");
 		messageRecvTask.start();
 	}
 
@@ -76,7 +74,7 @@ public class ZeroMQMessageAdaptor extends MessageAdaptor {
 					
 					while(true) {
 						Thread.sleep(1);
-						message =  zmqConsumer.recvStr();
+						message =  zmqRouter.recvStr();
 						if(message != null) {
 							if(message.contains("{") || message.contains("}")) break;
 						}
@@ -95,8 +93,8 @@ public class ZeroMQMessageAdaptor extends MessageAdaptor {
 	protected synchronized void send(String receiver, JSONObject msg) {
 		String receiverDestination = receiver + "/message";
 		
-		zmqConsumer.sendMore(receiverDestination);
-		zmqConsumer.sendMore("");
-		zmqConsumer.send(msg.toJSONString());
+		zmqRouter.sendMore(receiverDestination);
+		zmqRouter.sendMore("");
+		zmqRouter.send(msg.toJSONString());
 	}
 }

@@ -158,34 +158,35 @@ public class ServerLauncher {
 
 			}
 
-
-			if (InteractionManagerBrokerConfiguration.getApolloBroker() != null) {
-				ApolloBroker broker = new ApolloBroker();
-				broker.setURL(InteractionManagerBrokerConfiguration.getApolloBroker());
-				broker.start();
-			}
-			if (InteractionManagerBrokerConfiguration.getStompBroker() != null) {
-				ActiveMQBroker stompBroker = new ActiveMQBroker();
-				stompBroker.setURL(InteractionManagerBrokerConfiguration.getStompBroker());
-				stompBroker.start();
-			}
-			
-			
-			String brokerURL = "tcp://" + brokerHost + ":" + brokerPort;
-			
-			ArbiFrameworkServer server = new ArbiFrameworkServer(brokerType);
-			server.start(brokerURL);
-
-			if (interactionManagerStart) {
-
-				interactionManager = new InteractionManager();
-
-				interactionManager.start(brokerURL, brokerType);
-
-				ArbiAgentExecutor.execute(brokerURL, InteractionManager.interactionAgentURI, interactionManager,
-						brokerType);
-
-			}
+			System.out.println("code is not complete");
+			//TODO
+//			if (InteractionManagerBrokerConfiguration.getApolloBroker() != null) {
+//				ApolloBroker broker = new ApolloBroker();
+//				broker.setURL(InteractionManagerBrokerConfiguration.getApolloBroker());
+//				broker.start();
+//			}
+//			if (InteractionManagerBrokerConfiguration.getStompBroker() != null) {
+//				ActiveMQBroker stompBroker = new ActiveMQBroker();
+//				stompBroker.setURL(InteractionManagerBrokerConfiguration.getStompBroker());
+//				stompBroker.start();
+//			}
+//			
+//			
+//			String brokerURL = "tcp://" + brokerHost + ":" + brokerPort;
+//			
+//			ArbiFrameworkServer server = new ArbiFrameworkServer(brokerType);
+//			server.start(brokerURL);
+//
+//			if (interactionManagerStart) {
+//
+//				interactionManager = new InteractionManager();
+//
+//				interactionManager.start(brokerURL, brokerType);
+//
+//				ArbiAgentExecutor.execute(brokerURL, InteractionManager.interactionAgentURI, interactionManager,
+//						brokerType);
+//
+//			}
 
 			if (arbiFrameworkMonitorStart) {
 				ArbiFrameworkMonitor m = new ArbiFrameworkMonitor();

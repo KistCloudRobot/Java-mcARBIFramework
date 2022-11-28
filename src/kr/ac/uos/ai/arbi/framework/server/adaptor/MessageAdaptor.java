@@ -30,7 +30,7 @@ public abstract class MessageAdaptor {
 		ltmMessageQueue = ltmQueue;
 	}
 	
-	public abstract void initialize(String brokerURL);
+	public abstract void start();
 	
 	protected abstract void send(String receiver, JSONObject msg);
 	

@@ -12,19 +12,19 @@ import kr.ac.uos.ai.arbi.ltm.DataSource;
 public class AgentExecuteTest {
 	public static void main(String[] args) {
 		
-		ArbiAgent agent = new ArbiAgent() {
-		};
-		ArbiAgentExecutor.execute("agent/Agent1.xml", agent);
-		
-		
-		ArbiAgent agent2 = new ArbiAgent() { 
-			@Override
-			public String onRequest(String sender, String request) {
-				System.out.println(sender +" "+ request);
-				return "world";
-			}
-		};
-		ArbiAgentExecutor.execute("agent/Agent2.xml", agent2);
+//		ArbiAgent agent = new ArbiAgent() {
+//		};
+//		ArbiAgentExecutor.execute("agent/Agent1.xml", agent);
+//		
+//		
+//		ArbiAgent agent2 = new ArbiAgent() { 
+//			@Override
+//			public String onRequest(String sender, String request) {
+//				System.out.println(sender +" "+ request);
+//				return "world";
+//			}
+//		};
+//		ArbiAgentExecutor.execute("agent/Agent2.xml", agent2);
 		
 		//System.out.println(agent.request("testAgent2", "hello"));
 		//System.out.println(agent.request("testAgent2", "hello"));
@@ -40,7 +40,7 @@ public class AgentExecuteTest {
 		}
 			
 		};
-		dc.connect("tcp://0.0.0.0:61616", "dc://testdc2", BrokerType.ZEROMQ);
+		dc.connect("0.0.0.0", 61616, "dc://testdc2", BrokerType.ZEROMQ);
 		dc.assertFact("(test 1)");
 		dc.assertFact("(test 2)");
 		String data = dc.match("(test $a)");
@@ -55,7 +55,7 @@ public class AgentExecuteTest {
 		System.out.println(id);
 		dc.unsubscribe(id);
 		
-		agent.close();
+//		agent.close();
 		System.out.println("closed");
 //		dc.assertFact("(a \"b\" \"c\")");
 //		String id = dc.subscribe("(rule (fact (SystemLog $actor $type $action $content $time)) --> (notify (SystemLog $actor $type $action $content $time)))");

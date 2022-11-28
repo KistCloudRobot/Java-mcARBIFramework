@@ -13,39 +13,39 @@ import kr.ac.uos.ai.arbi.agent.ArbiAgentMessage;
 import kr.ac.uos.ai.arbi.agent.communication.ArbiMessageQueue;
 
 public class ZeroMQAgentAdaptor implements ArbiMessageAdaptor {
-	private String arbiAgentURI;
-
 	private MessageRecvTask messageRecvTask;
+	
+	private String brokerURL;
+	private String agentURI;
 
 	private Context zmqContext;
 	private Socket zmqProducer;
 	private Socket zmqConsumer;
-	private String broker;
 	private ArbiMessageQueue queue;
 	private boolean isAlive;
 	
-	public ZeroMQAgentAdaptor(String broker, String myURI, ArbiMessageQueue queue){
-		this.arbiAgentURI = myURI;
+	public ZeroMQAgentAdaptor(String brokerHost, int brokerPort, String agentURI, ArbiMessageQueue queue) {
+		this.brokerURL = "tcp://" + brokerHost + ":" + brokerPort;
+		this.agentURI = agentURI;
 		this.queue = queue;
-		this.broker = broker;
 		zmqContext = ZMQ.context(1);
-		this.broker = broker;
 		
 		zmqProducer = zmqContext.socket(SocketType.DEALER);
-		zmqProducer.connect(broker);
-		zmqProducer.setIdentity(arbiAgentURI.getBytes());
-		//zmqProducer.setSndHWM(0);
 		
 		zmqConsumer = zmqContext.socket(SocketType.DEALER);
-		zmqConsumer.connect(broker);
-		zmqConsumer.setIdentity((arbiAgentURI + "/message").getBytes());
-		//zmqConsumer.setRcvHWM(0);
 		
 		messageRecvTask = new MessageRecvTask();
-		messageRecvTask.start();
 		
 		isAlive = true;
-		System.out.println("Broker Connected : " + broker);
+	}
+	
+	@Override
+	public void start() {
+		zmqProducer.connect(brokerURL);
+		zmqProducer.setIdentity(agentURI.getBytes());
+		zmqConsumer.connect(brokerURL);
+		zmqConsumer.setIdentity((agentURI + "/message").getBytes());
+		messageRecvTask.start();
 	}
 	
 	public boolean isAlive() {

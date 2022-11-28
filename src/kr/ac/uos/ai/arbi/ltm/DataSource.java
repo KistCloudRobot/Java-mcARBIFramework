@@ -18,10 +18,11 @@ public class DataSource {
 		this.running = false;
 	}
 	
-	public final void connect(String brokerURL, String dataSourceURI, BrokerType brokerType) {
+	public final void connect(String brokerHost, int brokerPort, String dataSourceURI, BrokerType brokerType) {
 		this.dataSourceURI = dataSourceURI;
 		running = true;
-		dataInterfaceToolkit = new DataCenterInterfaceToolkit(brokerURL, dataSourceURI, this, brokerType);
+		dataInterfaceToolkit = new DataCenterInterfaceToolkit(brokerHost, brokerPort, dataSourceURI, this, brokerType);
+		dataInterfaceToolkit.start();
 	}
 
 	public void assertFact(String fact) {

@@ -204,7 +204,8 @@ public class LTMMessageTestPanel extends AbstractNullLayoutPanel {
 				receiveNotification(content);
 			}
 		};
-		this.ds.connect(jmsURL, dsURL, ServerLauncher.brokerType);
+		System.err.println("ds monitor code not finished");
+//		this.ds.connect(jmsURL, dsURL, ServerLauncher.brokerType);
 
 		this.connectBtn.setEnabled(false);
 		this.jmsURLTF.setTextFieldEditable(false);

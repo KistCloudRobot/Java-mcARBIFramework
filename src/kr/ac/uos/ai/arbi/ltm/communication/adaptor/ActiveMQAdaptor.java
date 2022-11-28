@@ -1,5 +1,9 @@
 package kr.ac.uos.ai.arbi.ltm.communication.adaptor;
 
+import java.io.EOFException;
+import java.io.IOException;
+import java.net.SocketTimeoutException;
+
 import javax.jms.Connection;
 import javax.jms.Destination;
 import javax.jms.JMSException;
@@ -10,6 +14,7 @@ import javax.jms.MessageProducer;
 import javax.jms.Session;
 import javax.jms.TextMessage;
 
+import kr.ac.uos.ai.arbi.agent.communication.ArbiMessageQueue;
 import kr.ac.uos.ai.arbi.framework.ArbiFrameworkServer;
 import kr.ac.uos.ai.arbi.ltm.LTMMessageAction;
 import kr.ac.uos.ai.arbi.ltm.communication.LTMMessageFactory;
@@ -17,76 +22,81 @@ import kr.ac.uos.ai.arbi.ltm.communication.LTMMessageQueue;
 import kr.ac.uos.ai.arbi.ltm.communication.message.LTMMessage;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
+import org.apache.activemq.transport.stomp.StompConnection;
+import org.apache.activemq.transport.stomp.StompFrame;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-public class ActiveMQAdaptor implements LTMMessageAdaptor, MessageListener {
-	private String					clientURI;
-	
-	private Connection 				mqConnection; 
-	private Session					mqSession;
-	
-	private MessageProducer			mqProducer;
-	private MessageConsumer			mqConsumer;
-	
+public class ActiveMQAdaptor implements LTMMessageAdaptor {
 	private LTMMessageQueue			queue;
-	
-	
-	public ActiveMQAdaptor(String brokerURL, String myURI, LTMMessageQueue queue) {
-		this.clientURI = myURI;
-		this.queue = queue;
-		try {
-			ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory();
-			connectionFactory.setBrokerURL(brokerURL);
-			mqConnection 	= connectionFactory.createConnection();
-			mqSession 	= mqConnection.createSession(false, Session.AUTO_ACKNOWLEDGE);
-			Destination ltmDestination = mqSession.createQueue(ArbiFrameworkServer.URL);
-			mqProducer 	= mqSession.createProducer(ltmDestination);
+	private String					clientURI;
 
-			Destination srcDestination = mqSession.createQueue(clientURI + "/message");
-			mqConsumer 	= mqSession.createConsumer(srcDestination);
-			mqConnection.start();
-			while(mqConsumer.receiveNoWait() != null) {
-				
-			}
-			mqConsumer.setMessageListener(this);
+	private StompConnection	connection;
+	private MessageRecvTask messageRecvTask;
+
+	public ActiveMQAdaptor(String brokerHost, int brokerPort, String clientURI, LTMMessageQueue queue) {
+		try {
+			connection = new StompConnection();
+			connection.open(brokerHost, brokerPort);
+			
+			this.clientURI = clientURI;
+			this.queue = queue;
+			
+			messageRecvTask = new MessageRecvTask();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
+	
+	private class MessageRecvTask extends Thread {
+		@Override
+		public void run() {
+			while (true) {
+				String message = "";
+				try {
+					StompFrame messageFrame;
+					messageFrame = connection.receive();
+					if(messageFrame != null) message = messageFrame.getBody();
+					else continue;
+				}
+				catch(SocketTimeoutException e) {
+					continue;
+				}
+				catch(EOFException e) {
+					System.err.println("server connection disconnected.");
+					break;
+				}
+				catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+					continue;
+				}
+				if(message.isEmpty()) continue;
+				onMessage(message);
+			} 
+		}
+	}
+	
+	@Override
+	public void start() {	
+		try {	
+			connection.connect("system", "manager");
+			connection.subscribe(clientURI + "/message");
+			messageRecvTask.start();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
 	public void close() {
-		if (mqProducer != null) {
-			try {
-				mqProducer.close();
-			} catch(JMSException e) {
-				e.printStackTrace();
-			}
-			mqProducer = null;
-		}
-		if (mqConsumer != null) {
-			try {
-				mqConsumer.close();
-			} catch(JMSException e) {
-				e.printStackTrace();
-			}
-			mqConsumer = null;
-		}
-		if (mqSession != null) {
-			try {
-				mqSession.close();
-			} catch(JMSException e) {
-				e.printStackTrace();
-			}
-			mqSession = null;
-		}
-		if (mqConnection != null) {
-			try {
-				mqConnection.close();
-			} catch(JMSException e) {
-				e.printStackTrace();
-			}
-			mqConnection = null;
+		try {
+			connection.close();
+			messageRecvTask.stop();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 
@@ -98,44 +108,38 @@ public class ActiveMQAdaptor implements LTMMessageAdaptor, MessageListener {
 			messageObject.put("action", message.getAction().toString());
 			messageObject.put("content", message.getContent());
 			messageObject.put("conversationID", message.getConversationID());
-			
-			TextMessage textMessage = mqSession.createTextMessage(messageObject.toJSONString());
-			mqProducer.send(textMessage);
-		} catch (JMSException e) {
+
+			connection.send(ArbiFrameworkServer.URL, messageObject.toJSONString());
+		} 
+		catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
-	@Override
-	public void onMessage(Message message) {
-		if (message instanceof TextMessage) {
-			try {
-	            TextMessage textMessage = (TextMessage) message;
-				String text = textMessage.getText();			
-				JSONParser jsonParser = new JSONParser();
-				JSONObject messageObject = (JSONObject) jsonParser.parse(text);
-				
-				String command = messageObject.get("command").toString();
-				if (command.startsWith("Long-Term-Memory")) {
-					String client = messageObject.get("client").toString();
-					String action = messageObject.get("action").toString();
-					String content = messageObject.get("content").toString();
-					String conversationID = messageObject.get("conversationID").toString();
-					LTMMessageFactory f = LTMMessageFactory.getInstance();
-					LTMMessage ltmMessage = f.newMessage(client, LTMMessageAction.valueOf(action), content,
-							conversationID);
-					queue.enqueue(ltmMessage);
-				}
-			} catch (JMSException | ParseException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+	private void onMessage(String message) {	
+		try {
+			JSONParser jsonParser = new JSONParser();
+			JSONObject messageObject = (JSONObject) jsonParser.parse(message);
+			
+			String command = messageObject.get("command").toString();
+			if (command.startsWith("Long-Term-Memory")) {
+				String client = messageObject.get("client").toString();
+				String action = messageObject.get("action").toString();
+				String content = messageObject.get("content").toString();
+				String conversationID = messageObject.get("conversationID").toString();
+				LTMMessageFactory f = LTMMessageFactory.getInstance();
+				LTMMessage ltmMessage = f.newMessage(client, LTMMessageAction.valueOf(action), content,
+						conversationID);
+				queue.enqueue(ltmMessage);
 			}
-		}
-		else {
-			System.out.println(message.toString());
+		} 
+		catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
+	
 	@Override
 	public void notify(LTMMessage msg) {
 		// TODO Auto-generated method stub

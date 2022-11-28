@@ -15,17 +15,14 @@ public class ArbiFrameworkServer {
 	private MessageService		messageService;
 	private LTMServiceInterface	ltmService;
 	private Broker 				broker;
-	private BrokerType 			brokerType;
 		
-	public ArbiFrameworkServer(BrokerType brokerType) {
-		this.brokerType = brokerType;
-		
+	public ArbiFrameworkServer(BrokerType brokerType, String host, int port) {
 		switch(brokerType) {
 		case ACTIVEMQ:
-			this.broker = new ActiveMQBroker();
+			this.broker = new ActiveMQBroker(host, port);
 			break;
 		case APOLLO:
-			this.broker = new ApolloBroker();
+			this.broker = new ApolloBroker(host, port);
 			break;
 		case ZEROMQ:
 			break;
@@ -35,20 +32,18 @@ public class ArbiFrameworkServer {
 		}
 		
 		ltmService = new InMemoryLTMService();
-		
-		
 		LTMMessageProcessor msgProcessor = new LTMMessageProcessor(ltmService);
 		
-		messageService = new MessageService(msgProcessor, brokerType);
+		messageService = new MessageService(msgProcessor, brokerType, host, port);
 		msgProcessor.setMessageService(messageService);
 	}
 	
-	public void start(String brokerURL) {
+	public void start() {
 		if(broker != null) {
-			broker.setURL(brokerURL);
 			broker.start();
 		}
-		messageService.initialize(brokerURL);
+		messageService.start();
+		System.out.println("Server start!");
 	}
 
 }

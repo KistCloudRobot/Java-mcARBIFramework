@@ -1,108 +1,92 @@
 package kr.ac.uos.ai.arbi.agent.communication.adaptor;
 
-import java.util.Properties;
-
-import javax.jms.Connection;
-import javax.jms.Destination;
-import javax.jms.JMSException;
-import javax.jms.MapMessage;
-import javax.jms.Message;
-import javax.jms.MessageConsumer;
-import javax.jms.MessageListener;
-import javax.jms.MessageProducer;
-import javax.jms.Session;
-import javax.jms.TextMessage;
+import java.io.IOException;
+import java.net.SocketTimeoutException;
 
 import kr.ac.uos.ai.arbi.agent.ArbiAgentMessage;
 import kr.ac.uos.ai.arbi.agent.AgentMessageAction;
 import kr.ac.uos.ai.arbi.agent.communication.ArbiMessageQueue;
 import kr.ac.uos.ai.arbi.framework.ArbiFrameworkServer;
 
-import org.apache.activemq.ActiveMQConnectionFactory;
+import org.apache.activemq.transport.stomp.StompConnection;
+import org.apache.activemq.transport.stomp.StompFrame;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
 
 
-public class ActiveMQAdaptor implements ArbiMessageAdaptor, MessageListener {
-	private String					arbiAgentURI;
-	
-	private Connection 				mqConnection; 
-	private Session					mqSession;
-	
-	private MessageProducer			mqProducer;
-	private MessageConsumer			mqConsumer;
-	
+public class ActiveMQAdaptor implements ArbiMessageAdaptor {
 	private ArbiMessageQueue			queue;
+	private String agentURI;
 
-	
-	
-	public ActiveMQAdaptor(String broker, String myURI, ArbiMessageQueue queue) {
-		this.arbiAgentURI = myURI;
-		this.queue = queue;
+	private StompConnection	connection;
+	private MessageRecvTask messageRecvTask;
+
+	public ActiveMQAdaptor(String brokerHost, int brokerPort, String agentURI, ArbiMessageQueue queue) {
 		try {
+			connection = new StompConnection();
+			connection.open(brokerHost, brokerPort);
 			
-			ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory(broker);
-			Properties props = new Properties();
-			props.setProperty("brokerURL", broker);
-			connectionFactory.setProperties(props);
-			mqConnection 	= connectionFactory.createConnection();
-			mqSession 	= mqConnection.createSession(false, Session.AUTO_ACKNOWLEDGE);
-			Destination blackboardServerDestination = mqSession.createQueue(ArbiFrameworkServer.URL);
-			mqProducer 	= mqSession.createProducer(blackboardServerDestination);
-			System.out.println("my dest : " + arbiAgentURI + "/message");
-			Destination srcDestination = mqSession.createQueue(arbiAgentURI + "/message");
-			mqConsumer 	= mqSession.createConsumer(srcDestination);
-			mqConnection.start();
-			while(mqConsumer.receiveNoWait() != null) {
-				
-			}
-			mqConsumer.setMessageListener(this);
+			this.agentURI = agentURI;
+			this.queue = queue;
+			
+			messageRecvTask = new MessageRecvTask();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
+	
+	private class MessageRecvTask extends Thread {
+		@Override
+		public void run() {
+			while (true) {
+				String message = "";
+				try {
+					StompFrame messageFrame;
+					messageFrame = connection.receive();
+					if(messageFrame != null) message = messageFrame.getBody();
+					else continue;
+				}
+				catch(SocketTimeoutException e) {
+					continue;
+				}
+				catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+					continue;
+				}
+				if(message.isEmpty()) continue;
+				onMessage(message);
+			} 
+		}
+	}
+	
+	@Override
+	public void start() {	
+		try {	
+			connection.connect("system", "manager");
+			connection.subscribe(agentURI + "/message");
+			messageRecvTask.start();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
 	public void close() {
-		if (mqProducer != null) {
-			try {
-				
-				mqProducer.close();
-			} catch(JMSException e) {
-				e.printStackTrace();
-			}
-			mqProducer = null;
-		}
-		if (mqConsumer != null) {
-			try {
-				mqConsumer.close();
-			} catch(JMSException e) {
-				e.printStackTrace();
-			}
-			mqConsumer = null;
-		}
-		if (mqSession != null) {
-			try {
-				mqSession.close();
-			} catch(JMSException e) {
-				e.printStackTrace();
-			}
-			mqSession = null;
-		}
-		if (mqConnection != null) {
-			try {
-				mqConnection.close();
-			} catch(JMSException e) {
-				e.printStackTrace();
-			}
-			mqConnection = null;
+		try {
+			connection.close();
+			messageRecvTask.stop();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 
 	public void send(ArbiAgentMessage message)  {
-		boolean isRequireResponse = false;
 		try {
 			JSONObject messageObject = new JSONObject();
+			
 			messageObject.put("sender", message.getSender());
 			messageObject.put("receiver", message.getReceiver());
 			messageObject.put("command", "Arbi-Agent");
@@ -111,40 +95,33 @@ public class ActiveMQAdaptor implements ArbiMessageAdaptor, MessageListener {
 			messageObject.put("conversationID", message.getConversationID());
 			messageObject.put("timestamp", message.getTimestamp());
 			
-			TextMessage textMessage = mqSession.createTextMessage(messageObject.toJSONString());
-			mqProducer.send(textMessage);
-			
-		} catch (JMSException e) {
+			connection.send(ArbiFrameworkServer.URL, messageObject.toJSONString());
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
-	@Override
-	public void onMessage(Message message) {
+	private void onMessage(String message) {
 		try {
-			if (message instanceof TextMessage) {
-	            TextMessage textMessage = (TextMessage) message;
-				String text = textMessage.getText();
-				JSONParser jsonParser = new JSONParser();
-				JSONObject messageObject = (JSONObject) jsonParser.parse(text);
-				
-				String command = messageObject.get("command").toString();
-				if (command.startsWith("Arbi-Agent")) {
-					String sender = messageObject.get("sender").toString();
-					String receiver = messageObject.get("receiver").toString();
-					String action = messageObject.get("action").toString();
-					String content = messageObject.get("content").toString();
-					String conversationID = messageObject.get("conversationID").toString();
-					long timestamp = Long.parseLong(messageObject.get("timestamp").toString());
-					ArbiAgentMessage agentMessage = new ArbiAgentMessage(sender, receiver,
-							AgentMessageAction.valueOf(action), content, conversationID, timestamp);
-					queue.enqueue(agentMessage);
-				}
+			JSONParser jsonParser = new JSONParser();
+			JSONObject messageObject = (JSONObject) jsonParser.parse(message);
+			
+			String command = messageObject.get("command").toString();
+			if (command.startsWith("Arbi-Agent")) {
+				String sender = messageObject.get("sender").toString();
+				String receiver = messageObject.get("receiver").toString();
+				String action = messageObject.get("action").toString();
+				String content = messageObject.get("content").toString();
+				String conversationID = messageObject.get("conversationID").toString();
+				long timestamp = Long.parseLong(messageObject.get("timestamp").toString());
+				ArbiAgentMessage agentMessage = new ArbiAgentMessage(sender, receiver,
+						AgentMessageAction.valueOf(action), content, conversationID, timestamp);
+				queue.enqueue(agentMessage);
 			}
-		} catch (JMSException | ParseException e1) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e1.printStackTrace();
+			e.printStackTrace();
 		}
 	}
 }

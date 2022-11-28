@@ -1,10 +1,5 @@
 package kr.ac.uos.ai.arbi.ltm.communication.adaptor;
 
-import javax.jms.Connection;
-import javax.jms.MessageConsumer;
-import javax.jms.MessageProducer;
-import javax.jms.Session;
-
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -20,6 +15,7 @@ import kr.ac.uos.ai.arbi.ltm.communication.message.LTMMessage;
 
 public class ZeroMQLTMAdaptor implements LTMMessageAdaptor {
 	private String clientURI;
+	private String brokerURL;
 	private Context zmqContext;
 	private boolean isAlive;
 	private Socket zmqProducer;
@@ -29,24 +25,28 @@ public class ZeroMQLTMAdaptor implements LTMMessageAdaptor {
 
 	private LTMMessageQueue queue;
 
-	public ZeroMQLTMAdaptor(String broker, String myURI, LTMMessageQueue queue) {
-		this.clientURI = myURI;
+	public ZeroMQLTMAdaptor(String brokerHost, int brokerPort, String clientURI, LTMMessageQueue queue) {
+		this.brokerURL = "tcp://" + brokerHost + ":" + brokerPort;
+		this.clientURI = clientURI;
 		this.queue = queue;
-
 		zmqContext = ZMQ.context(1);
+		
 		zmqProducer = zmqContext.socket(SocketType.DEALER);
-		zmqProducer.connect(broker);
-		zmqProducer.setIdentity((clientURI).getBytes());
-		//zmqProducer.setSndHWM(0);
+		
 		zmqConsumer = zmqContext.socket(SocketType.DEALER);
-		zmqConsumer.connect(broker);
-		zmqConsumer.setIdentity((clientURI + "/message").getBytes());
-		//zmqConsumer.setRcvHWM(0);
 		
 		messageRecvTask = new MessageRecvTask();
+		
+		isAlive = true;
+	}
+	
+	public void start() {
+		zmqProducer.connect(brokerURL);
+		zmqProducer.setIdentity(clientURI.getBytes());
+		zmqConsumer.connect(brokerURL);
+		zmqConsumer.setIdentity((clientURI + "/message").getBytes());
 		isAlive = true;
 		messageRecvTask.start();
-
 	}
 
 	public void close() {

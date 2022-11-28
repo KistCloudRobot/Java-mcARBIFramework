@@ -23,7 +23,7 @@ import kr.ac.uos.ai.arbi.agent.communication.dispatchTask.DispatchSubscribeTask;
 import kr.ac.uos.ai.arbi.agent.communication.dispatchTask.DispatchSystemTask;
 import kr.ac.uos.ai.arbi.agent.communication.dispatchTask.DispatchUnsubscribeTask;
 
-public class ArbiAgentMessageToolkit extends Thread {
+public class ArbiAgentMessageToolkit implements Runnable {
 	private final int nThread = 5;
 
 	private ArbiMessageAdaptor adaptor;
@@ -31,25 +31,32 @@ public class ArbiAgentMessageToolkit extends Thread {
 	private ArbiMessageQueue queue;
 	private ExecutorService messageThreadPool;
 	private ArbiAgent agent;
-	private int brokerType;
 
 	private BlockingArrayQueue<ArbiAgentMessage> waitingResponse;
 
-	public ArbiAgentMessageToolkit(String brokerURL, String agentURI, ArbiAgent agent, BrokerType brokerType) {
+	public ArbiAgentMessageToolkit(BrokerType brokerType, String brokerHost, int brokerPort, String agentURI, ArbiAgent agent) {
 		this.agentURI = agentURI;
 		this.queue = new ArbiMessageQueue();
 		this.messageThreadPool = Executors.newFixedThreadPool(nThread);
 	
 		if (brokerType == BrokerType.ZEROMQ) {
-			this.adaptor = new ZeroMQAgentAdaptor(brokerURL, agentURI, queue);
-		} else {
-			this.adaptor = new ActiveMQAdaptor(brokerURL, agentURI, queue);
+			this.adaptor = new ZeroMQAgentAdaptor(brokerHost, brokerPort, agentURI, queue);
+		} 
+		else if (brokerType == BrokerType.ACTIVEMQ) {
+			this.adaptor = new ActiveMQAdaptor(brokerHost, brokerPort, agentURI, queue);
 		}
-		
+		else {
+			System.err.println("broker type undefined!");
+		}
 		
 		waitingResponse = new BlockingArrayQueue<ArbiAgentMessage>();
 		this.agent = agent;
-		this.start();
+	}
+	
+	public void start() {
+		Thread t = new Thread(this);
+		t.start();
+		adaptor.start();
 	}
 
 	public void close() {
@@ -66,6 +73,7 @@ public class ArbiAgentMessageToolkit extends Thread {
 		return new ArbiAgentMessage(agentURI, receiver, action, content);
 	}
 
+	@Override
 	public void run() {
 		while (agent.isRunning()) {
 			ArbiAgentMessage message = queue.blockingDequeue(null, 500);

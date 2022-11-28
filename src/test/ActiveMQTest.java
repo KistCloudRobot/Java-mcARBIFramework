@@ -1,6 +1,7 @@
 package test;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
+import org.apache.activemq.transport.stomp.StompConnection;
 
 import kr.ac.uos.ai.arbi.framework.ArbiFrameworkServer;
 

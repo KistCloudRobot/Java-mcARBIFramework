@@ -16,7 +16,7 @@ import kr.ac.uos.ai.arbi.ltm.communication.message.LTMMessage;
 import kr.ac.uos.ai.arbi.ltm.communication.task.DispatchOnNotifyTask;
 import kr.ac.uos.ai.arbi.utility.DebugUtilities;
 
-public class DataCenterInterfaceToolkit extends Thread {
+public class DataCenterInterfaceToolkit implements Runnable {
 	private final int nThread = 5;
 	
 	private final LTMMessageQueue queue;
@@ -27,19 +27,28 @@ public class DataCenterInterfaceToolkit extends Thread {
 
 	private final LTMMessageFactory factory;
 
-	public DataCenterInterfaceToolkit(String brokerURL, String dataSourceURI, DataSource dataSource, BrokerType brokerType) {
-
+	public DataCenterInterfaceToolkit(String brokerHost, int brokerPort, String dataSourceURI, DataSource dataSource, BrokerType brokerType) {
 		this.factory = LTMMessageFactory.getInstance();
 		this.dataSource = dataSource;
 		this.queue = new LTMMessageQueue();
 		if (brokerType == BrokerType.ZEROMQ) {
-			this.adaptor = new ZeroMQLTMAdaptor(brokerURL, dataSourceURI, queue);
-		} else {
-			this.adaptor = new ActiveMQAdaptor(brokerURL, dataSourceURI, queue);
+			this.adaptor = new ZeroMQLTMAdaptor(brokerHost, brokerPort, dataSourceURI, queue);
+		} 
+		else if(brokerType == BrokerType.ACTIVEMQ) {
+			this.adaptor = new ActiveMQAdaptor(brokerHost, brokerPort, dataSourceURI, queue);
+		}
+		else {
+			System.err.println("undefined ltm broker type");
+			this.adaptor = null;
 		}
 		this.waitingResult = new LinkedBlockingQueue<LTMMessage>();
 		this.messageThreadPool = Executors.newFixedThreadPool(nThread);
-		this.start();
+	}
+	
+	public void start() {
+		Thread t = new Thread(this);
+		t.start();
+		this.adaptor.start();
 	}
 
 	public void run() {

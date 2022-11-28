@@ -6,14 +6,11 @@ import org.apache.activemq.apollo.dto.BrokerDTO;
 import org.apache.activemq.apollo.dto.VirtualHostDTO;
 
 public class ApolloBroker implements kr.ac.uos.ai.arbi.framework.broker.Broker  {
-
 	private Broker broker;
 
-	public ApolloBroker() {
+	public ApolloBroker(String host, int port) {
 		broker = new Broker();
-	}
-
-	public void setURL(String url) {
+		String url = "tcp://" + host + ":" + port;
 		broker.setConfig(createConfig(url));
 	}
 
@@ -36,7 +33,6 @@ public class ApolloBroker implements kr.ac.uos.ai.arbi.framework.broker.Broker  
 	}
 
 	public void start() {
-		System.out.println("Starting the broker.");
 		broker.start(new Runnable() {
 			public void run() {
 				System.out.println("The broker has now started.");

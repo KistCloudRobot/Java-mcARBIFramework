@@ -16,7 +16,12 @@ public class ZeroMQMonitorTest extends ArbiAgent{
 	}
 	
 	public void init() {
-		ArbiAgentExecutor.execute("tcp://192.168.0.2:61616","agent://www.arbi.com/taskManager", this, BrokerType.ZEROMQ);
+		String host = "127.0.0.1";
+//		String host = "192.168.100.10";
+//		String host = "172.16.165.141";
+		int port = 61116;
+		
+		ArbiAgentExecutor.execute(host, port,"agent://www.arbi.com/taskManager", this, BrokerType.ZEROMQ);
 		String test = "(testArg)";
 		AgentAction owlLoadAction = new AgentAction("WorldModel", new TestAction());
 		LoggerManager.getInstance().registerAction(owlLoadAction, LogTiming.NonAction);

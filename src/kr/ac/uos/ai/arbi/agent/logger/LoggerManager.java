@@ -30,8 +30,7 @@ public class LoggerManager {
 		return instance;
 	}
 	
-	public void initLoggerManager(String brokerURL, String agentURI, ArbiAgent arbiAgent) {
-		
+	public void initLoggerManager(String agentURI, ArbiAgent arbiAgent) {
 		this.agent = arbiAgent;
 		this.actor = agentURI;	
 	}

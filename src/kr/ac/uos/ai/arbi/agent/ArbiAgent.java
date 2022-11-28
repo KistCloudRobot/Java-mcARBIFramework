@@ -17,8 +17,6 @@ public abstract class ArbiAgent {
 	protected BrokerType brokerType;
 	private ArbiAgentMessageToolkit messageToolkit;
 	private DataStream dataStream;
-	private static final int BROKER_TYPE_ZEROMQ = 2;
-	private static final int BROKER_TYPE_APOLLO = 1;
 	private boolean running;
 
 	public void setRunning(boolean running) {
@@ -36,41 +34,25 @@ public abstract class ArbiAgent {
 		
 	}
 	
-	public ArbiAgentMessageToolkit GetMessageToolkit() { return messageToolkit; }
-	
-	public final void initialize(String brokerURL, String agentURI, BrokerType brokerType) {
+	public final void initialize(BrokerType brokerType, String brokerHost, int brokerPort, String agentURI) {
 		arbiAgentURI = agentURI;
 		this.brokerType = brokerType;
-	
-		String broker = brokerURL;
+		
 		running = true;
 		
 		System.out.println("agentName : " + agentURI);
 		System.out.println("brokerType : " + brokerType.toString());
-		System.out.println("brokerURL : " + brokerURL);
+		System.out.println("brokerHost : " + brokerHost);
+		System.out.println("brokerPort : " + brokerPort);
 		
-		messageToolkit = new ArbiAgentMessageToolkit(broker, arbiAgentURI, this, brokerType);
+		messageToolkit = new ArbiAgentMessageToolkit(brokerType, brokerHost, brokerPort, arbiAgentURI, this);
 		dataStream = new DataStream();
-		LoggerManager.getInstance().initLoggerManager(brokerURL, agentURI, this);
+		LoggerManager.getInstance().initLoggerManager(agentURI, this);
 		this.onStart();
-	}
-	public final void initialize(String agentURI, BrokerType brokerType) {
-		arbiAgentURI = agentURI;
 		
-		String broker = null;
-		try {
-			broker = "tcp://" + Inet4Address.getLocalHost().getHostAddress() + ":61616";
-		} catch (UnknownHostException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		running = true;
-
-		messageToolkit = new ArbiAgentMessageToolkit(broker, arbiAgentURI, this, brokerType);
-		dataStream = new DataStream();
-		LoggerManager.getInstance().initLoggerManager(broker, agentURI,this);
-		this.onStart();
+		messageToolkit.start();
 	}
+	
 	public void onStart() {
 	}
 

@@ -38,7 +38,8 @@ public class AAMessageTestPanel extends AbstractNullLayoutPanel {
 	private static final String RESPONSE_MESSAGE = "(ok)";
 
 	private JPanel senderPanel;
-	private LabeledTextField jmsURLTF;
+	private LabeledTextField jmsHostTF;
+	private LabeledTextField jmsPortTF;
 	private LabeledTextField senderURLTF;
 	private JButton connectBtn;
 	private JPanel receiverPanel;
@@ -56,7 +57,8 @@ public class AAMessageTestPanel extends AbstractNullLayoutPanel {
 	public AAMessageTestPanel(String brokerURL) {
 		// TODO Auto-generated constructor stub
 		this.senderPanel = new JPanel();
-		this.jmsURLTF = new LabeledTextField("JMS URL: ", 90, "tcp://localhost:61616");
+		this.jmsHostTF = new LabeledTextField("JMS URL: ", 60, "localhost");
+		this.jmsPortTF = new LabeledTextField("JMS URL: ", 30, "61616");
 		this.senderURLTF = new LabeledTextField("Sender URL: ", 90, "agent://ai.uos.ac.kr/tester01");
 		this.connectBtn = new JButton("Connect");
 
@@ -74,8 +76,10 @@ public class AAMessageTestPanel extends AbstractNullLayoutPanel {
 		this.threadPool = MessageTestFrame.getThreadPool();
 
 		if (!(Utility.isNullString(brokerURL))) {
-			this.jmsURLTF.setText(brokerURL);
-			this.jmsURLTF.setTextFieldEditable(true);
+			this.jmsHostTF.setText(brokerURL);
+			this.jmsHostTF.setTextFieldEditable(true);
+			this.jmsPortTF.setText(brokerURL);
+			this.jmsPortTF.setTextFieldEditable(true);
 		}
 	}
 
@@ -92,11 +96,13 @@ public class AAMessageTestPanel extends AbstractNullLayoutPanel {
 	private void initializeSenderPart() {
 		this.senderPanel.setLayout(null);
 		this.senderPanel.setBorder(new TitledBorder(""));
-		this.jmsURLTF.setTextFieldColor(Color.WHITE);
+		this.jmsHostTF.setTextFieldColor(Color.WHITE);
+		this.jmsPortTF.setTextFieldColor(Color.WHITE);
 		this.senderURLTF.setTextFieldColor(Color.WHITE);
 		this.connectBtn.setActionCommand("CONNECT");
 
-		this.senderPanel.add(this.jmsURLTF);
+		this.senderPanel.add(this.jmsHostTF);
+		this.senderPanel.add(this.jmsPortTF);
 		this.senderPanel.add(this.senderURLTF);
 		this.senderPanel.add(this.connectBtn);
 
@@ -153,12 +159,19 @@ public class AAMessageTestPanel extends AbstractNullLayoutPanel {
 		if (this.aa != null)
 			return;
 
-		String jmsURL = this.jmsURLTF.getText();
-		if ((jmsURL == null) || ("".equals(jmsURL))) {
+		String host = this.jmsHostTF.getText();
+		if ((host == null) || host.isEmpty()) {
 			showWarning("Please input JMS Broker URL!");
 			return;
 		}
 
+		String portString = this.jmsPortTF.getText();
+		if ((portString == null) || portString.isEmpty()) {
+			showWarning("Please input JMS Broker URL!");
+			return;
+		}
+		int port = Integer.parseInt(portString);
+		
 		String saURL = this.senderURLTF.getText();
 		if ((saURL == null) || ("".equals(saURL))) {
 			showWarning("Please input sender AA URL!");
@@ -194,10 +207,11 @@ public class AAMessageTestPanel extends AbstractNullLayoutPanel {
 				return "(ok)";
 			}
 		};
-		ArbiAgentExecutor.execute(jmsURL, senderURLTF.getText() , aa, ServerLauncher.brokerType);
+		ArbiAgentExecutor.execute(host, port, senderURLTF.getText() , aa, ServerLauncher.brokerType);
 
 		this.connectBtn.setEnabled(false);
-		this.jmsURLTF.setTextFieldEditable(false);
+		this.jmsHostTF.setTextFieldEditable(false);
+		this.jmsPortTF.setTextFieldEditable(false);
 		this.senderURLTF.setTextFieldEditable(false);
 
 	}
@@ -251,7 +265,8 @@ public class AAMessageTestPanel extends AbstractNullLayoutPanel {
 		this.senderPanel.setBounds(10, 10, width - 20, 55);
 		this.connectBtn.setBounds(bX, 5, 100, 45);
 
-		this.jmsURLTF.setBounds(10, 5, tfWidth, 20);
+		this.jmsHostTF.setBounds(10, 5, tfWidth * 3 / 4, 20);
+		this.jmsPortTF.setBounds(10 + tfWidth * 3 / 4 + 5, 5, tfWidth / 4 - 5, 20);
 		this.senderURLTF.setBounds(10, 30, tfWidth, 20);
 
 		this.receiverPanel.setBounds(10, 20 + this.senderPanel.getHeight(), width - 20, 160);
