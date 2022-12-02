@@ -9,10 +9,10 @@ import kr.ac.uos.ai.arbi.ltm.DataSource;
 
 public class DemoStarter extends ArbiAgent {
 	static String agentURI = "agent://www.arbi.com/demoStarter";
-	static String host = "127.0.0.1";
+//	static String host = "127.0.0.1";
 //	static String host = "192.168.100.10";
-//	static String host = "172.16.165.141";
-	static int port = 61116;
+	static String host = "172.16.165.141";
+	static int port = 61316;
 	
 	public static void main(String[] args) {
 		DemoStarter demo = new DemoStarter(BrokerType.ACTIVEMQ);
@@ -27,6 +27,9 @@ public class DemoStarter extends ArbiAgent {
 	DataSource dc;
 	
 	public DemoStarter(BrokerType brokerType) {
+
+		dc = new DataSource();
+		dc.connect(host, port, "dc://www.agent.com/demoStarter", brokerType);
 		ArbiAgentExecutor.execute(host, port, agentURI, this, brokerType);
 
 		//communicator.getBaseChannel().request("agent://www.mcarbi.com/organizationDispatcher", "(DiapatchOrganization)");
@@ -36,8 +39,6 @@ public class DemoStarter extends ArbiAgent {
 	@Override
 	public void onStart() {
 		
-		dc = new DataSource();
-		dc.connect(host, port, "dc://www.agent.com/demoStarter", BrokerType.ZEROMQ);
 		
 		//send("agent://www.arbi.com/TaskAllocator", "(hi)");
 	}

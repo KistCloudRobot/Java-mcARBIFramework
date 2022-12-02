@@ -9,9 +9,9 @@ import kr.ac.uos.ai.arbi.framework.ArbiFrameworkServer;
 
 public class LocalServer {
 	public static void main(String[] args) {
-		String host = "127.0.0.1";
+//		String host = "127.0.0.1";
 //		String host = "192.168.100.10";
-//		String host = "172.16.165.141";
+		String host = "172.16.165.141";
 		int port = 61316;
 		
 		ArbiFrameworkServer server = new ArbiFrameworkServer(BrokerType.ACTIVEMQ, host, port);
