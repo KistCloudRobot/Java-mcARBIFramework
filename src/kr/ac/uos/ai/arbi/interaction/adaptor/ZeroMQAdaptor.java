@@ -23,7 +23,10 @@ public class ZeroMQAdaptor extends Thread implements InteractionMessageAdaptor {
 	public ZeroMQAdaptor(MonitorMessageQueue queue) {
 		this.queue = queue;
 		
-		String[] url = InteractionManagerBrokerConfiguration.getZeroMQBroker().split(":");
+		String zeroMQBrokerHost = InteractionManagerBrokerConfiguration.getZeroMQBrokerHost();
+		int zeroMQBrokerPort = InteractionManagerBrokerConfiguration.getZeroMQBrokerPort();
+		
+		String zeroMQURL = "tcp://" + zeroMQBrokerHost +":" +zeroMQBrokerPort;
 		
 		zmqContext = ZMQ.context(1);
 		/*
@@ -38,7 +41,7 @@ public class ZeroMQAdaptor extends Thread implements InteractionMessageAdaptor {
 		
 		zmqRouter = zmqContext.socket(ZMQ.ROUTER);
 
-		zmqRouter.bind(InteractionManagerBrokerConfiguration.getZeroMQBroker());
+		zmqRouter.bind(zeroMQURL);
 		System.out.println("ZeroMQ broker started");
 		
 
@@ -49,11 +52,8 @@ public class ZeroMQAdaptor extends Thread implements InteractionMessageAdaptor {
 	public void run() {
 		while (true) {
 			String message = zmqRouter.recvStr();
-//			System.out.println("receivedMessage : " + message);
 			message = zmqRouter.recvStr();
-			
 			message = zmqRouter.recvStr();
-//			System.out.println("receivedMessage : " + message);
 			queue.enqueue(message);
 		}
 	}
@@ -68,7 +68,7 @@ public class ZeroMQAdaptor extends Thread implements InteractionMessageAdaptor {
 	public void send(String monitorID, String message) {
 
 		// TODO Auto-generated method stub
-		
+		System.out.println("send message " + monitorID + " " + message);
 		zmqRouter.sendMore(monitorID);
 		zmqRouter.sendMore("");
 		zmqRouter.send(message);

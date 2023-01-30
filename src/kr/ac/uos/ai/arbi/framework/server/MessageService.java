@@ -7,10 +7,14 @@ import kr.ac.uos.ai.arbi.agent.communication.ArbiMessageQueue;
 import kr.ac.uos.ai.arbi.framework.server.adaptor.ActiveMQMessageAdaptor;
 import kr.ac.uos.ai.arbi.framework.server.adaptor.MessageAdaptor;
 import kr.ac.uos.ai.arbi.framework.server.adaptor.ZeroMQMessageAdaptor;
+import kr.ac.uos.ai.arbi.interaction.InteractionManager;
 import kr.ac.uos.ai.arbi.ltm.communication.LTMMessageQueue;
 import kr.ac.uos.ai.arbi.ltm.communication.adaptor.ActiveMQAdaptor;
 import kr.ac.uos.ai.arbi.ltm.communication.adaptor.ZeroMQLTMAdaptor;
 import kr.ac.uos.ai.arbi.ltm.communication.message.LTMMessage;
+import kr.ac.uos.ai.arbi.model.GLFactory;
+import kr.ac.uos.ai.arbi.model.GeneralizedList;
+import kr.ac.uos.ai.arbi.model.parser.ParseException;
 import kr.ac.uos.ai.arbi.ltm.LTMMessageAction;
 
 public class MessageService {
@@ -63,18 +67,28 @@ public class MessageService {
 	
 
 	public void agentMessageReceived(ArbiAgentMessage agentMessage) {
+		// 로그
 		if(agentMessage.getAction() != AgentMessageAction.Notify) {
 			System.out.println("[Agent Message]\t<" + agentMessage.getAction().toString() + ">\t" + agentMessage.getSender()
 					+ " --> " + agentMessage.getReceiver() + " : " + agentMessage.getContent());
 		}
-		messageAdaptor.deliver(agentMessage);
+		
+		if(agentMessage.getReceiver().equals("Server")) {
+			this.messageReceived(agentMessage);
+		}
+		else {
+			messageAdaptor.deliver(agentMessage);
+		}
 		
 		if (interactionManagerStatus) {
-			messageAdaptor.deliverToMonitor(agentMessage);
+			if(!(agentMessage.getReceiver().equals(InteractionManager.interactionManagerURI) && agentMessage.getAction().equals(AgentMessageAction.System))) {
+				messageAdaptor.deliverToMonitor(agentMessage);
+			}
 		}
 	}
 
 	public synchronized void send(LTMMessage message) {
+		// 로그
 //		System.out.println("[LTM Message]\t<" + message.getAction().toString() + ">\t" + message.getClient() + " : "
 //				+ message.getContent());
 		
@@ -91,25 +105,32 @@ public class MessageService {
 	}
 	
 	public void ltmMessageReceived(LTMMessage ltmMessage) {
-		if (interactionManagerStatus) {
-			messageAdaptor.deliverToMonitor(ltmMessage);
-		}
 		if(ltmMessage.getAction() == LTMMessageAction.Notify || ltmMessage.isSendingFromServer() == true) {
 			messageAdaptor.send(ltmMessage);
 		}else {
+			// 로그
 //			System.out.println("[LTM Message]\t<" + ltmMessage.getAction().toString() + ">\t" + ltmMessage.getClient()
 //			+ " : " + ltmMessage.getContent());
 			ltmListener.messageRecieved(ltmMessage);
 		}
 		
-		
+		if (interactionManagerStatus) {
+			messageAdaptor.deliverToMonitor(ltmMessage);
+		}
 	}
 
-	public void messageRecieved(String status) {
-		if (status.equals("ON"))
-			interactionManagerStatus = true;
-		else if (status.equals("OFF"))
-			interactionManagerStatus = false;
+	public void messageReceived(ArbiAgentMessage message) {
+		try {
+			GeneralizedList gl = GLFactory.newGLFromGLString(message.getContent());
+			String messageType = gl.getName();
+			if(messageType.equals("ActivateLogging")) {
+				System.out.println("[Server]\t" + "Logging Activate");
+				interactionManagerStatus = true;
+			}
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	class ArbiAgentMessageService implements Runnable{

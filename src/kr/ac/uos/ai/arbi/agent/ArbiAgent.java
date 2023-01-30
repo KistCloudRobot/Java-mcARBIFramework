@@ -48,9 +48,10 @@ public abstract class ArbiAgent {
 		messageToolkit = new ArbiAgentMessageToolkit(brokerType, brokerHost, brokerPort, arbiAgentURI, this);
 		dataStream = new DataStream();
 		LoggerManager.getInstance().initLoggerManager(agentURI, this);
-		this.onStart();
 		
 		messageToolkit.start();
+		
+		this.onStart();
 	}
 	
 	public void onStart() {

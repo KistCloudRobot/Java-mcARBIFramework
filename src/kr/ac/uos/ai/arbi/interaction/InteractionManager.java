@@ -7,17 +7,15 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import kr.ac.uos.ai.arbi.BrokerType;
 import kr.ac.uos.ai.arbi.agent.ArbiAgent;
+import kr.ac.uos.ai.arbi.framework.broker.ActiveMQBroker;
 import kr.ac.uos.ai.arbi.interaction.proxy.MonitorProxy;
-import kr.ac.uos.ai.arbi.ltm.DataSource;
 import kr.ac.uos.ai.arbi.model.GLFactory;
 import kr.ac.uos.ai.arbi.model.GeneralizedList;
 
 public class InteractionManager extends ArbiAgent {
 
-	public static final String interactionAgentURI = "agent://www.arbi.com/interactionManager";
-	public static final String interactionManagerURI = "http://www.arbi.com/interactionManager";
+	public static final String interactionManagerURI = "agent://www.arbi.com/interactionManager";
 	private static final String interactionManagerDS = "ds://www.arbi.com/interactionManager";
 
 	private static final String CONTEXTMANAGER_ADDRESS = "agent://www.arbi.com/contextManager";
@@ -33,24 +31,33 @@ public class InteractionManager extends ArbiAgent {
 	
 	private MonitorMessageToolkit monitorMessageToolkit;
 	
+	private ActiveMQBroker activeMQBroker = null;
+	
 	public InteractionManager() {
 		monitorProxyList = new ArrayList<>();
 		logManager = new LogManager(this);
 		tempMessageQueue = new MonitorMessageQueue();
+		initMessageBroker();
+		monitorMessageToolkit = new MonitorMessageToolkit(this);
 	}
 	
-	public void start(String serverURI, BrokerType brokerType){
-		initMessageToolkit();
-		monitorMessageToolkit.sendStatus(serverURI, "ON", brokerType);
-		//initDataSource(serverURI, brokerType);
+	private void initMessageBroker() {
+		String activeMQBrokerHost = InteractionManagerBrokerConfiguration.getActiveMQBrokerHost();
+		if(activeMQBrokerHost != null) {
+			this.activeMQBroker = new ActiveMQBroker(activeMQBrokerHost, InteractionManagerBrokerConfiguration.getActiveMQBrokerPort());
+		}
+	}
+	
+	@Override
+	public void onStart(){
+		if(this.activeMQBroker != null) {
+			this.activeMQBroker.start();
+		}
+		this.send("Server", "(ActivateLogging)");
 	}
 	
 	public void stop() {
 		monitorMessageToolkit.stopThread();
-	}
-
-	private void initMessageToolkit() {
-		monitorMessageToolkit = new MonitorMessageToolkit(this);
 	}
 	
 	/*
@@ -117,7 +124,6 @@ public class InteractionManager extends ArbiAgent {
 		}else {
 			//System.out.println("************************out filter");
 			JSONObject message = logManager.logParseToJSON(data);
-			
 			String logType = message.get("LogType").toString();
 			System.out.println("[ LogData ]\t" +"<" + logType+ ">"+"\t" +data);
 			

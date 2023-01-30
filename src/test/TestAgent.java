@@ -15,9 +15,9 @@ public class TestAgent extends ArbiAgent{
 		String host = "127.0.0.1";
 //		String host = "192.168.100.10";
 //		String host = "172.16.165.141";
-		int port = 61116;
+		int port = 61616;
 		
-		ArbiAgentExecutor.execute(host, port, "test81", this, BrokerType.ZEROMQ);
+		ArbiAgentExecutor.execute(host, port, "test81", this, BrokerType.ACTIVEMQ);
 		System.out.println("test start!");
 		this.send("test81", "(Move \"AMR_LIFT2+Move_120\" (Path 120))");
 		this.send("test81", "(Move \"AMR_LIFT2+Move_120\" (Path 120))");

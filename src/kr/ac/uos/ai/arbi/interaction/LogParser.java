@@ -13,7 +13,7 @@ public class LogParser {
 		
 		JSONObject jsonObject = new JSONObject();
 		try {
-			System.out.println("content to parse : " + content);
+//			System.out.println("content to parse : " + content);
 			GeneralizedList gl = GLFactory.newGLFromGLString(content);
 			for(int i=0; i<gl.getExpressionsSize(); i++) {
 				GeneralizedList glChild = gl.getExpression(i).asGeneralizedList();

@@ -63,7 +63,7 @@ public class MonitorFilter {
 	}
 
 	private void setMessageLogFilter(JSONObject filterObject) {
-		String filterType = filterObject.get("Type").toString();
+		String filterType = filterObject.get("LogType").toString();
 		String filterAction = filterObject.get("Action").toString();
 		boolean filterFlag = Boolean.parseBoolean(filterObject.get("Flag").toString());
 

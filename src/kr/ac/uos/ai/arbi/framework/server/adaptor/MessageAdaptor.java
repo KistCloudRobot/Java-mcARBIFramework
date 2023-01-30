@@ -131,12 +131,9 @@ public abstract class MessageAdaptor {
 				LTMMessageFactory f = LTMMessageFactory.getInstance();
 				LTMMessage ltmMessage = f.newMessage(client, LTMMessageAction.valueOf(action), content, queryID);
 				ltmMessageQueue.enqueue(ltmMessage);
-			} else if (command.startsWith("InteractionManager-Status")) {
-				String status = messageObject.get("status").toString();
-				service.messageRecieved(status);
-			}
+			} 
 			else {
-				System.out.println("undefined message command");
+				System.out.println("undefined message command :" + command);
 			}
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block

@@ -82,24 +82,22 @@ public class ServerLauncher {
 							.item(0);
 					Element hostElement = (Element) interactionManagerStompBrokerElement.getElementsByTagName("Host")
 							.item(0);
-					InteractionManagerBrokerConfiguration.setStompBroker(
-							"stomp://" + hostElement.getTextContent() + ":" + portElement.getTextContent());
-					System.out.println("InteractionManager stomp addr : "
-							+ InteractionManagerBrokerConfiguration.getStompBroker());
+					InteractionManagerBrokerConfiguration.setActiveMQBrokerHost(hostElement.getTextContent());
+					InteractionManagerBrokerConfiguration.setActiveMQBrokerPort(Integer.parseInt(portElement.getTextContent()));
 				}
 				Element interactionManagerApolloBrokerElement = (Element) interactionManagerBrokerElement
 						.getElementsByTagName("ApolloBroker").item(0);
 				
-				if (interactionManagerApolloBrokerElement.getAttribute("Available").equals("true")) {
-					Element portElement = (Element) interactionManagerApolloBrokerElement.getElementsByTagName("Port")
-							.item(0);
-					Element hostElement = (Element) interactionManagerApolloBrokerElement.getElementsByTagName("Host")
-							.item(0);
-					InteractionManagerBrokerConfiguration.setApolloBroker(
-							"tcp://" + hostElement.getTextContent() + ":" + portElement.getTextContent());
-					System.out.println("InteractionManager apollo addr : "
-							+ InteractionManagerBrokerConfiguration.getApolloBroker());
-				}
+//				if (interactionManagerApolloBrokerElement.getAttribute("Available").equals("true")) {
+//					Element portElement = (Element) interactionManagerApolloBrokerElement.getElementsByTagName("Port")
+//							.item(0);
+//					Element hostElement = (Element) interactionManagerApolloBrokerElement.getElementsByTagName("Host")
+//							.item(0);
+//					InteractionManagerBrokerConfiguration.setApolloBroker(
+//							"tcp://" + hostElement.getTextContent() + ":" + portElement.getTextContent());
+//					System.out.println("InteractionManager apollo addr : "
+//							+ InteractionManagerBrokerConfiguration.getApolloBroker());
+//				}
 				Element interactionManagerZeroMQBrokerElement = (Element) interactionManagerBrokerElement
 						.getElementsByTagName("ZeroMQBroker").item(0);
 				
@@ -108,10 +106,8 @@ public class ServerLauncher {
 							.item(0);
 					Element hostElement = (Element) interactionManagerZeroMQBrokerElement.getElementsByTagName("Host")
 							.item(0);
-					InteractionManagerBrokerConfiguration.setZeroMQBroker(
-							"tcp://" + hostElement.getTextContent() + ":" + portElement.getTextContent());
-					System.out.println("InteractionManager zeroMQ addr : "
-							+ InteractionManagerBrokerConfiguration.getZeroMQBroker());
+					InteractionManagerBrokerConfiguration.setZeroMQBrokerHost(hostElement.getTextContent());
+					InteractionManagerBrokerConfiguration.setZeroMQBrokerPort(Integer.parseInt(portElement.getTextContent()));
 				}
 				Element interactionManagerSocketBrokerElement = (Element) interactionManagerBrokerElement
 						.getElementsByTagName("SocketBroker").item(0);
@@ -120,10 +116,8 @@ public class ServerLauncher {
 							.item(0);
 					Element hostElement = (Element) interactionManagerSocketBrokerElement.getElementsByTagName("Host")
 							.item(0);
-					InteractionManagerBrokerConfiguration.setSocketBroker(
-							"tcp://" + hostElement.getTextContent() + ":" + portElement.getTextContent());
-					System.out.println("InteractionManager socket addr : "
-							+ InteractionManagerBrokerConfiguration.getSocketBroker());
+					InteractionManagerBrokerConfiguration.setSocketBrokerHost(hostElement.getTextContent());
+					InteractionManagerBrokerConfiguration.setSocketBrokerPort(Integer.parseInt(portElement.getTextContent()));
 				}
 				
 				

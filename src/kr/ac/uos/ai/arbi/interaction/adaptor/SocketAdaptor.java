@@ -26,9 +26,8 @@ public class SocketAdaptor extends Thread implements InteractionMessageAdaptor {
 	public SocketAdaptor(MonitorMessageQueue queue) {
 		this.queue = queue;
 		try {
-			String[] brokerAddress = InteractionManagerBrokerConfiguration.SocketBroker.split(":");
-			String addr = brokerAddress[1].substring(2);
-			int port = Integer.parseInt(brokerAddress[2]);
+			String host = InteractionManagerBrokerConfiguration.getSocketBrokerHost();
+			int port = InteractionManagerBrokerConfiguration.getSocketBrokerPort();
 
 			serverSocket = new ServerSocket(port);
 			socketMap = new HashMap<>();
@@ -129,7 +128,6 @@ public class SocketAdaptor extends Thread implements InteractionMessageAdaptor {
 	@Override
 	public void sendStatus(String status) {
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override
