@@ -47,48 +47,46 @@ class LTMSubscriptionManager implements Runnable{
 	private void checkSubscribedRules(Condition c) {
 		String predicateName = c.getPredicateName();
 
-		if(Configuration.getLogAvailability() == true) {
-			System.out.println(DebugUtilities.getDate() + "RedisSubscriber checkSubscribedRules : predicateName : " + predicateName);
-
-		}
 		LinkedBlockingQueue<Rule> rules = subscribedRulesByPredicateName.get(predicateName);
+		
 		if (rules == null || rules.isEmpty()) {
-
 			return;
-			
 		}
+		
 		boolean conditionSatisfied;
 
-
 		for (Rule rule : rules) {
-			Binding b = BindingFactory.newBinding();
-			conditionSatisfied = true;
-
-			for (Condition con : rule.getConditions()) {
-				Binding tempBind = null;
-				
-				if(Configuration.getLogAvailability() == true) {
-					System.out.println(DebugUtilities.getDate() + "RedisSubscriber checkSubscribedRules : condition : " + con.getPredicateName());
-				}
-				boolean checkResult = checkIfRelatedCondition(c, con);
-				if(Configuration.getLogAvailability() == true) {
-					System.out.println(DebugUtilities.getDate() + "RedisSubscriber checkSubscribedRules : condition : " + con.getPredicateName());
-					System.out.println(DebugUtilities.getDate() + "RedisSubscriber checkSubscribedRules : result : " + checkResult);
-					
-				}
-				if ((tempBind = evaluate(con)) != null && checkResult == true) {
-				
-					b.copy(tempBind);
-				} else {
-					conditionSatisfied = false;
-					
+			Binding binding = null;
+			conditionSatisfied = false;
+			Condition checkedCondition = null;
+			
+			for(Condition condition : rule.getConditions()) {
+				Binding checkResult = checkIfRelatedCondition(c, condition);
+				if(checkResult != null) {
+					checkedCondition = condition;
+					binding = checkResult;
+					conditionSatisfied = true;
 					break;
 				}
 			}
+			
+			if(conditionSatisfied) {
+				for(Condition condition : rule.getConditions()) {
+					if(condition == checkedCondition) continue;
+					
+					Binding evaluateResult = evaluate(condition);
+					if(evaluateResult != null) binding.copy(evaluateResult);
+					else {
+						conditionSatisfied = false;
+						break;
+					}
+				}
+			}
+			
 			if (conditionSatisfied) {
-				for (Action a : rule.getActions()) {
-					a.bind(b);
-					notificationHandler.notify(a);
+				for (Action action : rule.getActions()) {
+					action.bind(binding);
+					notificationHandler.notify(action);
 				}
 			}
 		}
@@ -103,17 +101,13 @@ class LTMSubscriptionManager implements Runnable{
 		this.isNotificationAlive = isNotificationAlive;
 	}
 	
-	private boolean checkIfRelatedCondition(Condition receivedCondition, Condition ruleCondition) {
+	private Binding checkIfRelatedCondition(Condition receivedCondition, Condition ruleCondition) {
 		PredicateContainer receivedPredicate = createContainer(null, receivedCondition.toString());
 		PredicateContainer rulePredicate = createContainer(null, ruleCondition.toString());
 
-		Binding b = receivedPredicate.getPredicate().unify(rulePredicate.getPredicate(), null);
+		Binding binding = receivedPredicate.getPredicate().unify(rulePredicate.getPredicate(), null);
 
-		boolean result = false;
-		if (b != null) {
-			result = true;
-		}
-		return result;
+		return binding;
 	}
 
 	private Binding evaluate(Condition con) {

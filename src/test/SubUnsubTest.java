@@ -26,20 +26,25 @@ public class SubUnsubTest {
 				System.out.println("Notified! : " + content);
 			}
 		};
-		ds.connect("127.0.0.1", 61616, "ds://www.arbi.com/Lift2/TaskManager", BrokerType.ZEROMQ);
+		ds.connect("127.0.0.1", 61616, "ds://www.arbi.com/Lift2/TaskManager", BrokerType.ACTIVEMQ);
 		System.out.println("connected");
 
 		String subscribeID1 = ds.subscribe("(rule (fact (context $context)) --> (notify (context $context)))");
 		String subscribeID2 = ds.subscribe("(rule (fact (RobotInfo $robot_id $x $y $loading $timestamp)) --> (notify (RobotInfo $robot_id $x $y $loading $timestamp)))");
 		String subscribeID3 = ds.subscribe("(rule (fact (DoorStatus $status)) --> (notify (DoorStatus $status)))");
 		String subscribeID4 = ds.subscribe("(rule (fact (MosPersonCall $locationID $callID)) --> (notify (MosPersonCall $locationID $callID)))");
+		String subscribeID5 = ds.subscribe("(rule (fact (x $x)) (fact (y $y)) --> (notify (z $x $y)))");
 
 		System.out.println("test start");
 
 		try {
-			ds.assertFact("(context 1)");
-			ds.updateFact("(update (context 1) (context 2))");
-			ds.assertFact("(context \"TestModel3\")");
+//			ds.assertFact("(context 1)");
+//			ds.updateFact("(update (context 1) (context 2))");
+//			ds.assertFact("(context \"TestModel3\")");
+			ds.assertFact("(x 1)");
+			ds.assertFact("(y 2)");
+			ds.assertFact("(x 3)");
+			ds.assertFact("(y 4)");
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
