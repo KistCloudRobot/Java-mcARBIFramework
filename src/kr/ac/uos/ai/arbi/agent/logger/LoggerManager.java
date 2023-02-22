@@ -7,6 +7,7 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import kr.ac.uos.ai.arbi.agent.ArbiAgent;
+import kr.ac.uos.ai.arbi.agent.logger.action.AgentAction;
 import kr.ac.uos.ai.arbi.ltm.DataSource;
 
 public class LoggerManager {
@@ -35,7 +36,6 @@ public class LoggerManager {
 		this.actor = agentURI;	
 	}
 	
-
 	public void registerAction(AgentAction action, LogTiming logTiming) {
 		AgentAction foundAction = actionMap.get(action.getActionName());
 		if(foundAction == null) {
@@ -43,11 +43,12 @@ public class LoggerManager {
 			actionMap.put(action.getActionName(), action);
 		}
 	}
+	
 	public void registerAction(AgentAction action) {
 		this.registerAction(action,LogTiming.NonAction);
 	}
+	
 	public void freeAction(String actionName) {
-
 		if (actionMap.containsKey(actionName))
 			actionMap.remove(actionName);
 

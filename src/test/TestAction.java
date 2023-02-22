@@ -1,6 +1,6 @@
 package test;
 
-import kr.ac.uos.ai.arbi.agent.logger.ActionBody;
+import kr.ac.uos.ai.arbi.agent.logger.action.ActionBody;
 
 public class TestAction implements ActionBody{
 

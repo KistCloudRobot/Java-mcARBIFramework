@@ -3,10 +3,10 @@ package test.interactionManager;
 import kr.ac.uos.ai.arbi.BrokerType;
 import kr.ac.uos.ai.arbi.agent.ArbiAgent;
 import kr.ac.uos.ai.arbi.agent.ArbiAgentExecutor;
-import kr.ac.uos.ai.arbi.agent.logger.ActionBody;
-import kr.ac.uos.ai.arbi.agent.logger.AgentAction;
 import kr.ac.uos.ai.arbi.agent.logger.LogTiming;
 import kr.ac.uos.ai.arbi.agent.logger.LoggerManager;
+import kr.ac.uos.ai.arbi.agent.logger.action.ActionBody;
+import kr.ac.uos.ai.arbi.agent.logger.action.AgentAction;
 
 public class TestAgent extends ArbiAgent {
 	private static final String AGENT_NAME = "testAgent";

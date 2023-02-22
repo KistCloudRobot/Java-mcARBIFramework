@@ -1,5 +1,6 @@
 package kr.ac.uos.ai.arbi.agent.communication.adaptor;
 
+import java.io.EOFException;
 import java.io.IOException;
 import java.net.SocketTimeoutException;
 
@@ -49,6 +50,10 @@ public class ActiveMQAdaptor implements ArbiMessageAdaptor {
 				}
 				catch(SocketTimeoutException e) {
 					continue;
+				}
+				catch(EOFException e) {
+					System.err.println("server connection disconnected.");	
+					break;
 				}
 				catch (Exception e) {
 					// TODO Auto-generated catch block

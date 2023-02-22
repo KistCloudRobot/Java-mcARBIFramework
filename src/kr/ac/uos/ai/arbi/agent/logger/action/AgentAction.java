@@ -1,6 +1,7 @@
-package kr.ac.uos.ai.arbi.agent.logger;
+package kr.ac.uos.ai.arbi.agent.logger.action;
 
 import kr.ac.uos.ai.arbi.agent.ArbiAgent;
+import kr.ac.uos.ai.arbi.agent.logger.LogTiming;
 import kr.ac.uos.ai.arbi.ltm.DataSource;
 
 public class AgentAction implements ActionBody {

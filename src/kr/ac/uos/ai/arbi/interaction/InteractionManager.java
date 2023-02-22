@@ -123,9 +123,10 @@ public class InteractionManager extends ArbiAgent {
 			tempMessageQueue.enqueue(data);
 		}else {
 			//System.out.println("************************out filter");
+			System.out.println(data.toString());
 			JSONObject message = logManager.logParseToJSON(data);
 			String logType = message.get("LogType").toString();
-			System.out.println("[ LogData ]\t" +"<" + logType+ ">"+"\t" +data);
+			//System.out.println("[ LogData ]\t" +"<" + logType+ ">"+"\t" +data);
 			
 			for (int i = 0; i < monitorProxyList.size(); i++) {
 				MonitorProxy monitorProxy = monitorProxyList.get(i);

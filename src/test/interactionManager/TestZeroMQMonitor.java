@@ -1,12 +1,16 @@
 package test.interactionManager;
 
 import java.net.SocketTimeoutException;
+import java.util.Base64;
+import java.util.Base64.Decoder;
 import java.util.HashMap;
 
 import org.apache.activemq.transport.stomp.StompConnection;
 import org.apache.activemq.transport.stomp.StompFrame;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.zeromq.SocketType;
 import org.zeromq.ZMQ;
 import org.zeromq.ZMQ.Context;
@@ -52,6 +56,22 @@ public class TestZeroMQMonitor {
 				
 				message = zmqSocket.recvStr();
 				System.out.println("on message : " + message);
+
+				try {
+					JSONParser jsonParser = new JSONParser();
+					JSONObject messageObject = (JSONObject) jsonParser.parse(message);
+					String content = messageObject.get("Content").toString();
+					System.out.println("before content : " + content);
+					
+					Decoder decoder = Base64.getDecoder();
+					content = new String(decoder.decode(content.getBytes()));
+					System.out.println("after content : " + content);
+					
+					
+				} catch (ParseException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			} 
 		}
 	}

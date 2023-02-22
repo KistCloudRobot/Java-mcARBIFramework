@@ -1,6 +1,13 @@
 package kr.ac.uos.ai.arbi.framework.server;
 
+import java.util.Base64;
+import java.util.Base64.Decoder;
+import java.util.Base64.Encoder;
+
+
 import kr.ac.uos.ai.arbi.BrokerType;
+
+
 import kr.ac.uos.ai.arbi.agent.AgentMessageAction;
 import kr.ac.uos.ai.arbi.agent.ArbiAgentMessage;
 import kr.ac.uos.ai.arbi.agent.communication.ArbiMessageQueue;
@@ -14,6 +21,7 @@ import kr.ac.uos.ai.arbi.ltm.communication.adaptor.ZeroMQLTMAdaptor;
 import kr.ac.uos.ai.arbi.ltm.communication.message.LTMMessage;
 import kr.ac.uos.ai.arbi.model.GLFactory;
 import kr.ac.uos.ai.arbi.model.GeneralizedList;
+import kr.ac.uos.ai.arbi.model.parser.GLParser;
 import kr.ac.uos.ai.arbi.model.parser.ParseException;
 import kr.ac.uos.ai.arbi.ltm.LTMMessageAction;
 
@@ -68,7 +76,9 @@ public class MessageService {
 
 	public void agentMessageReceived(ArbiAgentMessage agentMessage) {
 		// 로그
-		if(agentMessage.getAction() != AgentMessageAction.Notify) {
+		
+		if(agentMessage.getAction() != AgentMessageAction.Notify && agentMessage.getAction() != AgentMessageAction.System) {
+			
 			System.out.println("[Agent Message]\t<" + agentMessage.getAction().toString() + ">\t" + agentMessage.getSender()
 					+ " --> " + agentMessage.getReceiver() + " : " + agentMessage.getContent());
 		}

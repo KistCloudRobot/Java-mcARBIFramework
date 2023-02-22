@@ -2,6 +2,7 @@ package kr.ac.uos.ai.arbi.ltm.communication.adaptor;
 
 import java.io.EOFException;
 import java.io.IOException;
+import java.net.SocketException;
 import java.net.SocketTimeoutException;
 
 import javax.jms.Connection;
@@ -108,9 +109,12 @@ public class ActiveMQAdaptor implements LTMMessageAdaptor {
 			messageObject.put("action", message.getAction().toString());
 			messageObject.put("content", message.getContent());
 			messageObject.put("conversationID", message.getConversationID());
-
+				
 			connection.send(ArbiFrameworkServer.URL, messageObject.toJSONString());
 		} 
+		catch (SocketException e) {
+			System.err.println("DataSource send failed. Connection is disconnected.");
+		}
 		catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

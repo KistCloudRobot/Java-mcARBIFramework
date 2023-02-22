@@ -1,6 +1,8 @@
 package kr.ac.uos.ai.arbi.framework.server.adaptor;
 
+import java.util.Base64;
 import java.util.LinkedList;
+import java.util.Base64.Encoder;
 
 import javax.jms.Destination;
 import javax.json.JsonObject;
@@ -12,6 +14,7 @@ import org.json.simple.parser.ParseException;
 import kr.ac.uos.ai.arbi.agent.AgentMessageAction;
 import kr.ac.uos.ai.arbi.agent.ArbiAgentMessage;
 import kr.ac.uos.ai.arbi.agent.communication.ArbiMessageQueue;
+import kr.ac.uos.ai.arbi.agent.logger.LoggerManager;
 import kr.ac.uos.ai.arbi.framework.server.MessageService;
 import kr.ac.uos.ai.arbi.interaction.InteractionManager;
 import kr.ac.uos.ai.arbi.ltm.LTMMessageAction;
@@ -66,14 +69,20 @@ public abstract class MessageAdaptor {
 	public void deliverToMonitor(ArbiAgentMessage message) {
 		String receiverURL = InteractionManager.interactionManagerURI;
 		
+		Encoder encoder = Base64.getEncoder();
+		
 		JSONObject messageObject = new JSONObject();
 		messageObject.put("sender", "Server");
 		messageObject.put("receiver", receiverURL);
 		messageObject.put("command", "Arbi-Agent");
 		messageObject.put("action", "System");
-		String content = "(MessageLog (Sender \"" + message.getSender() + "\") (Receiver \""
-				+ message.getReceiver() + "\")" + " (Type \"AgentMessage\") (Action \"" + message.getAction().toString() + "\") (Content \""
-				+ message.getContent().replace("\"", "\\\"") + "\"))";
+		String content = 	"(MessageLog " 	
+								+ "(Sender \"" + message.getSender() + "\") "
+								+ "(Receiver \"" + message.getReceiver() + "\") " 
+								+ "(Type \"AgentMessage\") "
+								+ "(Action \"" + message.getAction().toString() + "\") "
+								+ "(Content \""+ encoder.encodeToString(message.getContent().getBytes()) + "\")"
+							+ ")";
 		messageObject.put("content", content);
 		messageObject.put("conversationID", message.getConversationID());
 		messageObject.put("timestamp", message.getTimestamp());
