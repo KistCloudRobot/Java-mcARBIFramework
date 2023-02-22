@@ -11,7 +11,7 @@ public class LoggingActionBoth extends LoggingAction {
 	public Object execute(Object o){
 		this.sendLog(o.toString());
 		Object object =  this.action.execute(o);
-		this.sendLog(o.toString());
+		this.sendLog(object.toString());
 		return object;
 	}
 }

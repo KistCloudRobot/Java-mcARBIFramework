@@ -10,7 +10,7 @@ public class LoggingActionLater extends LoggingAction {
 	@Override
 	public Object execute(Object o){
 		Object object =  this.action.execute(o);
-		this.sendLog(o.toString());
+		this.sendLog(object.toString());
 		return object;
 	}
 }
