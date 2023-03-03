@@ -11,7 +11,7 @@ public class DemoStarter extends ArbiAgent {
 	static String agentURI = "agent://www.arbi.com/demoStarter";
 //	static String host = "127.0.0.1";
 //	static String host = "192.168.100.10";
-	static String host = "172.16.165.141";
+	static String host = "172.16.165.158";
 	static int port = 61316;
 	
 	public static void main(String[] args) {
@@ -22,6 +22,10 @@ public class DemoStarter extends ArbiAgent {
 		System.out.println("demo start!");
 		
 		demo.startDemo();
+
+		in.nextLine();
+		System.out.println("second call start!");
+		demo.secondCall();
 	}
 
 	DataSource dc;
@@ -42,31 +46,41 @@ public class DemoStarter extends ArbiAgent {
 		
 		//send("agent://www.arbi.com/TaskAllocator", "(hi)");
 	}
-	
+	public void secondCall() {
+		dc.assertFact("(context (PersonCall \"call05\" \"http://www.arbi.com/ontologies/arbi.owl#station4\" \"Unstoring\"))");
+		try {
+			Thread.sleep(10);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		dc.assertFact("(context (PersonCall \"call06\" \"http://www.arbi.com/ontologies/arbi.owl#station3\" \"PrepareUnstoring\"))");
+		
+	}
 	public void startDemo() {
-		dc.assertFact("(context (PersonCall \"call01\" \"http://www.arbi.com/ontologies/arbi.owl#station2\" \"Storing\"))");
+		dc.assertFact("(context (PersonCall \"call01\" \"http://www.arbi.com/ontologies/arbi.owl#station1\" \"Storing\"))");
 		try {
-			Thread.sleep(500);
+			Thread.sleep(10);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 
-		dc.assertFact("(context (PersonCall \"call02\" \"http://www.arbi.com/ontologies/arbi.owl#station4\" \"Unstoring\"))");
-
+		dc.assertFact("(context (PersonCall \"call02\" \"http://www.arbi.com/ontologies/arbi.owl#station3\" \"Unstoring\"))");
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(10);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 
-		dc.assertFact("(context (PersonCall \"call03\" \"http://www.arbi.com/ontologies/arbi.owl#station3\" \"PrepareUnstoring\"))");
+		dc.assertFact("(context (PersonCall \"call03\" \"http://www.arbi.com/ontologies/arbi.owl#station4\" \"PrepareUnstoring\"))");
 
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(10);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 
-		dc.assertFact("(context (PersonCall \"call04\" \"http://www.arbi.com/ontologies/arbi.owl#station1\" \"PrepareStoring\"))");
+		dc.assertFact("(context (PersonCall \"call04\" \"http://www.arbi.com/ontologies/arbi.owl#station2\" \"Storing\"))");
+		System.out.println("??");
 	}
 }

@@ -20,7 +20,6 @@ public class MonitorFilter {
 	}
 
 	public void setMonitorFilter(JSONObject filterObject) {
-
 		String logType = filterObject.get("LogType").toString();
 
 		if (logType.toLowerCase().equals("systemlog")) {

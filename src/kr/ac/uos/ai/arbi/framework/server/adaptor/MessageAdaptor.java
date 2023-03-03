@@ -93,14 +93,19 @@ public abstract class MessageAdaptor {
 	public void deliverToMonitor(LTMMessage message) {
 		String receiverURL = InteractionManager.interactionManagerURI;
 		
+		Encoder encoder = Base64.getEncoder();
+		
 		JSONObject messageObject = new JSONObject();
 		messageObject.put("sender", "Server");
 		messageObject.put("receiver", InteractionManager.interactionManagerURI);
 		messageObject.put("command", "Arbi-Agent");
 		messageObject.put("action", "System");
-		String content = "(MessageLog (Client \"" + message.getClient() + "\")  (Type \"LTMMessage\") (Action \""
-				+ message.getAction().toString() + "\")" + " (Content \"" + message.getContent().replace("\"", "\\\"")
-				+ "\"))";
+		String content = 	"(MessageLog "
+								+ "(Client \"" + message.getClient() + "\") "
+								+ "(Type \"LTMMessage\") "
+								+ "(Action \"" + message.getAction().toString() + "\")" 
+								+ "(Content \"" + encoder.encodeToString(message.getContent().getBytes()) + "\")"
+							+ ")";
 		messageObject.put("content", content);
 		messageObject.put("conversationID", message.getConversationID());
 		//TODO LTM message timestamp

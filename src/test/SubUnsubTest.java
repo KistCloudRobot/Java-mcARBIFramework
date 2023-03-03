@@ -41,6 +41,8 @@ public class SubUnsubTest {
 //			ds.assertFact("(context 1)");
 //			ds.updateFact("(update (context 1) (context 2))");
 //			ds.assertFact("(context \"TestModel3\")");
+			ds.assertFact("(context (PersonCall \"call03\" \"http://www.arbi.com/ontologies/arbi.owl#station3\" \"PrepareUnstoring\"))");
+			ds.assertFact("(context (PersonCall \"call04\" \"http://www.arbi.com/ontologies/arbi.owl#station1\" \"PrepareStoring\"))");
 			ds.assertFact("(x 1)");
 			ds.assertFact("(y 2)");
 			ds.assertFact("(x 3)");

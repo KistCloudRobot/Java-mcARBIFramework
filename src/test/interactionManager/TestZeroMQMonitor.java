@@ -91,11 +91,17 @@ public class TestZeroMQMonitor {
 		filterArray.add(filter1);
 		
 		JSONObject filter2 = new JSONObject();
-		filter2.put("LogType", "SystemLog");
-		filter2.put("Actor", "testAgent");
-		filter2.put("Action", "testAction");
+		filter2.put("LogType", "MessageLog");
+		filter2.put("Action", "AssertFact");
 		filter2.put("Flag", true);
 		filterArray.add(filter2);
+		
+		JSONObject filter3 = new JSONObject();
+		filter3.put("LogType", "SystemLog");
+		filter3.put("Actor", "testAgent");
+		filter3.put("Action", "testAction");
+		filter3.put("Flag", true);
+		filterArray.add(filter3);
 		
 		createMonitorMessage.put("Filter", filterArray);
 		
