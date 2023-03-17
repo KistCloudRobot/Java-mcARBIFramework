@@ -19,7 +19,7 @@ public class TestAgent extends ArbiAgent {
 		loggerManager.initLoggerManager(AGENT_NAME, this);
 		loggerManager.registerAction(new AgentAction("testAction", new TestAction()), LogTiming.Later);
 		ds = new DataSource();
-		ds.connect("127.0.0.1", 61615, "ds://testAgent", BrokerType.ACTIVEMQ);
+		ds.connect("172.16.165.158", 61316, "ds://testAgent", BrokerType.ACTIVEMQ);
 	}
 	
 	private class TestAction implements ActionBody {
@@ -32,10 +32,18 @@ public class TestAgent extends ArbiAgent {
 	
 	@Override
 	public void onStart() {
-		AgentAction action = loggerManager.getAction("testAction");
-		action.changeAction(true);
-		action.execute("(testArgument)");
-		ds.assertFact("(test \"assert\")");
+		try {
+			AgentAction action = loggerManager.getAction("testAction");
+			action.changeAction(true);
+			action.execute("(testArgument)");
+			ds.assertFact("(test \"assert\")");
+			Thread.sleep(1000);
+			ds.updateFact("(update (test $x) (test \"update\"))");
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 	
 	@Override
@@ -44,6 +52,6 @@ public class TestAgent extends ArbiAgent {
 	}
 	
 	public static void main(String[] args) {
-		ArbiAgentExecutor.execute("127.0.0.1", 61615, "testAgent", new TestAgent(), BrokerType.ACTIVEMQ);
+		ArbiAgentExecutor.execute("172.16.165.158", 61116, "testAgent", new TestAgent(), BrokerType.ACTIVEMQ);
 	}
 }

@@ -52,9 +52,10 @@ public class TestZeroMQMonitor {
 		public void run() {
 			while (true) {
 				System.out.println("message receiving");
-				String message = zmqSocket.recvStr();;
-				
-				message = zmqSocket.recvStr();
+				String message = "";
+				while(message.length() == 0) {
+					message = zmqSocket.recvStr();
+				}
 				System.out.println("on message : " + message);
 
 				try {
@@ -68,9 +69,8 @@ public class TestZeroMQMonitor {
 					System.out.println("after content : " + content);
 					
 					
-				} catch (ParseException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+				} catch (Exception e) {
+					System.err.println("parsing error");
 				}
 			} 
 		}
@@ -103,6 +103,12 @@ public class TestZeroMQMonitor {
 		filter3.put("Flag", true);
 		filterArray.add(filter3);
 		
+		JSONObject filter4 = new JSONObject();
+		filter4.put("LogType", "MessageLog");
+		filter4.put("Action", "UpdateFact");
+		filter4.put("Flag", true);
+		filterArray.add(filter4);
+		
 		createMonitorMessage.put("Filter", filterArray);
 		
 		zmqSocket.sendMore("");
@@ -111,5 +117,6 @@ public class TestZeroMQMonitor {
 	
 	public static void main(String[] args) {
 		TestZeroMQMonitor monitor = new TestZeroMQMonitor();
+		while(true);
 	}
 }
