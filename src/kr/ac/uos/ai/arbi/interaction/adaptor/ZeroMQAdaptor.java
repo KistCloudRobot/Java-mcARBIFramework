@@ -52,8 +52,12 @@ public class ZeroMQAdaptor extends Thread implements InteractionMessageAdaptor {
 	public void run() {
 		while (true) {
 			String message = zmqRouter.recvStr();
-			message = zmqRouter.recvStr();
-			message = zmqRouter.recvStr();
+			while(true) {
+				message =  zmqRouter.recvStr();
+				if(message == null || message.isEmpty()) continue;
+				else break;
+			}
+			System.out.println("on mwssage : " + message);
 			queue.enqueue(message);
 		}
 	}

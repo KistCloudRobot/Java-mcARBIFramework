@@ -59,6 +59,7 @@ public class MonitorMessageToolkit extends Thread {
 		while(true){
 			String message = queue.blockingDequeue(500);
 			if(message != null) {
+//				System.out.println("message : " + message);
 				interactionManager.messageRecieved(message);
 			}
 		}
