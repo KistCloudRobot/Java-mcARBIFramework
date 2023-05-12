@@ -73,7 +73,7 @@ public class ZeroMQAgentAdaptor implements ArbiMessageAdaptor {
 		messageObject.put("receiver", message.getReceiver());
 		messageObject.put("command", "Arbi-Agent");
 		messageObject.put("action", message.getAction().toString());
-		messageObject.put("content", message.getContent());
+		messageObject.put("content", message.getContent()); 
 		messageObject.put("conversationID", message.getConversationID());
 		messageObject.put("timestamp", message.getTimestamp());
 		

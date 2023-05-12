@@ -218,7 +218,7 @@ public class InteractionManager extends ArbiAgent {
 			}
 		}
 	}
-
+ 
 	public void messageRecieved(String monitorAction) {
 		try {
 			System.out.println("[ Monitor Action ] " +monitorAction);

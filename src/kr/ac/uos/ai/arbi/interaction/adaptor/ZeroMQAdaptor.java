@@ -48,7 +48,7 @@ public class ZeroMQAdaptor extends Thread implements InteractionMessageAdaptor {
 		this.start();
 	}
 
-	@Override
+	@Override 
 	public void run() {
 		while (true) {
 			String message = zmqRouter.recvStr();

@@ -30,7 +30,7 @@ public class MonitorMessageToolkit extends Thread {
 	}
 	
 	private void initAdaptors() {
-		this.activeMQAdaptor = null;
+		this.activeMQAdaptor = null; 
 		this.zeroMQAdaptor = null;
 		this.socketAdaptor = null;
 		
