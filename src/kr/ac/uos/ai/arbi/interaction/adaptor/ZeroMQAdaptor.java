@@ -71,8 +71,7 @@ public class ZeroMQAdaptor extends Thread implements InteractionMessageAdaptor {
 	@Override
 	public void send(String monitorID, String message) {
 
-		// TODO Auto-generated method stub
-		System.out.println("send message " + monitorID + " " + message);
+		//System.out.println("send message " + monitorID + " " + message);
 		zmqRouter.sendMore(monitorID);
 		zmqRouter.sendMore("");
 		zmqRouter.send(message);

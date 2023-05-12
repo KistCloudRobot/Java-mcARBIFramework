@@ -17,7 +17,11 @@ public class InteractionManagerTest {
 		InteractionManagerBrokerConfiguration.setSocketBrokerPort(61613);
 		
 		InteractionManager im = new InteractionManager();
+<<<<<<< HEAD
 		ArbiAgentExecutor.execute("127.0.0.1", 61616, InteractionManager.interactionManagerURI, im, BrokerType.ACTIVEMQ);
+=======
+		ArbiAgentExecutor.execute("172.16.165.158", 61116, InteractionManager.interactionManagerURI, im, BrokerType.ACTIVEMQ);
+>>>>>>> refs/remotes/mcARBIFramework/master
 		
 	}
 }

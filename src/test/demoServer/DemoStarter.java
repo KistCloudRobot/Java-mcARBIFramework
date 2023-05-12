@@ -10,8 +10,7 @@ import kr.ac.uos.ai.arbi.ltm.DataSource;
 public class DemoStarter extends ArbiAgent {
 	static String agentURI = "agent://www.arbi.com/demoStarter";
 //	static String host = "127.0.0.1";
-//	static String host = "192.168.100.10";
-	static String host = "172.16.165.158";
+	static String host = "172.16.165.164";
 	static int port = 61316;
 	
 	public static void main(String[] args) {
@@ -58,21 +57,21 @@ public class DemoStarter extends ArbiAgent {
 		
 	}
 	public void startDemo() {
-		dc.assertFact("(context (PersonCall \"call01\" \"http://www.arbi.com/ontologies/arbi.owl#station1\" \"Storing\"))");
+		dc.assertFact("(context (PersonCall \"call01\" \"http://www.arbi.com/ontologies/arbi.owl#station1\" \"PrepareStoring\"))");
 		try {
 			Thread.sleep(10);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 
-		dc.assertFact("(context (PersonCall \"call02\" \"http://www.arbi.com/ontologies/arbi.owl#station3\" \"Unstoring\"))");
+		dc.assertFact("(context (PersonCall \"call02\" \"http://www.arbi.com/ontologies/arbi.owl#station4\" \"Unstoring\"))");
 		try {
 			Thread.sleep(10);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 
-		dc.assertFact("(context (PersonCall \"call03\" \"http://www.arbi.com/ontologies/arbi.owl#station4\" \"PrepareUnstoring\"))");
+		dc.assertFact("(context (PersonCall \"call03\" \"http://www.arbi.com/ontologies/arbi.owl#station3\" \"PrepareUnstoring\"))");
 
 		try {
 			Thread.sleep(10);
