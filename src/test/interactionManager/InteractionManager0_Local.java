@@ -18,7 +18,7 @@ public class InteractionManager0_Local {
 		
 		// local
 		InteractionManager im = new InteractionManager();
-		ArbiAgentExecutor.execute("172.16.165.158", 61316, InteractionManager.interactionManagerURI, im, BrokerType.ACTIVEMQ);
+		ArbiAgentExecutor.execute("172.16.165.141", 61316, InteractionManager.interactionManagerURI, im, BrokerType.ACTIVEMQ);
 		// 61112 ~ 61116  61316 
 	}
 }

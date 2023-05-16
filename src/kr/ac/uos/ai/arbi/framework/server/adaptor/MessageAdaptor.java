@@ -70,6 +70,8 @@ public abstract class MessageAdaptor {
 		String receiverURL = InteractionManager.interactionManagerURI;
 		
 		Encoder encoder = Base64.getEncoder();
+
+		long timestamp = System.currentTimeMillis();
 		
 		JSONObject messageObject = new JSONObject();
 		messageObject.put("sender", "Server");
@@ -81,11 +83,12 @@ public abstract class MessageAdaptor {
 								+ "(Receiver \"" + message.getReceiver() + "\") " 
 								+ "(Type \"AgentMessage\") "
 								+ "(Action \"" + message.getAction().toString() + "\") "
-								+ "(Content \""+ encoder.encodeToString(message.getContent().getBytes()) + "\")"
+								+ "(Content \""+ encoder.encodeToString(message.getContent().getBytes()) + "\") "
+								+ "(Timestamp \"" +timestamp + "\")"
 							+ ")";
 		messageObject.put("content", content);
 		messageObject.put("conversationID", message.getConversationID());
-		messageObject.put("timestamp", message.getTimestamp());
+		messageObject.put("timestamp", timestamp);
 
 		this.send(receiverURL, messageObject);
 	}
@@ -95,6 +98,8 @@ public abstract class MessageAdaptor {
 		
 		Encoder encoder = Base64.getEncoder();
 		
+		long timestamp = System.currentTimeMillis();
+		
 		JSONObject messageObject = new JSONObject();
 		messageObject.put("sender", "Server");
 		messageObject.put("receiver", InteractionManager.interactionManagerURI);
@@ -103,13 +108,13 @@ public abstract class MessageAdaptor {
 		String content = 	"(MessageLog "
 								+ "(Client \"" + message.getClient() + "\") "
 								+ "(Type \"LTMMessage\") "
-								+ "(Action \"" + message.getAction().toString() + "\")" 
-								+ "(Content \"" + encoder.encodeToString(message.getContent().getBytes()) + "\")"
+								+ "(Action \"" + message.getAction().toString() + "\") " 
+								+ "(Content \"" + encoder.encodeToString(message.getContent().getBytes()) + "\") "
+								+ "(Timestamp \"" +timestamp + "\")"
 							+ ")";
 		messageObject.put("content", content);
 		messageObject.put("conversationID", message.getConversationID());
-		//TODO LTM message timestamp
-		messageObject.put("timestamp", System.currentTimeMillis());
+		messageObject.put("timestamp", timestamp);
 
 		this.send(receiverURL, messageObject);
 	}

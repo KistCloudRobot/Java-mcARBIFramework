@@ -112,7 +112,7 @@ public class InteractionManager extends ArbiAgent {
 
 	@Override
 	public void onSystem(String sender, String data) {
-
+		System.out.println(sender + " -> " + data);
 		sendMessage(data);
 
 	}

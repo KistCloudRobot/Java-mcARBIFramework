@@ -32,7 +32,7 @@ public class TestZeroMQMonitor {
 	public TestZeroMQMonitor() {
 		zmqContext = ZMQ.context(1);
 		zmqSocket = zmqContext.socket(SocketType.DEALER);
-		zmqSocket.connect("tcp://127.0.0.1:61614");
+		zmqSocket.connect("tcp://127.0.0.1:51316");
 		zmqSocket.setIdentity(MONITOR_ID.getBytes());
 //		zmqProducer = zmqContext.socket(SocketType.DEALER);
 //		zmqConsumer = zmqContext.socket(SocketType.DEALER);
@@ -105,7 +105,7 @@ public class TestZeroMQMonitor {
 		
 		JSONObject filter4 = new JSONObject();
 		filter4.put("LogType", "MessageLog");
-		filter4.put("Action", "UpdateFact");
+		filter4.put("Action", "AssertFact");
 		filter4.put("Flag", true);
 		filterArray.add(filter4);
 		
