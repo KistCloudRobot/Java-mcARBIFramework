@@ -1,0 +1,4 @@
+<Agent-Property>
+<ServerURL>tcp://localhost:61616</ServerURL>
+<AgentName>testAgent3</AgentName>
+</Agent-Property>

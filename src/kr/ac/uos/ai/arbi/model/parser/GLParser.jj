@@ -1,0 +1,183 @@
+options
+{
+	STATIC = false;
+}
+
+PARSER_BEGIN(GLParser)
+package kr.ac.uos.ai.arbi.model.parser;
+
+import java.util.*;
+import java.io.*;
+import kr.ac.uos.ai.arbi.model.*;
+
+public class GLParser {
+	private static final Expression[] NULL_EXPRESSION = new Expression[0];
+	
+	public GLParser() {
+		this(new StringReader(""));
+	}
+	
+	public synchronized GeneralizedList parseGL(String glString) throws ParseException {
+		ReInit(new StringReader(glString));
+		return parseGL();
+	}
+}
+PARSER_END(GLParser)
+
+SPECIAL_TOKEN :		// WHITE SPACE 
+{
+	<WS: ([" ", "\t", "\n", "\r", "\f"])+ >
+}
+
+SKIP:
+{
+	"\"" : IN_STRING
+}
+ 
+<IN_STRING>
+TOKEN :
+{
+	<STRING: "\"" > 
+	{
+		image.setLength(image.length() - 1);
+		matchedToken.image = image.toString();
+	}: DEFAULT 
+}
+
+<IN_STRING>
+MORE :
+{
+	"\\\""		{ image.setLength(image.length() - 2); image.append("\""); }
+	| "\\t"		{ image.setLength(image.length() - 2); image.append("\t"); }
+	| "\\n"		{ image.setLength(image.length() - 2); image.append("\n"); }
+	| "\\r"		{ image.setLength(image.length() - 2); image.append("\r"); }
+	| "\\f"		{ image.setLength(image.length() - 2); image.append("\f"); }
+	| < ~[] >	// Note that here you don't need any action.
+}
+
+TOKEN :
+{
+	< #ws:			( [" ","\t","\n","\r"] )+ >
+	| <#delim:		[" ","\t","\n","\r"] >
+	| <#letter:		( ["-","_","A"-"Z","a"-"z"] ) >
+	| <#digit:		["0"-"9"] >
+	| <#charac:		( "'" ~["'","\n"] "'") | ( "''''" ) >
+	| <#EXP:		["e","E"] ( ["+","-"] )? ( <digit> )+ >
+	| <#colon:		":" >
+	| <#SIGN:		["-","+"] >
+	| <#number0:	( <SIGN> )? ( <digit> )+ >
+	| <#number1:	( <SIGN> )? ( <digit> )+ "." ( <digit> )* ( <EXP> )?  >
+	| <#number2:	( <SIGN> )? "." ( <digit> )+ ( <EXP> )?	 >
+	| <#hexa0:		"0x" ( ["0"-"9","a"-"f"] )+ >
+}
+
+TOKEN :
+{
+	<INTEGER:				<number0> >
+	| <FLOAT:				( <number1> | <number2> )+ >
+	| <IDENTIFIER:			["_","A"-"Z","a"-"z"] ( <letter> | <digit> | <colon> )* >
+	| <VARIABLE:			"$" ( <letter> | <digit> | "." )* >
+	| <SPECIAL_KEYWORD: 	( "-->" ) >
+}
+
+
+private GeneralizedList parseGL() :
+{
+	Token id;
+	Expression[] expressions;
+}
+{
+	"(" id=<IDENTIFIER> expressions=parseExpressionList() ")"
+	{
+		return GLFactory.newGL(id.image, expressions);
+	}
+}
+
+private Expression[] parseExpressionList() :
+{
+	Expression expression;
+	List<Expression> expressionList = new LinkedList<Expression>();
+}
+{
+	(
+		expression=parseExpression()
+		{
+			expressionList.add(expression);
+		}
+	)*
+	{
+		return expressionList.toArray(NULL_EXPRESSION);
+	}
+}
+
+private Expression parseExpression() :
+{
+	Value value;
+	Variable variable;
+	Function function;
+	GeneralizedList gl;
+}
+{
+	value=parseValue()
+	{
+		return GLFactory.newExpression(value);
+	}
+	| variable=parseVariable() 
+	{
+		return GLFactory.newExpression(variable);
+	}
+	| function=parseFunction()
+	{
+		return GLFactory.newExpression(function);
+	}
+	| gl=parseGL()
+	{
+		return GLFactory.newExpression(gl);
+	}
+}
+
+private Value parseValue() :
+{
+	Token id;
+}
+{
+	id=<INTEGER>
+	{
+		return GLFactory.newValue(Integer.valueOf(id.image).intValue());
+	}
+	| id=<FLOAT>
+	{
+		return GLFactory.newValue(Float.valueOf(id.image).floatValue());
+	}
+	| id=<STRING>
+	{
+		return GLFactory.newValue(id.image);
+	}
+	| id=<SPECIAL_KEYWORD>
+	{
+		return GLFactory.newValue(id.image);
+	}
+}
+
+private Variable parseVariable() :
+{
+	Token id;
+}
+{
+	id=<VARIABLE>
+	{
+		return GLFactory.newVariable(id.image);
+	}
+}
+
+private Function parseFunction() :
+{
+	Token id;
+	Expression[] expressions;
+}
+{
+	"#(" id=<IDENTIFIER> expressions=parseExpressionList() ")"
+	{
+		return GLFactory.newFunction(id.image, expressions);
+	}
+}
