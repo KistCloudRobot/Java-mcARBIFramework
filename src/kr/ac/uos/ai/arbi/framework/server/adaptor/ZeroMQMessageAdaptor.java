@@ -79,6 +79,7 @@ public class ZeroMQMessageAdaptor extends MessageAdaptor {
 							if(message.contains("{") || message.contains("}")) break;
 						}
 					}
+					System.out.println(message);
 					handleMessage(message);
 				} 
 			} catch (InterruptedException e) {

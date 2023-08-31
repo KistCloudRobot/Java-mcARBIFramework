@@ -15,7 +15,6 @@ public class LoggerManager {
 	private static LoggerManager instance;
 	public static final String INTERACTION_MANAGER_ADDRESS = "agent://www.arbi.com/interactionManager";
 	
-	private String actor;
 	private HashMap<String, AgentAction> actionMap;
 	private ArbiAgent agent;
 	
@@ -31,15 +30,18 @@ public class LoggerManager {
 		return instance;
 	}
 	
+	public void initLoggerManager(ArbiAgent arbiAgent) {
+		this.agent = arbiAgent;
+	}
+	
 	public void initLoggerManager(String agentURI, ArbiAgent arbiAgent) {
 		this.agent = arbiAgent;
-		this.actor = agentURI;	
 	}
 	
 	public void registerAction(AgentAction action, LogTiming logTiming) {
 		AgentAction foundAction = actionMap.get(action.getActionName());
 		if(foundAction == null) {
-			action.initLoggingFunction(this.agent, this.actor, logTiming);
+			action.initLoggingFunction(this.agent, this.agent.getAgentURI(), logTiming);
 			actionMap.put(action.getActionName(), action);
 		}
 	}

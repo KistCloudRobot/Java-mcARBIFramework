@@ -83,7 +83,7 @@ public class GLFactory {
 		int expressionSize = gl.getExpressionsSize();
 
 		glObject.put("PredicateName", glName);
-		glObject.put("ExPressionSize", String.valueOf(expressionSize));
+		glObject.put("ExpressionSize", expressionSize);
 
 		JSONArray expressionList = new JSONArray();
 		for (int i = 0; i < expressionSize; i++) {
@@ -128,8 +128,23 @@ public class GLFactory {
 			expressionObject.put("GeneralizedList", newJSONObjectFromGL(expression.asGeneralizedList()));
 		} else if (expression.isValue()) {
 			expressionObject.put("Type", "Value");
-			expressionObject.put("ValueType", expression.asValue().getType().toString());
-			expressionObject.put("Value", expression.toString());
+
+			Value value = expression.asValue();
+			expressionObject.put("ValueType", value.getType().toString());
+			switch(value.getType()) {
+			case FLOAT:
+				expressionObject.put("Value", value.floatValue());
+				break;
+			case INT:
+				expressionObject.put("Value", value.intValue());
+				break;
+			case STRING:
+				expressionObject.put("Value", value.stringValue());
+				break;
+			default:
+				expressionObject.put("Value", value.toString());
+				break;
+			}
 		} else if (expression.isVariable()) {
 			expressionObject.put("Type", "Variable");
 			expressionObject.put("VariableName", expression.asVariable().getName());

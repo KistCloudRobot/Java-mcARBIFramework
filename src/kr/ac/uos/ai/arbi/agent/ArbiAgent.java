@@ -13,8 +13,10 @@ import kr.ac.uos.ai.arbi.model.GeneralizedList;
 import kr.ac.uos.ai.arbi.model.parser.ParseException;
 
 public abstract class ArbiAgent {
-	private String arbiAgentURI;
+	private String agentURI;
 	protected BrokerType brokerType;
+	protected String brokerHost;
+	protected int brokerPort;
 	private ArbiAgentMessageToolkit messageToolkit;
 	private DataStream dataStream;
 	private boolean running;
@@ -35,8 +37,10 @@ public abstract class ArbiAgent {
 	}
 	
 	public final void initialize(BrokerType brokerType, String brokerHost, int brokerPort, String agentURI) {
-		arbiAgentURI = agentURI;
+		this.agentURI = agentURI;
 		this.brokerType = brokerType;
+		this.brokerHost = brokerHost;
+		this.brokerPort = brokerPort;
 		
 		running = true;
 		
@@ -45,13 +49,17 @@ public abstract class ArbiAgent {
 		System.out.println("brokerHost : " + brokerHost);
 		System.out.println("brokerPort : " + brokerPort);
 		
-		messageToolkit = new ArbiAgentMessageToolkit(brokerType, brokerHost, brokerPort, arbiAgentURI, this);
+		messageToolkit = new ArbiAgentMessageToolkit(brokerType, brokerHost, brokerPort, agentURI, this);
 		dataStream = new DataStream();
-		LoggerManager.getInstance().initLoggerManager(agentURI, this);
+		LoggerManager.getInstance().initLoggerManager(this);
 		
 		messageToolkit.start();
 		
 		this.onStart();
+	}
+	
+	public String getAgentURI() {
+		return this.agentURI;
 	}
 	
 	public void onStart() {

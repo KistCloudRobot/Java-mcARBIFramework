@@ -57,7 +57,6 @@ public class ZeroMQAdaptor extends Thread implements InteractionMessageAdaptor {
 				if(message == null || message.isEmpty()) continue;
 				else break;
 			}
-			System.out.println("on mwssage : " + message);
 			queue.enqueue(message);
 		}
 	}

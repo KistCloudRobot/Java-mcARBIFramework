@@ -42,14 +42,12 @@ public class MonitorFilter {
 	}
 
 	private void setSystemLogFilter(JSONObject filterObject) {
-
 		String filterActor = filterObject.get("Actor").toString();
 //		String filterType = filterObject.get("Type").toString();
 		String filterAction = filterObject.get("Action").toString();
 		boolean filterFlag = Boolean.parseBoolean(filterObject.get("Flag").toString());
 
 		for (SystemLog systemLog : systemLogFilter.keySet()) {
-			
 			if (systemLog.getActor().toLowerCase().equals(filterActor.toLowerCase()) 
 //					&& systemLog.getType().toLowerCase().equals(filterType.toLowerCase())
 					&& systemLog.getAction().toLowerCase().equals(filterAction.toLowerCase())) {
@@ -73,9 +71,8 @@ public class MonitorFilter {
 				return;
 			}
 		}
-
+		
 		messageLogFilter.put(new MessageLog(filterType, filterAction), filterFlag);
-
 	}
 
 	private boolean getSystemLogFilter(JSONObject message) {

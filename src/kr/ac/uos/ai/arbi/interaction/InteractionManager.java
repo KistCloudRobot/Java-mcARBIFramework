@@ -112,7 +112,7 @@ public class InteractionManager extends ArbiAgent {
 
 	@Override
 	public void onSystem(String sender, String data) {
-		System.out.println(sender + " -> " + data);
+//		System.out.println(sender + " -> " + data);
 		sendMessage(data);
 
 	}
@@ -206,7 +206,9 @@ public class InteractionManager extends ArbiAgent {
 			notify(receiver, gl.toString());
 	
 		if(result != null) {
+			System.out.println(result);
 			JSONObject resultObject = GLFactory.newJSONObjectFromGLString(result);
+			System.out.println(resultObject);
 			resultObject.put("Sender", receiver);
 			resultObject.put("Receiver", sender);
 			for(int i=0; i<monitorProxyList.size(); i++) {
@@ -221,11 +223,10 @@ public class InteractionManager extends ArbiAgent {
  
 	public void messageRecieved(String monitorAction) {
 		try {
-			//System.out.println("[ Monitor Action ] " +monitorAction);
+			System.out.println("[ Monitor Action ] " +monitorAction);
 			JSONParser jsonParser = new JSONParser();
 			JSONObject jsonObject = (JSONObject) jsonParser.parse(monitorAction);
 			String action = jsonObject.get("Action").toString();
-			//System.out.println("action : " + action);
 			if (action.toLowerCase().equals("create monitor")) {
 				String monitorID = jsonObject.get("ID").toString();
 				String protocol = jsonObject.get("Protocol").toString();
