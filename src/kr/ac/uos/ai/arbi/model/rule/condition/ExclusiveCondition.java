@@ -1,47 +1,49 @@
 package kr.ac.uos.ai.arbi.model.rule.condition;
 
-import java.util.LinkedList;
-import java.util.List;
-
 import kr.ac.uos.ai.arbi.model.Binding;
 import kr.ac.uos.ai.arbi.model.Expression;
 import kr.ac.uos.ai.arbi.model.GLFactory;
 import kr.ac.uos.ai.arbi.model.GeneralizedList;
 import kr.ac.uos.ai.arbi.model.rule.condition.ConditionFactory.ConditionType;
 
-class PostCondition implements Condition {
-
-	private GeneralizedList condition = null; 
+public class ExclusiveCondition implements Condition {
+private final GeneralizedList			_predicate;
 	
-	public PostCondition(GeneralizedList glCondition) {
-		this.condition = glCondition;
+	ExclusiveCondition(GeneralizedList predicate) {
+		_predicate = predicate;
 	}
 
 	@Override
 	public boolean checkCondition() {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public String getPredicateName() {
-		
-		return this.condition.getName();
+		return _predicate.getName();
 	}
 
 	@Override
 	public Expression[] getExpressions() {
-		// TODO Auto-generated method stub
-		return null;
+		Expression[] exps = new Expression[_predicate.getExpressionsSize()];
+		for(int i = 0; i< exps.length; i++){
+			exps[i]= _predicate.getExpression(i);
+		}
+		return exps;
+	}
+
+	@Override
+	public String toString() {
+		return _predicate.toString();
 	}
 	
 	public ConditionType getType() {
-		return ConditionType.post;
+		return ConditionType.exclusive;
 	}
 
+	@Override
 	public Expression getEvaluatedExpression(Binding b) {
 
-		 return GLFactory.newExpression(condition);
+		return GLFactory.newExpression(_predicate).evaluate(b);
 	}
-	
 }

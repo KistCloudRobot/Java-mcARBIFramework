@@ -4,7 +4,7 @@ import kr.ac.uos.ai.arbi.model.*;
 
 public class And extends AbstractFunction {
 	public And(Expression... expressions) {
-		super("and", expressions);
+		super("&&", expressions);
 		if (_expressions.length < 2) {
 			throw new IllegalArgumentException("");
 		}

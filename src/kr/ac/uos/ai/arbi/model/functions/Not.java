@@ -4,7 +4,7 @@ import kr.ac.uos.ai.arbi.model.*;
 
 public class Not extends AbstractFunction {
 	public Not(Expression... expressions) {
-		super("not", expressions);
+		super("!", expressions);
 		if (_expressions.length != 1) {
 			throw new IllegalArgumentException("");
 		}

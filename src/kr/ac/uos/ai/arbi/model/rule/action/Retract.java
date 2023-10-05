@@ -4,27 +4,39 @@ import kr.ac.uos.ai.arbi.model.Binding;
 import kr.ac.uos.ai.arbi.model.GeneralizedList;
 
 public class Retract implements Action{
-
+	private final String 							subscriber;
+	private final GeneralizedList					generalizedList;
+	private Binding									bind;
+	
 	public Retract(String subscriber, GeneralizedList asGeneralizedList) {
-		// TODO Auto-generated constructor stub
+		this.subscriber = subscriber;
+		this.generalizedList = asGeneralizedList;
+		
 	}
 
 	@Override
 	public String getSubscriber() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.subscriber;
 	}
 
 	@Override
 	public String toActionContent() {
-		// TODO Auto-generated method stub
-		return null;
+		String result = "";
+		if(bind != null) {
+			result = generalizedList.evaluate(bind).toString();
+		}
+		return result;
 	}
 
 	@Override
 	public void bind(Binding b) {
-		// TODO Auto-generated method stub
-		
+		this.bind = b;
 	}
+
+	public GeneralizedList getBindedGL() {
+		
+		return generalizedList;
+	}
+
 
 }

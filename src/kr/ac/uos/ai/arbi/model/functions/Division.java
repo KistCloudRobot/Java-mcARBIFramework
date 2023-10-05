@@ -4,7 +4,7 @@ import kr.ac.uos.ai.arbi.model.*;
 
 public class Division extends AbstractFunction {
 	public Division(Expression... expressions) {
-		super("div", expressions);
+		super("/", expressions);
 	}
 
 	public Expression evaluate(Binding binding) {

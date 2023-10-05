@@ -9,35 +9,35 @@ public class FunctionFactory {
 	}
 	
 	public static Function newFunction(String name, Expression... expressions) {
-		if (name.equals("add")) {
+		if (name.equals("+")) {
 			return new Addition(expressions);
-		} else if (name.equals("sub")) {
+		} else if (name.equals("-")) {
 			return new Subtraction(expressions);
-		} else if (name.equals("mul")) {
+		} else if (name.equals("*")) {
 			return new Multiplication(expressions);
-		} else if (name.equals("div")) {
+		} else if (name.equals("/")) {
 			return new Division(expressions);
-		} else if (name.equals("mod")) {
+		} else if (name.equals("%")) {
 			return new Modulo(expressions);
-		} else if (name.equals("gt")) {
+		} else if (name.equals("<")) {
 			return new GreaterThan(expressions);
-		} else if (name.equals("ge")) {
+		} else if (name.equals("<=")) {
 			return new GreaterThanEquals(expressions);
-		} else if (name.equals("eq")) {
+		} else if (name.equals("==")) {
 			return new Equals(expressions);
-		} else if (name.equals("ne")) {
+		} else if (name.equals("!=")) {
 			return new NotEquals(expressions);
-		} else if (name.equals("le")) {
+		} else if (name.equals(">=")) {
 			return new LessThanEquals(expressions);
-		} else if (name.equals("lt")) {
+		} else if (name.equals(">")) {
 			return new LessThan(expressions);
-		} else if (name.equals("and")) {
+		} else if (name.equals("&&")) {
 			return new And(expressions);
-		} else if (name.equals("or")) {
+		} else if (name.equals("||")) {
 			return new Or(expressions);
-		} else if (name.equals("not")) {
+		} else if (name.equals("!")) {
 			return new Not(expressions);
-		} else if (name.equals("test")) {
+		} else if (name.equals("?")) {
 			return new Test(expressions);
 		} 
 		throw new IllegalArgumentException("Illegal function: " + name);

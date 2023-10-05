@@ -4,7 +4,7 @@ import kr.ac.uos.ai.arbi.model.*;
 
 public class LessThan extends AbstractFunction {
 	public LessThan(Expression... expressions) {
-		super("lt", expressions);
+		super("<", expressions);
 		if (_expressions.length < 2) {
 			throw new IllegalArgumentException("");
 		}

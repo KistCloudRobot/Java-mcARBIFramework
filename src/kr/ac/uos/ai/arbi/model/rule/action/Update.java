@@ -2,11 +2,17 @@ package kr.ac.uos.ai.arbi.model.rule.action;
 
 import kr.ac.uos.ai.arbi.model.Binding;
 import kr.ac.uos.ai.arbi.model.Expression;
+import kr.ac.uos.ai.arbi.model.GeneralizedList;
 
 public class Update implements Action {
 
+	private GeneralizedList formerGLExpression = null; 
+	private GeneralizedList newGLExpression = null;
+	private Binding b;
+	
 	public Update(Expression formerGLExpression, Expression newGLExpression) {
-		// TODO Auto-generated constructor stub
+		this.formerGLExpression = formerGLExpression.asGeneralizedList();
+		this.newGLExpression = newGLExpression.asGeneralizedList();
 	}
 
 	@Override
@@ -25,6 +31,14 @@ public class Update implements Action {
 	public void bind(Binding b) {
 		// TODO Auto-generated method stub
 		
+	}
+	
+	public GeneralizedList getFormerGLExpression() {
+		return formerGLExpression.evaluate(b);
+	}
+	
+	public GeneralizedList getNewGLExpression() {
+		return newGLExpression.evaluate(b);
 	}
 
 }

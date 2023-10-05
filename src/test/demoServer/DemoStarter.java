@@ -10,8 +10,8 @@ import kr.ac.uos.ai.arbi.ltm.DataSource;
 public class DemoStarter extends ArbiAgent {
 	static String agentURI = "agent://www.arbi.com/demoStarter";
 //	static String host = "127.0.0.1";
-	static String host = "172.16.165.141";
-	static int port = 61316;
+	static String host = "127.0.0.1";
+	static int port = 61616;
 	
 	public static void main(String[] args) {
 		DemoStarter demo = new DemoStarter(BrokerType.ACTIVEMQ);

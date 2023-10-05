@@ -1,11 +1,14 @@
 package kr.ac.uos.ai.arbi.model.rule.condition;
 
+import kr.ac.uos.ai.arbi.model.Binding;
 import kr.ac.uos.ai.arbi.model.Expression;
+import kr.ac.uos.ai.arbi.model.GLFactory;
 import kr.ac.uos.ai.arbi.model.GeneralizedList;
+import kr.ac.uos.ai.arbi.model.rule.condition.ConditionFactory.ConditionType;
 
 class FactCondition implements Condition {
 	private final GeneralizedList			_predicate;
-
+	
 	FactCondition(GeneralizedList predicate) {
 		_predicate = predicate;
 	}
@@ -32,5 +35,15 @@ class FactCondition implements Condition {
 	@Override
 	public String toString() {
 		return _predicate.toString();
+	}
+	
+	public ConditionType getType() {
+		return ConditionType.fact;
+	}
+
+	@Override
+	public Expression getEvaluatedExpression(Binding b) {
+
+		return GLFactory.newExpression(_predicate);
 	}
 }

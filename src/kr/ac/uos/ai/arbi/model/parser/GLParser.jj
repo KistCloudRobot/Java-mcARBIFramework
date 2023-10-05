@@ -9,17 +9,18 @@ package kr.ac.uos.ai.arbi.model.parser;
 import java.util.*;
 import java.io.*;
 import kr.ac.uos.ai.arbi.model.*;
+import kr.ac.uos.ai.arbi.model.functions.*;
+import java.io.ByteArrayInputStream;
 
 public class GLParser {
 	private static final Expression[] NULL_EXPRESSION = new Expression[0];
 	
-	public GLParser() {
-		this(new StringReader(""));
-	}
 	
-	public synchronized GeneralizedList parseGL(String glString) throws ParseException {
-		ReInit(new StringReader(glString));
-		return parseGL();
+	
+	public static synchronized GeneralizedList parseGL(String glString) throws ParseException {
+		GLParser parser = new GLParser(new ByteArrayInputStream(glString.getBytes()));
+	  	
+		return parser.parseGL();
 	}
 }
 PARSER_END(GLParser)
@@ -78,6 +79,23 @@ TOKEN :
 	| <IDENTIFIER:			["_","A"-"Z","a"-"z"] ( <letter> | <digit> | <colon> )* >
 	| <VARIABLE:			"$" ( <letter> | <digit> | "." )* >
 	| <SPECIAL_KEYWORD: 	( "-->" ) >
+	
+
+	| 	< GT: 					">" >
+	| 	< LT: 					"<" >
+	| 	< BANG: 				"!" >
+	| 	< EQ: 					"==" >
+	| 	< LE: 					"<=" >
+	| 	< GE: 					">=" >
+	| 	< NE: 					"!=" >	
+	| 	< SC_OR: 				"||" >
+	| 	< SC_AND: 				"&&" >
+	| 	< INCR: 				"++" >
+	| 	< DECR: 				"--" >
+	| 	< PLUS: 				"+" >
+	| 	< MINUS: 				"-" >
+	| 	< STAR: 				"*" >
+	| 	< SLASH: 				"/" >
 }
 
 
@@ -110,15 +128,217 @@ private Expression[] parseExpressionList() :
 	}
 }
 
-private Expression parseExpression() :
+
+
+
+
+
+
+
+Expression conditionalOrExpression() :
+{
+	Expression lhExpr = null;
+	Expression rhExpr = null;
+	Or orFunction = null;
+}
+{
+	lhExpr = conditionalAndExpression() 
+	[
+		"||" rhExpr = conditionalAndExpression() 
+		{
+			orFunction = new Or(lhExpr, rhExpr);
+			return GLFactory.newExpression(orFunction);
+		}
+	]
+	{
+		return lhExpr;
+	}
+}
+
+Expression conditionalAndExpression() :
+{
+	Expression lhExpr = null;
+	Expression rhExpr = null;
+	And and = null;
+}
+{
+	lhExpr = equalityExpression()
+	[
+		"&&" rhExpr = equalityExpression()
+		{
+			and = new And(lhExpr, rhExpr);
+			return GLFactory.newExpression(and);
+		}
+	]
+	{
+		return lhExpr;
+	}
+}
+
+Expression equalityExpression() :
+{
+	Expression lhExpr = null;
+	Expression rhExpr = null;
+	Token t = null;
+	AbstractFunction function = null;
+}
+{
+	lhExpr = relationalExpression()
+	[
+		( t = "==" | t = "!=" ) rhExpr = relationalExpression()
+		{
+
+			if(t.image.equals("==")) {
+			  function = new Equals(lhExpr, rhExpr);
+			}else {
+			  function = new NotEquals(lhExpr, rhExpr);
+			}
+			
+			
+			return GLFactory.newExpression(function);
+		}		
+	]
+	{
+		return lhExpr;
+	}
+}
+
+Expression relationalExpression() :
+{
+	Expression lhExpr = null;
+	Expression rhExpr = null;
+	Token t = null;
+	Function function = null;
+}
+{
+	lhExpr = additiveExpression()
+	[
+		( t = "<" | t = ">" | t = "<=" | t = ">=" ) rhExpr = additiveExpression()
+		{
+			if(t.image.equals("<")) {
+				function = new LessThan(lhExpr, rhExpr);	
+			}else if(t.image.equals( ">")) {
+			  	function = new GreaterThan(lhExpr, rhExpr);
+			}else if(t.image.equals("<=")) {
+			  	function = new LessThanEquals(lhExpr, rhExpr);
+			}else {
+			 	 function = new GreaterThanEquals(lhExpr, rhExpr);
+			}
+		
+
+
+
+			
+			return GLFactory.newExpression(function);
+		}
+	]
+	{
+		return lhExpr;
+	}	
+}
+
+Expression additiveExpression() :
+{
+	Expression lhExpr = null;
+	Expression rhExpr = null;
+	Token t = null;
+	Function function = null;
+}
+{
+	lhExpr = multiplicativeExpression()
+	[
+		( t = "+" | t = "-"  | t = <IDENTIFIER>) rhExpr = multiplicativeExpression() 
+		{
+
+		  	if(t.image.equals("+")) {
+			  function = new Addition(lhExpr, rhExpr);	
+			}else if (t.image.equals("-")){
+			  function = new Subtraction(lhExpr, rhExpr);
+			}else {
+			  Expression[] expressionList = { lhExpr, rhExpr };
+			  function = new ExternalFunction(t.image,expressionList);
+			}
+			
+			return GLFactory.newExpression(function);
+		}
+	]
+	{
+		return lhExpr;
+	}	
+}
+
+Expression multiplicativeExpression() :
+{
+	Expression lhExpr = null;
+	Expression rhExpr = null;
+	Token t = null;
+	Function function = null;
+}
+{
+	lhExpr = unaryExpression()
+	[
+		( t = "*" | t = "/" ) rhExpr = unaryExpression( )
+		{
+			if(t.image.equals("*")) {
+			  function = new Multiplication(lhExpr, rhExpr);	
+			}else {
+			  function = new Division(lhExpr, rhExpr);
+			}
+			
+			
+		
+			return GLFactory.newExpression(function);
+		}
+	]
+	{
+		return lhExpr;
+	}
+}
+
+Expression unaryExpression() :
+{
+	Expression expr = null;
+	Function unaryFunction = null;
+	Token functionName = null;
+}
+{
+ 	     
+	"!" expr = primaryExpression()
+	{
+	  	unaryFunction = new Not(expr);
+	  	
+		return GLFactory.newExpression(unaryFunction);
+	}
+	| functionName = <IDENTIFIER> expr = primaryExpression()
+	{
+		Expression[] expressionList = { expr };
+	  	unaryFunction = new ExternalFunction(functionName.image, expressionList);
+	  	
+		return GLFactory.newExpression(unaryFunction);
+	}
+	| expr = primaryExpression() 
+	{
+		return expr;
+	}
+	
+}
+
+Expression primaryExpression() :    ///// the second lowest unit.
 {
 	Value value;
 	Variable variable;
 	Function function;
-	GeneralizedList gl;
+	Expression infixExpression;
 }
 {
-	value=parseValue()
+	
+	function = parseFunction()
+
+	{
+		return GLFactory.newExpression(function);
+	} 
+	| 
+		value=parseValue()
 	{
 		return GLFactory.newExpression(value);
 	}
@@ -126,35 +346,78 @@ private Expression parseExpression() :
 	{
 		return GLFactory.newExpression(variable);
 	}
+
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+private Expression parseExpression() :
+{
+	Value value;
+	Variable variable;
+	Function function;
+	GeneralizedList gl;
+	Expression ie;
+}
+{
+	value=parseValue()
+	{
+
+		return GLFactory.newExpression(value);
+	}
+	| variable=parseVariable() 
+	{
+
+		return GLFactory.newExpression(variable);
+	}
 	| function=parseFunction()
 	{
+
 		return GLFactory.newExpression(function);
 	}
 	| gl=parseGL()
 	{
+
 		return GLFactory.newExpression(gl);
 	}
+	
 }
 
 private Value parseValue() :
 {
-	Token id;
+	Token id = null;
 }
 {
+
 	id=<INTEGER>
 	{
+
 		return GLFactory.newValue(Integer.valueOf(id.image).intValue());
 	}
 	| id=<FLOAT>
 	{
+
 		return GLFactory.newValue(Float.valueOf(id.image).floatValue());
 	}
 	| id=<STRING>
 	{
+	
 		return GLFactory.newValue(id.image);
 	}
 	| id=<SPECIAL_KEYWORD>
 	{
+
 		return GLFactory.newValue(id.image);
 	}
 }
@@ -172,12 +435,11 @@ private Variable parseVariable() :
 
 private Function parseFunction() :
 {
-	Token id;
-	Expression[] expressions;
+	Expression expression = null;
 }
 {
-	"#(" id=<IDENTIFIER> expressions=parseExpressionList() ")"
+	"#(" expression = conditionalOrExpression() ")"
 	{
-		return GLFactory.newFunction(id.image, expressions);
+		return expression.asFunction();
 	}
 }

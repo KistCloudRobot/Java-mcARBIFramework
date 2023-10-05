@@ -4,7 +4,7 @@ import kr.ac.uos.ai.arbi.model.*;
 
 public class Equals extends AbstractFunction {
 	public Equals(Expression... expressions) {
-		super("eq", expressions);
+		super("==", expressions);
 		if (_expressions.length < 2) {
 			throw new IllegalArgumentException("");
 		}

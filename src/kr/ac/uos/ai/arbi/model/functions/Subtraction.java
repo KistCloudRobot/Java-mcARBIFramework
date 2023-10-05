@@ -4,7 +4,7 @@ import kr.ac.uos.ai.arbi.model.*;
 
 public class Subtraction extends AbstractFunction {
 	public Subtraction(Expression... expressions) {
-		super("sub", expressions);
+		super("-", expressions);
 	}
 
 	public Expression evaluate(Binding binding) {

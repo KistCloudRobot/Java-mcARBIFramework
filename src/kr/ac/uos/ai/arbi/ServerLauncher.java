@@ -27,9 +27,9 @@ import kr.ac.uos.ai.arbi.monitor.ArbiFrameworkMonitor;
 public class ServerLauncher {
 
 	public static final int DefaultBrokerPort = 61616;
-	public static final String DefualtBrokerHost = "localhost";
+	public static final String DefualtBrokerHost = "0.0.0.0";
 
-	public static BrokerType brokerType = BrokerType.ZEROMQ;
+	public static BrokerType brokerType = BrokerType.ACTIVEMQ;
 
 	private InteractionManager interactionManager;
 
@@ -98,6 +98,7 @@ public class ServerLauncher {
 //					System.out.println("InteractionManager apollo addr : "
 //							+ InteractionManagerBrokerConfiguration.getApolloBroker());
 //				}
+				
 				Element interactionManagerZeroMQBrokerElement = (Element) interactionManagerBrokerElement
 						.getElementsByTagName("ZeroMQBroker").item(0);
 				
@@ -132,7 +133,6 @@ public class ServerLauncher {
 					Element hostElement = (Element) brokerPropertyElement.getElementsByTagName("Host").item(0);
 					Element nameElement = (Element) brokerPropertyElement.getElementsByTagName("Name").item(0);
 					boolean isTrue = brokerPropertyElement.getAttribute("Center").equals("true");
-					System.out.println("wat? " + isTrue);
 					
 					if (portElement != null) {
 						brokerPort = Integer.parseInt(portElement.getTextContent());
@@ -152,35 +152,29 @@ public class ServerLauncher {
 
 			}
 
-			System.out.println("code is not complete");
-			//TODO
-//			if (InteractionManagerBrokerConfiguration.getApolloBroker() != null) {
-//				ApolloBroker broker = new ApolloBroker();
-//				broker.setURL(InteractionManagerBrokerConfiguration.getApolloBroker());
-//				broker.start();
-//			}
-//			if (InteractionManagerBrokerConfiguration.getStompBroker() != null) {
-//				ActiveMQBroker stompBroker = new ActiveMQBroker();
-//				stompBroker.setURL(InteractionManagerBrokerConfiguration.getStompBroker());
-//				stompBroker.start();
-//			}
-//			
-//			
-//			String brokerURL = "tcp://" + brokerHost + ":" + brokerPort;
-//			
-//			ArbiFrameworkServer server = new ArbiFrameworkServer(brokerType);
-//			server.start(brokerURL);
-//
-//			if (interactionManagerStart) {
-//
-//				interactionManager = new InteractionManager();
-//
-//				interactionManager.start(brokerURL, brokerType);
-//
-//				ArbiAgentExecutor.execute(brokerURL, InteractionManager.interactionAgentURI, interactionManager,
-//						brokerType);
-//
-//			}
+			if (InteractionManagerBrokerConfiguration.getActiveMQBrokerHost() != null) {
+				ActiveMQBroker activeMQBroker = new ActiveMQBroker(configurationPath, brokerPort);
+				activeMQBroker.start();
+			}
+			
+			
+			String brokerURL = "tcp://" + brokerHost + ":" + brokerPort;
+			
+			System.out.println("broker type : " + brokerType.toString());
+			System.out.println("broker host : " + brokerHost);
+			System.out.println("broker port : " + brokerPort);
+			
+			ArbiFrameworkServer server = new ArbiFrameworkServer(brokerType,brokerHost,brokerPort);
+			server.start();
+
+			if (interactionManagerStart) {
+
+			interactionManager = new InteractionManager();
+
+				ArbiAgentExecutor.execute(brokerHost,brokerPort, InteractionManager.interactionManagerURI, interactionManager,
+						brokerType);
+
+			}
 
 			if (arbiFrameworkMonitorStart) {
 				ArbiFrameworkMonitor m = new ArbiFrameworkMonitor();

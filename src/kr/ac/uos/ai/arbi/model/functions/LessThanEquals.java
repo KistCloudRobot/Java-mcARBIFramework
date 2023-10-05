@@ -4,7 +4,7 @@ import kr.ac.uos.ai.arbi.model.*;
 
 public class LessThanEquals extends AbstractFunction {
 	public LessThanEquals(Expression... expressions) {
-		super("le", expressions);
+		super("<=", expressions);
 		if (_expressions.length < 2) {
 			throw new IllegalArgumentException("");
 		}
@@ -30,7 +30,7 @@ public class LessThanEquals extends AbstractFunction {
 			}
 		}
 		if (!check) {
-			throw new IllegalStateException("");
+			return Expression.FALSE;
 		}
 		return Expression.TRUE;
 	}

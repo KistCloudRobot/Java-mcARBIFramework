@@ -4,7 +4,7 @@ import kr.ac.uos.ai.arbi.model.*;
 
 public class Multiplication extends AbstractFunction {
 	public Multiplication(Expression... expressions) {
-		super("mul", expressions);
+		super("*", expressions);
 	}
 
 	public Expression evaluate(Binding binding) {

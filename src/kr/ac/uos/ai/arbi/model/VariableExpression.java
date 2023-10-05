@@ -41,7 +41,16 @@ class VariableExpression implements Expression {
 	}
 
 	public Expression evaluate(Binding binding) {
-		return (binding != null) ? binding.retrieve(_variable) : Expression.UNDEFINED; 
+		if(binding != null ) {
+			Expression result = binding.retrieve(_variable);
+			if(result == null|| result == Expression.UNDEFINED) {
+				return this;
+			}else {
+				return result;
+			}
+		}
+		
+		return this;
 	}
 	
 	public String toString() {

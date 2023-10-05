@@ -48,8 +48,8 @@ public class GLFactory {
 	}
 
 	public static GeneralizedList newGLFromGLString(String glString) throws ParseException {
-		GLParser parser = new GLParser();
-		return parser.parseGL(glString);
+
+		return GLParser.parseGL(glString);
 	}
 
 	public static GeneralizedList newGLFromGLString(InputSource source) throws ParseException, IOException {
@@ -293,6 +293,10 @@ public class GLFactory {
 
 	public static Expression newExpression(GeneralizedList gl) {
 		return new GLExpression(gl);
+	}
+	
+	public static Expression newExpression(InfixExpression ie) {
+		return new InfixExpression(ie);
 	}
 
 	public static Expression newExpression(Function function) {

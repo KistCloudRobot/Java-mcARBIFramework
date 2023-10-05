@@ -9,7 +9,7 @@ import kr.ac.uos.ai.arbi.model.parser.ParseException;
 
 public class ConditionFactory {
 	
-	public enum Type {fact, expression, post, event, retracted};
+	public enum ConditionType {fact, expression, post, event, retracted,exclusive,query};
 	
 	private ConditionFactory() {
 		//
@@ -18,13 +18,21 @@ public class ConditionFactory {
 	public static Condition newConditionFromGL(GeneralizedList glCondition) {
 		Condition condition = null;
 		
-		Type condionName = Type.valueOf(glCondition.getName());
+		ConditionType condionName = ConditionType.valueOf(glCondition.getName());
 		switch(condionName) {
 		case fact:
 			if (glCondition.getExpressionsSize() == 1) {
 				Expression predicateExpression = glCondition.getExpression(0);
 				if (predicateExpression.isGeneralizedList()) {
 					condition = new FactCondition(predicateExpression.asGeneralizedList());
+				}
+			}
+			break;
+		case query:
+			if (glCondition.getExpressionsSize() == 1) {
+				Expression predicateExpression = glCondition.getExpression(0);
+				if (predicateExpression.isGeneralizedList()) {
+					condition = new QueryCondition(predicateExpression.asGeneralizedList());
 				}
 			}
 			break;
@@ -55,6 +63,14 @@ public class ConditionFactory {
 				Expression retractedExpression = glCondition.getExpression(0);
 				if (retractedExpression.isGeneralizedList()) {
 					condition = new RetractedCondition(retractedExpression.asGeneralizedList());
+				}
+			}
+			break;
+		case exclusive:
+			if (glCondition.getExpressionsSize() == 1) {
+				Expression exclulsiveExpression = glCondition.getExpression(0);
+				if (exclulsiveExpression.isGeneralizedList()) {
+					condition = new ExclusiveCondition(exclulsiveExpression.asGeneralizedList());
 				}
 			}
 			break;

@@ -48,6 +48,36 @@ public interface GLParserConstants {
   int VARIABLE = 25;
   /** RegularExpression Id. */
   int SPECIAL_KEYWORD = 26;
+  /** RegularExpression Id. */
+  int GT = 27;
+  /** RegularExpression Id. */
+  int LT = 28;
+  /** RegularExpression Id. */
+  int BANG = 29;
+  /** RegularExpression Id. */
+  int EQ = 30;
+  /** RegularExpression Id. */
+  int LE = 31;
+  /** RegularExpression Id. */
+  int GE = 32;
+  /** RegularExpression Id. */
+  int NE = 33;
+  /** RegularExpression Id. */
+  int SC_OR = 34;
+  /** RegularExpression Id. */
+  int SC_AND = 35;
+  /** RegularExpression Id. */
+  int INCR = 36;
+  /** RegularExpression Id. */
+  int DECR = 37;
+  /** RegularExpression Id. */
+  int PLUS = 38;
+  /** RegularExpression Id. */
+  int MINUS = 39;
+  /** RegularExpression Id. */
+  int STAR = 40;
+  /** RegularExpression Id. */
+  int SLASH = 41;
 
   /** Lexical state. */
   int DEFAULT = 0;
@@ -83,6 +113,21 @@ public interface GLParserConstants {
     "<IDENTIFIER>",
     "<VARIABLE>",
     "\"-->\"",
+    "\">\"",
+    "\"<\"",
+    "\"!\"",
+    "\"==\"",
+    "\"<=\"",
+    "\">=\"",
+    "\"!=\"",
+    "\"||\"",
+    "\"&&\"",
+    "\"++\"",
+    "\"--\"",
+    "\"+\"",
+    "\"-\"",
+    "\"*\"",
+    "\"/\"",
     "\"(\"",
     "\")\"",
     "\"#(\"",

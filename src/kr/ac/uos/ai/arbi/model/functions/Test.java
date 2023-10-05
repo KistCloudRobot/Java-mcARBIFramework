@@ -4,7 +4,7 @@ import kr.ac.uos.ai.arbi.model.*;
 
 public class Test extends AbstractFunction {
 	public Test(Expression... expressions) {
-		super("test", expressions);
+		super("?", expressions);
 		if (expressions.length != 1) {
 			throw new IllegalArgumentException("");
 		}

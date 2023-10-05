@@ -9,12 +9,19 @@ public class PredicateContainer {
 	private final long					createTime;
 	private final GeneralizedList		predicate;
 
-	public PredicateContainer(String author, long createTime, GeneralizedList predicate) {
+	public PredicateContainer(String author,  GeneralizedList predicate) {
 		this.author = author;
-		this.createTime = createTime;
+		this.createTime = System.currentTimeMillis();
 		this.predicate = predicate;
 
 	}
+	public PredicateContainer(String author, long createTime, GeneralizedList predicate) {
+		this.author = author;
+		this.createTime = System.currentTimeMillis();
+		this.predicate = predicate;
+
+	}
+	
 	public PredicateContainer(String author, long createTime, String glString) {
 		GeneralizedList gl = null;
 		try {
@@ -27,6 +34,8 @@ public class PredicateContainer {
 		this.createTime = createTime;
 		this.predicate = gl;
 	}
+	
+	
 	public String getAuthor() {
 		return author;
 	}

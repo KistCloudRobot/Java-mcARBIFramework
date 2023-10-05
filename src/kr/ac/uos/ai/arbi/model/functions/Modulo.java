@@ -4,7 +4,7 @@ import kr.ac.uos.ai.arbi.model.*;
 
 public class Modulo extends AbstractFunction {
 	public Modulo(Expression... expressions) {
-		super("mod", expressions);
+		super("%", expressions);
 	}
 
 	public Expression evaluate(Binding binding) {

@@ -6,7 +6,7 @@ import kr.ac.uos.ai.arbi.model.GeneralizedList;
 
 public class ActionFactory {
 	
-	public enum ACTION {notify,post,retract,update ,stream };
+	public enum ACTION {notify,post,retract,update ,stream,bind };
 	
 	private ActionFactory() {
 		//
@@ -23,6 +23,14 @@ public class ActionFactory {
 				Expression notificationExpression = glAction.getExpression(0);
 				if (notificationExpression.isGeneralizedList()) {
 					action = new Notify(subscriber, notificationExpression.asGeneralizedList());
+				}
+			}
+			break;
+		case bind:
+			if (glAction.getExpressionsSize() == 1) {
+				Expression notificationExpression = glAction.getExpression(0);
+				if (notificationExpression.isGeneralizedList()) {
+					action = new BindResult(subscriber, notificationExpression.asGeneralizedList());
 				}
 			}
 			break;

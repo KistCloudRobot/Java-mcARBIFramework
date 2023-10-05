@@ -94,9 +94,14 @@ class StringValue implements Value {
 	}
 	
 	public String toString() {
-		StringBuilder sb = new StringBuilder();
-		sb.append("\"").append(GLFactory.escape(_value)).append("\"");
-		return sb.toString();
+		if(_value.equals("-->")) {
+			return _value;
+		}else {
+			StringBuilder sb = new StringBuilder();
+			sb.append("\"").append(GLFactory.escape(_value)).append("\"");
+			return sb.toString();
+		}
+		
 	}
 	
 }

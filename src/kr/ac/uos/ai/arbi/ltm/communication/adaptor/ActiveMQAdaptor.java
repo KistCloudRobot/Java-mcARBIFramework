@@ -39,6 +39,7 @@ public class ActiveMQAdaptor implements LTMMessageAdaptor {
 	public ActiveMQAdaptor(String brokerHost, int brokerPort, String clientURI, LTMMessageQueue queue) {
 		try {
 			connection = new StompConnection();
+			System.out.println(brokerHost + "  " + brokerPort);
 			connection.open(brokerHost, brokerPort);
 			
 			this.clientURI = clientURI;

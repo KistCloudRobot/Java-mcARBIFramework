@@ -4,26 +4,27 @@ package kr.ac.uos.ai.arbi.model.parser;
 import java.util.*;
 import java.io.*;
 import kr.ac.uos.ai.arbi.model.*;
+import kr.ac.uos.ai.arbi.model.functions.*;
+import java.io.ByteArrayInputStream;
 
 public class GLParser implements GLParserConstants {
         private static final Expression[] NULL_EXPRESSION = new Expression[0];
 
-        public GLParser() {
-                this(new StringReader(""));
-        }
 
-        public synchronized GeneralizedList parseGL(String glString) throws ParseException {
-                ReInit(new StringReader(glString));
-                return parseGL();
+
+        public static synchronized GeneralizedList parseGL(String glString) throws ParseException {
+                GLParser parser = new GLParser(new ByteArrayInputStream(glString.getBytes()));
+
+                return parser.parseGL();
         }
 
   final private GeneralizedList parseGL() throws ParseException {
         Token id;
         Expression[] expressions;
-    jj_consume_token(27);
+    jj_consume_token(42);
     id = jj_consume_token(IDENTIFIER);
     expressions = parseExpressionList();
-    jj_consume_token(28);
+    jj_consume_token(43);
                 {if (true) return GLFactory.newGL(id.image, expressions);}
     throw new Error("Missing return statement in function");
   }
@@ -39,8 +40,8 @@ public class GLParser implements GLParserConstants {
       case FLOAT:
       case VARIABLE:
       case SPECIAL_KEYWORD:
-      case 27:
-      case 29:
+      case 42:
+      case 44:
         ;
         break;
       default:
@@ -54,11 +55,296 @@ public class GLParser implements GLParserConstants {
     throw new Error("Missing return statement in function");
   }
 
+  final public Expression conditionalOrExpression() throws ParseException {
+        Expression lhExpr = null;
+        Expression rhExpr = null;
+        Or orFunction = null;
+    lhExpr = conditionalAndExpression();
+    switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
+    case SC_OR:
+      jj_consume_token(SC_OR);
+      rhExpr = conditionalAndExpression();
+                        orFunction = new Or(lhExpr, rhExpr);
+                        {if (true) return GLFactory.newExpression(orFunction);}
+      break;
+    default:
+      jj_la1[1] = jj_gen;
+      ;
+    }
+                {if (true) return lhExpr;}
+    throw new Error("Missing return statement in function");
+  }
+
+  final public Expression conditionalAndExpression() throws ParseException {
+        Expression lhExpr = null;
+        Expression rhExpr = null;
+        And and = null;
+    lhExpr = equalityExpression();
+    switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
+    case SC_AND:
+      jj_consume_token(SC_AND);
+      rhExpr = equalityExpression();
+                        and = new And(lhExpr, rhExpr);
+                        {if (true) return GLFactory.newExpression(and);}
+      break;
+    default:
+      jj_la1[2] = jj_gen;
+      ;
+    }
+                {if (true) return lhExpr;}
+    throw new Error("Missing return statement in function");
+  }
+
+  final public Expression equalityExpression() throws ParseException {
+        Expression lhExpr = null;
+        Expression rhExpr = null;
+        Token t = null;
+        AbstractFunction function = null;
+    lhExpr = relationalExpression();
+    switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
+    case EQ:
+    case NE:
+      switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
+      case EQ:
+        t = jj_consume_token(EQ);
+        break;
+      case NE:
+        t = jj_consume_token(NE);
+        break;
+      default:
+        jj_la1[3] = jj_gen;
+        jj_consume_token(-1);
+        throw new ParseException();
+      }
+      rhExpr = relationalExpression();
+                        if(t.image.equals("==")) {
+                          function = new Equals(lhExpr, rhExpr);
+                        }else {
+                          function = new NotEquals(lhExpr, rhExpr);
+                        }
+
+
+                        {if (true) return GLFactory.newExpression(function);}
+      break;
+    default:
+      jj_la1[4] = jj_gen;
+      ;
+    }
+                {if (true) return lhExpr;}
+    throw new Error("Missing return statement in function");
+  }
+
+  final public Expression relationalExpression() throws ParseException {
+        Expression lhExpr = null;
+        Expression rhExpr = null;
+        Token t = null;
+        Function function = null;
+    lhExpr = additiveExpression();
+    switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
+    case GT:
+    case LT:
+    case LE:
+    case GE:
+      switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
+      case LT:
+        t = jj_consume_token(LT);
+        break;
+      case GT:
+        t = jj_consume_token(GT);
+        break;
+      case LE:
+        t = jj_consume_token(LE);
+        break;
+      case GE:
+        t = jj_consume_token(GE);
+        break;
+      default:
+        jj_la1[5] = jj_gen;
+        jj_consume_token(-1);
+        throw new ParseException();
+      }
+      rhExpr = additiveExpression();
+                        if(t.image.equals("<")) {
+                                function = new LessThan(lhExpr, rhExpr);
+                        }else if(t.image.equals( ">")) {
+                                function = new GreaterThan(lhExpr, rhExpr);
+                        }else if(t.image.equals("<=")) {
+                                function = new LessThanEquals(lhExpr, rhExpr);
+                        }else {
+                                 function = new GreaterThanEquals(lhExpr, rhExpr);
+                        }
+
+
+
+
+
+                        {if (true) return GLFactory.newExpression(function);}
+      break;
+    default:
+      jj_la1[6] = jj_gen;
+      ;
+    }
+                {if (true) return lhExpr;}
+    throw new Error("Missing return statement in function");
+  }
+
+  final public Expression additiveExpression() throws ParseException {
+        Expression lhExpr = null;
+        Expression rhExpr = null;
+        Token t = null;
+        Function function = null;
+    lhExpr = multiplicativeExpression();
+    switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
+    case IDENTIFIER:
+    case PLUS:
+    case MINUS:
+      switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
+      case PLUS:
+        t = jj_consume_token(PLUS);
+        break;
+      case MINUS:
+        t = jj_consume_token(MINUS);
+        break;
+      case IDENTIFIER:
+        t = jj_consume_token(IDENTIFIER);
+        break;
+      default:
+        jj_la1[7] = jj_gen;
+        jj_consume_token(-1);
+        throw new ParseException();
+      }
+      rhExpr = multiplicativeExpression();
+                        if(t.image.equals("+")) {
+                          function = new Addition(lhExpr, rhExpr);
+                        }else if (t.image.equals("-")){
+                          function = new Subtraction(lhExpr, rhExpr);
+                        }else {
+                          Expression[] expressionList = { lhExpr, rhExpr };
+                          function = new ExternalFunction(t.image,expressionList);
+                        }
+
+                        {if (true) return GLFactory.newExpression(function);}
+      break;
+    default:
+      jj_la1[8] = jj_gen;
+      ;
+    }
+                {if (true) return lhExpr;}
+    throw new Error("Missing return statement in function");
+  }
+
+  final public Expression multiplicativeExpression() throws ParseException {
+        Expression lhExpr = null;
+        Expression rhExpr = null;
+        Token t = null;
+        Function function = null;
+    lhExpr = unaryExpression();
+    switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
+    case STAR:
+    case SLASH:
+      switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
+      case STAR:
+        t = jj_consume_token(STAR);
+        break;
+      case SLASH:
+        t = jj_consume_token(SLASH);
+        break;
+      default:
+        jj_la1[9] = jj_gen;
+        jj_consume_token(-1);
+        throw new ParseException();
+      }
+      rhExpr = unaryExpression();
+                        if(t.image.equals("*")) {
+                          function = new Multiplication(lhExpr, rhExpr);
+                        }else {
+                          function = new Division(lhExpr, rhExpr);
+                        }
+
+
+
+                        {if (true) return GLFactory.newExpression(function);}
+      break;
+    default:
+      jj_la1[10] = jj_gen;
+      ;
+    }
+                {if (true) return lhExpr;}
+    throw new Error("Missing return statement in function");
+  }
+
+  final public Expression unaryExpression() throws ParseException {
+        Expression expr = null;
+        Function unaryFunction = null;
+        Token functionName = null;
+    switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
+    case BANG:
+      jj_consume_token(BANG);
+      expr = primaryExpression();
+                unaryFunction = new Not(expr);
+
+                {if (true) return GLFactory.newExpression(unaryFunction);}
+      break;
+    case IDENTIFIER:
+      functionName = jj_consume_token(IDENTIFIER);
+      expr = primaryExpression();
+                Expression[] expressionList = { expr };
+                unaryFunction = new ExternalFunction(functionName.image, expressionList);
+
+                {if (true) return GLFactory.newExpression(unaryFunction);}
+      break;
+    case STRING:
+    case INTEGER:
+    case FLOAT:
+    case VARIABLE:
+    case SPECIAL_KEYWORD:
+    case 44:
+      expr = primaryExpression();
+                {if (true) return expr;}
+      break;
+    default:
+      jj_la1[11] = jj_gen;
+      jj_consume_token(-1);
+      throw new ParseException();
+    }
+    throw new Error("Missing return statement in function");
+  }
+
+  final public Expression primaryExpression() throws ParseException {
+        Value value;
+        Variable variable;
+        Function function;
+        Expression infixExpression;
+    switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
+    case 44:
+      function = parseFunction();
+                {if (true) return GLFactory.newExpression(function);}
+      break;
+    case STRING:
+    case INTEGER:
+    case FLOAT:
+    case SPECIAL_KEYWORD:
+      value = parseValue();
+                {if (true) return GLFactory.newExpression(value);}
+      break;
+    case VARIABLE:
+      variable = parseVariable();
+                {if (true) return GLFactory.newExpression(variable);}
+      break;
+    default:
+      jj_la1[12] = jj_gen;
+      jj_consume_token(-1);
+      throw new ParseException();
+    }
+    throw new Error("Missing return statement in function");
+  }
+
   final private Expression parseExpression() throws ParseException {
         Value value;
         Variable variable;
         Function function;
         GeneralizedList gl;
+        Expression ie;
     switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
     case STRING:
     case INTEGER:
@@ -71,16 +357,16 @@ public class GLParser implements GLParserConstants {
       variable = parseVariable();
                 {if (true) return GLFactory.newExpression(variable);}
       break;
-    case 29:
+    case 44:
       function = parseFunction();
                 {if (true) return GLFactory.newExpression(function);}
       break;
-    case 27:
+    case 42:
       gl = parseGL();
                 {if (true) return GLFactory.newExpression(gl);}
       break;
     default:
-      jj_la1[1] = jj_gen;
+      jj_la1[13] = jj_gen;
       jj_consume_token(-1);
       throw new ParseException();
     }
@@ -88,7 +374,7 @@ public class GLParser implements GLParserConstants {
   }
 
   final private Value parseValue() throws ParseException {
-        Token id;
+        Token id = null;
     switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
     case INTEGER:
       id = jj_consume_token(INTEGER);
@@ -107,7 +393,7 @@ public class GLParser implements GLParserConstants {
                 {if (true) return GLFactory.newValue(id.image);}
       break;
     default:
-      jj_la1[2] = jj_gen;
+      jj_la1[14] = jj_gen;
       jj_consume_token(-1);
       throw new ParseException();
     }
@@ -122,13 +408,11 @@ public class GLParser implements GLParserConstants {
   }
 
   final private Function parseFunction() throws ParseException {
-        Token id;
-        Expression[] expressions;
-    jj_consume_token(29);
-    id = jj_consume_token(IDENTIFIER);
-    expressions = parseExpressionList();
-    jj_consume_token(28);
-                {if (true) return GLFactory.newFunction(id.image, expressions);}
+        Expression expression = null;
+    jj_consume_token(44);
+    expression = conditionalOrExpression();
+    jj_consume_token(43);
+                {if (true) return expression.asFunction();}
     throw new Error("Missing return statement in function");
   }
 
@@ -141,13 +425,18 @@ public class GLParser implements GLParserConstants {
   public Token jj_nt;
   private int jj_ntk;
   private int jj_gen;
-  final private int[] jj_la1 = new int[3];
+  final private int[] jj_la1 = new int[15];
   static private int[] jj_la1_0;
+  static private int[] jj_la1_1;
   static {
       jj_la1_init_0();
+      jj_la1_init_1();
    }
    private static void jj_la1_init_0() {
-      jj_la1_0 = new int[] {0x2ec00008,0x2ec00008,0x4c00008,};
+      jj_la1_0 = new int[] {0x6c00008,0x0,0x0,0x40000000,0x40000000,0x98000000,0x98000000,0x1000000,0x1000000,0x0,0x0,0x27c00008,0x6c00008,0x6c00008,0x4c00008,};
+   }
+   private static void jj_la1_init_1() {
+      jj_la1_1 = new int[] {0x1400,0x4,0x8,0x2,0x2,0x1,0x1,0xc0,0xc0,0x300,0x300,0x1000,0x1000,0x1400,0x0,};
    }
 
   /** Constructor with InputStream. */
@@ -161,7 +450,7 @@ public class GLParser implements GLParserConstants {
     token = new Token();
     jj_ntk = -1;
     jj_gen = 0;
-    for (int i = 0; i < 3; i++) jj_la1[i] = -1;
+    for (int i = 0; i < 15; i++) jj_la1[i] = -1;
   }
 
   /** Reinitialise. */
@@ -175,7 +464,7 @@ public class GLParser implements GLParserConstants {
     token = new Token();
     jj_ntk = -1;
     jj_gen = 0;
-    for (int i = 0; i < 3; i++) jj_la1[i] = -1;
+    for (int i = 0; i < 15; i++) jj_la1[i] = -1;
   }
 
   /** Constructor. */
@@ -185,7 +474,7 @@ public class GLParser implements GLParserConstants {
     token = new Token();
     jj_ntk = -1;
     jj_gen = 0;
-    for (int i = 0; i < 3; i++) jj_la1[i] = -1;
+    for (int i = 0; i < 15; i++) jj_la1[i] = -1;
   }
 
   /** Reinitialise. */
@@ -195,7 +484,7 @@ public class GLParser implements GLParserConstants {
     token = new Token();
     jj_ntk = -1;
     jj_gen = 0;
-    for (int i = 0; i < 3; i++) jj_la1[i] = -1;
+    for (int i = 0; i < 15; i++) jj_la1[i] = -1;
   }
 
   /** Constructor with generated Token Manager. */
@@ -204,7 +493,7 @@ public class GLParser implements GLParserConstants {
     token = new Token();
     jj_ntk = -1;
     jj_gen = 0;
-    for (int i = 0; i < 3; i++) jj_la1[i] = -1;
+    for (int i = 0; i < 15; i++) jj_la1[i] = -1;
   }
 
   /** Reinitialise. */
@@ -213,7 +502,7 @@ public class GLParser implements GLParserConstants {
     token = new Token();
     jj_ntk = -1;
     jj_gen = 0;
-    for (int i = 0; i < 3; i++) jj_la1[i] = -1;
+    for (int i = 0; i < 15; i++) jj_la1[i] = -1;
   }
 
   private Token jj_consume_token(int kind) throws ParseException {
@@ -264,21 +553,24 @@ public class GLParser implements GLParserConstants {
   /** Generate ParseException. */
   public ParseException generateParseException() {
     jj_expentries.clear();
-    boolean[] la1tokens = new boolean[30];
+    boolean[] la1tokens = new boolean[45];
     if (jj_kind >= 0) {
       la1tokens[jj_kind] = true;
       jj_kind = -1;
     }
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 15; i++) {
       if (jj_la1[i] == jj_gen) {
         for (int j = 0; j < 32; j++) {
           if ((jj_la1_0[i] & (1<<j)) != 0) {
             la1tokens[j] = true;
           }
+          if ((jj_la1_1[i] & (1<<j)) != 0) {
+            la1tokens[32+j] = true;
+          }
         }
       }
     }
-    for (int i = 0; i < 30; i++) {
+    for (int i = 0; i < 45; i++) {
       if (la1tokens[i]) {
         jj_expentry = new int[1];
         jj_expentry[0] = i;

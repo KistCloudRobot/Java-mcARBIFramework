@@ -3,15 +3,17 @@ package kr.ac.uos.ai.arbi.model.rule.condition;
 import java.util.LinkedList;
 import java.util.List;
 
+import kr.ac.uos.ai.arbi.model.Binding;
 import kr.ac.uos.ai.arbi.model.Expression;
+import kr.ac.uos.ai.arbi.model.GLFactory;
 import kr.ac.uos.ai.arbi.model.GeneralizedList;
-import kr.ac.uos.ai.arbi.model.rule.condition.ConditionFactory.Type;
+import kr.ac.uos.ai.arbi.model.rule.condition.ConditionFactory.ConditionType;
 
 public class RetractedCondition implements Condition{
 	
 	private final GeneralizedList			_predicate;
 
-	RetractedCondition(GeneralizedList predicate) {
+	public RetractedCondition(GeneralizedList predicate) {
 		_predicate = predicate;
 	}
 
@@ -24,7 +26,7 @@ public class RetractedCondition implements Condition{
 	@Override
 	public String getPredicateName() {
 		// TODO Auto-generated method stub
-		return null;
+		return _predicate.getName();
 	}
 
 	@Override
@@ -33,6 +35,15 @@ public class RetractedCondition implements Condition{
 		return null;
 	}
 	
+	public ConditionType getType() {
+		return ConditionType.retracted;
+	}
 
+	public Expression getEvaluatedExpression(Binding b) {
+
+		return GLFactory.newExpression(_predicate);
+	}
+	
+	
 
 }

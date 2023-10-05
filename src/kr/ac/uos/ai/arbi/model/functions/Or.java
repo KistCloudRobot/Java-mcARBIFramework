@@ -4,7 +4,7 @@ import kr.ac.uos.ai.arbi.model.*;
 
 public class Or extends AbstractFunction {
 	public Or(Expression... expressions) {
-		super("or", expressions);
+		super("||", expressions);
 		if (_expressions.length < 2) {
 			throw new IllegalArgumentException("");
 		}

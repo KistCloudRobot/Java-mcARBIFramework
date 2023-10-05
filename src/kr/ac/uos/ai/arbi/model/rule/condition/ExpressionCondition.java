@@ -3,13 +3,16 @@ package kr.ac.uos.ai.arbi.model.rule.condition;
 import java.util.LinkedList;
 import java.util.List;
 
+import kr.ac.uos.ai.arbi.model.Binding;
 import kr.ac.uos.ai.arbi.model.Expression;
+import kr.ac.uos.ai.arbi.model.GeneralizedList;
+import kr.ac.uos.ai.arbi.model.rule.condition.ConditionFactory.ConditionType;
 
 
 class ExpressionCondition implements Condition {
 	private final Expression				_expression;
 	
-	ExpressionCondition(Expression expression) {
+	public ExpressionCondition(Expression expression) {
 		_expression = expression;
 	}
 
@@ -21,8 +24,15 @@ class ExpressionCondition implements Condition {
 
 	@Override
 	public String getPredicateName() {
-		// TODO Auto-generated method stub
-		return null;
+		String name = "";
+		if(_expression.isGeneralizedList() == true) {
+			name = _expression.asGeneralizedList().getName();
+			
+		}else if(_expression.isFunction() == true) {
+			name = _expression.asFunction().getName();
+		}
+
+		return name;
 	}
 
 	@Override
@@ -30,5 +40,14 @@ class ExpressionCondition implements Condition {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
+
+	public ConditionType getType() {
+		return ConditionType.expression;
+	}
+
+	@Override
+	public Expression getEvaluatedExpression(Binding b) {
+		Expression result = _expression.evaluate(b);
+		return result;
+	}
 }

@@ -4,7 +4,7 @@ import kr.ac.uos.ai.arbi.model.*;
 
 public class Addition extends AbstractFunction {
 	public Addition(Expression... expressions) {
-		super("add", expressions);
+		super("+", expressions);
 	}
 	
 	public Expression evaluate(Binding binding) {

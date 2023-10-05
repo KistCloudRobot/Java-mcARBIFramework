@@ -4,7 +4,7 @@ import kr.ac.uos.ai.arbi.model.*;
 
 public class GreaterThan extends AbstractFunction {
 	public GreaterThan(Expression... expressions) {
-		super("gt", expressions);
+		super(">", expressions);
 		if (_expressions.length < 2) {
 			throw new IllegalArgumentException("");
 		}

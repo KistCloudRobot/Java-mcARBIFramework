@@ -28,11 +28,29 @@ public abstract class AbstractFunction implements Function {
 
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("#(").append(_name);
-		for (Expression expression : _expressions) {
-			sb.append(" ").append(expression);
+		
+		sb.append("#");
+		if(_expressions.length == 1) {
+			sb.append("(");
+			sb.append(_name);
+			sb.append(" ");
+			sb.append(_expressions[0]);
+			sb.append(")");
+		}else if(_expressions.length == 2) {
+			sb.append("(");
+			sb.append(_expressions[0]).append(" ");
+			sb.append(_name).append(" ");
+			sb.append(_expressions[1]);
+			sb.append(")");
+		}else {
+			sb.append("(").append(_name);
+			for (Expression expression : _expressions) {
+				sb.append(" ").append(expression);
+			}
+			sb.append(")");
 		}
-		sb.append(")");
+		
+		
 		return sb.toString();
 	}
 	

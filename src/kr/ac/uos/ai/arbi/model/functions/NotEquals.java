@@ -4,7 +4,7 @@ import kr.ac.uos.ai.arbi.model.*;
 
 public class NotEquals extends AbstractFunction {
 	public NotEquals(Expression... expressions) {
-		super("ne", expressions);
+		super("!=", expressions);
 		if (_expressions.length < 2) {
 			throw new IllegalArgumentException("");
 		}
