@@ -24,6 +24,7 @@ import org.json.simple.parser.JSONParser;
 import kr.ac.uos.ai.arbi.agent.AgentMessageAction;
 import kr.ac.uos.ai.arbi.agent.ArbiAgentMessage;
 import kr.ac.uos.ai.arbi.framework.ArbiFrameworkServer;
+import kr.ac.uos.ai.arbi.framework.broker.ActiveMQBroker;
 import kr.ac.uos.ai.arbi.interaction.InteractionManager;
 import kr.ac.uos.ai.arbi.interaction.InteractionManagerBrokerConfiguration;
 import kr.ac.uos.ai.arbi.interaction.MonitorMessageQueue;
@@ -38,6 +39,8 @@ public class ActiveMQAdaptor implements InteractionMessageAdaptor {
 		try {
 			connection = new StompConnection();
 			connection.open(InteractionManagerBrokerConfiguration.getActiveMQBrokerHost(), InteractionManagerBrokerConfiguration.getActiveMQBrokerPort());
+			connection.connect("system", "manager");
+			connection.subscribe(InteractionManager.interactionManagerURI + "/message");
 			
 			this.queue = queue;
 			messageRecvTask = new MessageRecvTask();
@@ -82,12 +85,15 @@ public class ActiveMQAdaptor implements InteractionMessageAdaptor {
 	}
 
 	public void onMessage(String message) {
+//		System.out.println(message);
 		queue.enqueue(message);
 	}
 
 	@Override
 	public void send(String monitorID, String message) {
 		try {
+			System.out.println("before send : " + monitorID);
+			System.out.println("before send : " + message);
 			connection.send(monitorID, message);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

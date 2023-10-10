@@ -45,13 +45,14 @@ public class InteractionManager extends ArbiAgent {
 		String activeMQBrokerHost = InteractionManagerBrokerConfiguration.getActiveMQBrokerHost();
 		if(activeMQBrokerHost != null) {
 			this.activeMQBroker = new ActiveMQBroker(activeMQBrokerHost, InteractionManagerBrokerConfiguration.getActiveMQBrokerPort());
+			this.activeMQBroker.start();
 		}
 	}
 	
 	@Override
 	public void onStart(){
 		if(this.activeMQBroker != null) {
-			this.activeMQBroker.start();
+//			this.activeMQBroker.start();
 		}
 		this.send("Server", "(ActivateLogging)");
 	}
