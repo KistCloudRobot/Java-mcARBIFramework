@@ -92,8 +92,6 @@ public class ActiveMQAdaptor implements InteractionMessageAdaptor {
 	@Override
 	public void send(String monitorID, String message) {
 		try {
-			System.out.println("before send : " + monitorID);
-			System.out.println("before send : " + message);
 			connection.send(monitorID, message);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
