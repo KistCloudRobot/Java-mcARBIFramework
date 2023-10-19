@@ -10,14 +10,14 @@ public class InteractionManagerTest {
 //		InteractionManagerBrokerConfiguration.setActiveMQBrokerHost("127.0.0.1");
 //		InteractionManagerBrokerConfiguration.setActiveMQBrokerPort(61615);
 
-		InteractionManagerBrokerConfiguration.setZeroMQBrokerHost("127.0.0.1");
-		InteractionManagerBrokerConfiguration.setZeroMQBrokerPort(61614);
+		InteractionManagerBrokerConfiguration.setZeroMQBrokerHost("172.16.165.77");
+		InteractionManagerBrokerConfiguration.setZeroMQBrokerPort(8888);
 
-		InteractionManagerBrokerConfiguration.setSocketBrokerHost("127.0.0.1");
-		InteractionManagerBrokerConfiguration.setSocketBrokerPort(61613);
+//		InteractionManagerBrokerConfiguration.setSocketBrokerHost("172.16.165.77");
+//		InteractionManagerBrokerConfiguration.setSocketBrokerPort(8888);
 		
 		InteractionManager im = new InteractionManager();
-		ArbiAgentExecutor.execute("172.16.165.158", 61116, InteractionManager.interactionManagerURI, im, BrokerType.ACTIVEMQ);
+		ArbiAgentExecutor.execute("172.16.165.77", 41314, InteractionManager.interactionManagerURI, im, BrokerType.ACTIVEMQ);
 		
 	}
 }

@@ -119,8 +119,8 @@ public class MessageService {
 			messageAdaptor.send(ltmMessage);
 		}else {
 			// 로그
-//			System.out.println("[LTM Message]\t<" + ltmMessage.getAction().toString() + ">\t" + ltmMessage.getClient()
-//			+ " : " + ltmMessage.getContent());
+			System.out.println("[LTM Message]\t<" + ltmMessage.getAction().toString() + ">\t" + ltmMessage.getClient()
+			+ " : " + ltmMessage.getContent());
 			ltmListener.messageRecieved(ltmMessage);
 		}
 		
